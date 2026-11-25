@@ -8,6 +8,10 @@ SONA = "DA_Sona19"
 BANDS = ("Heartsteel", "Ionic Spark", "K/DA", "Pentakill", "True Damage")
 
 
+PROFILES = tuple(low + (3,) + high for low in ((1, 1, 2), (1, 2, 2))
+                 for high in ((4,), (5,), (4, 5)))
+
+
 def draw_collab(units, rng=None):
     rng = rng or random
     by_cost = defaultdict(list)
@@ -28,10 +32,10 @@ def draw_collab(units, rng=None):
                     return [unit, *rest]
         return None
 
-    profiles = [(4,), (5,), (4, 5)]
+    profiles = list(PROFILES)
     rng.shuffle(profiles)
-    for high_costs in profiles:
-        team = search((*high_costs, 3, 2, 1, 1), frozenset())
+    for profile in profiles:
+        team = search(profile[::-1], frozenset())
         if team is not None:
             return sorted(team, key=lambda unit: unit["cost"])
     raise ValueError("추정 추첨 조건을 만족하는 조합이 없어.")
@@ -71,7 +75,7 @@ class ManualBuilder(tk.Toplevel):
         ttk.Button(header, text="콜라보 다시 추첨", command=self.reroll).pack(side="left")
         self.pool_text = ttk.Label(header)
         self.pool_text.pack(side="left", padx=8)
-        rules = "추정 규칙 · 1코 2명, 2·3코 각 1명. 4코 / 5코 / 둘 다 중 가능한 구성을 같은 확률로 선택.\n해금 기물 제외 · 고유 포함 기본 특성 2개 · 추첨 기물끼리 기본 특성 중복 없음."
+        rules = "추정 규칙 · 1코와 2코는 한쪽에서 2명, 다른 쪽에서 1명. 3코는 1명. 4코, 5코 중 한 명 또는 각각 한 명.\n해금 기물 제외 · 고유 포함 기본 특성 2개 · 추첨 기물끼리 기본 특성 중복 없음."
         ttk.Label(self, text=rules, justify="left").grid(row=1, sticky="w", padx=8)
         ttk.Separator(self).grid(row=2, sticky="ew", pady=5)
         columns = ttk.Frame(self, padding=(8, 0))

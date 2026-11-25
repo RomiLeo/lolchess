@@ -2,7 +2,9 @@
 
 importScripts("./ladder-worker.js");
 const bands = ["Heartsteel", "Ionic Spark", "K/DA", "Pentakill", "True Damage"];
-const profiles = [[1, 1, 2, 3, 4], [1, 1, 2, 3, 5], [1, 1, 2, 3, 4, 5]];
+const profiles = [[1, 1, 2], [1, 2, 2]].flatMap(low =>
+  [[4], [5], [4, 5]].map(high => [...low, 3, ...high])
+);
 const weight = trait => trait === "K/DA" ? 2 : 1;
 const byCost = Array.from({length: 6}, () => []);
 let catalog, units, byId, tiers, nonunique, knownEmblems, eligible, loading;
@@ -53,9 +55,9 @@ function fill(costs, index, groups, taken, team) {
 
 function draw() {
   const groups = byCost.map(shuffle);
-  for (const highCosts of shuffle([[4], [5], [4, 5]])) {
+  for (const profile of shuffle(profiles)) {
     const team = [];
-    if (fill([...highCosts, 3, 2, 1, 1], 0, groups, new Set(), team)) {
+    if (fill([...profile].reverse(), 0, groups, new Set(), team)) {
       return team.sort((a, b) => a.cost - b.cost).map(u => u.id);
     }
   }
