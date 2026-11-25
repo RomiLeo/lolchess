@@ -25,7 +25,7 @@ ELIGIBLE = {u["id"]: u for u in UNITS if not u["unlock"] and
             len(set(u["traits"])) == 2 and 1 <= u["cost"] <= 5}
 COSTS = (1, 1, 2, 3, 4, 5)
 PROFILES = (COSTS[:-1], COSTS[:-2] + (5,), COSTS)
-FILES = {"/": "index.html", "/index.html": "index.html", "/ui.js": "ui.js", "/style.css": "style.css"}
+FILES = {"/": "index.html", "/index.html": "index.html", "/ui.js": "ui.js", "/style.css": "style.css", "/theme.js": "theme.js"}
 for name in ("ladder.html", "ladder-plans.json", "planner-worker.js", "ladder-worker.js", "units.json", "traits.json", "emblems.json"):
     FILES["/" + name] = name
 for row in [*UNITS, *CATALOG["traits"]["traits"]]:

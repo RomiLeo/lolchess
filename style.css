@@ -54,3 +54,59 @@ header{border-bottom:1px solid #2c3036;background:#141619}.nav{height:62px;displ
 .ladder-extra-emblems button { padding: 5px; }
 .ladder-extra-emblems img { display: block; width: 30px; height: 30px; object-fit: contain; }
 .ladder-alternative[aria-pressed="true"] { border-color: var(--lime); }
+
+:root { color-scheme: dark; }
+.nav-actions { display: flex; align-items: center; gap: clamp(8px, 2vw, 20px); }
+#theme-toggle {
+  display: grid; place-items: center; width: 36px; height: 36px;
+  padding: 0; font: 22px/1 "Segoe UI Symbol", sans-serif; border-radius: 50%;
+}
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f4f6f3;
+  --panel: #fff;
+  --edge: #cdd5cb;
+  --soft: #566256;
+  --lime: #42651e;
+  --text: #1a241d;
+  --surface: #f0f3ef;
+  --selected: #e9f3dc;
+}
+[data-theme="light"] header { background: #fff; border-color: var(--edge); }
+[data-theme="light"] :is(button, select, input[type=number]) { background: var(--surface); }
+[data-theme="light"] .brandmark,
+[data-theme="light"] .lime { background: #c4e98c; }
+[data-theme="light"] .lime:hover:not(:disabled) { background: #b4df73; }
+[data-theme="light"] .hero {
+  background: linear-gradient(105deg, #f7faef, #e8efdf 60%, #cad5b9);
+  border-color: #c5d1b8;
+}
+[data-theme="light"] .hero p,
+[data-theme="light"] :is(.overline, .rules, .unit .traits, .search span) { color: var(--soft); }
+[data-theme="light"] .panel { box-shadow: 0 2px 8px #20371d08; }
+[data-theme="light"] :is(.pick, .ladder-roster .ladder-pick, .team-row button[aria-pressed=true]) {
+  background: var(--selected);
+}
+[data-theme="light"] :is(.empty-picks, .quiet) {
+  background: #fafbf8; border-color: #bcc8b9; color: var(--soft);
+}
+[data-theme="light"] .tabs { background: var(--surface); border-color: var(--edge); }
+[data-theme="light"] .tabs button { color: var(--soft); background: transparent; }
+[data-theme="light"] .tabs button[aria-pressed=true] {
+  background: white; color: var(--text); border-color: #bdc9b9; box-shadow: 0 1px 3px #20371d12;
+}
+[data-theme="light"] .search { background: white; }
+[data-theme="light"] .filters button { color: var(--soft); }
+[data-theme="light"] .filters button[aria-pressed=true],
+[data-theme="light"] #feedback:not(:empty) {
+  color: var(--lime); background: var(--selected); border-color: #93ae77;
+}
+[data-theme="light"] .unit { background: white; border-color: var(--edge); }
+[data-theme="light"] .unit[aria-pressed=true] { background: var(--selected); border-color: var(--lime); }
+[data-theme="light"] :is(.team-row, .synergy, .inventory-row) { border-color: var(--edge); }
+[data-theme="light"] .editor { background: var(--surface); }
+[data-theme="light"] .synergy img { background: #364337; border-radius: 4px; }
+@media (max-width: 420px) {
+  .nav a { font-size: .76rem; }
+  .brand { font-size: 1rem; gap: 7px; }
+}
