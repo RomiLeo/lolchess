@@ -1,5 +1,6 @@
 ﻿"use strict";
 
+importScripts("./ladder-worker.js");
 const bands = ["Heartsteel", "Ionic Spark", "K/DA", "Pentakill", "True Damage"];
 const profiles = [[1, 1, 2, 3, 4], [1, 1, 2, 3, 5], [1, 1, 2, 3, 4, 5]];
 const weight = trait => trait === "K/DA" ? 2 : 1;
@@ -253,6 +254,15 @@ self.onmessage = async ({data: {id, path, body}}) => {
         throw new Error("기물 선택을 확인해 줘.");
       }
       if (path === "pool") result = pool(body.random ? draw() : body.selected);
+      else if (path === "ladder") {
+        if (!knownEmblems.has(body.emblem)) throw new Error("시작 상징을 확인해 줘.");
+        checkPool(body.selected.map(uid => byId.get(uid)));
+        const {emblem, selected} = body;
+        const base = findLadders(units, catalog.traits, emblem, []).routes;
+        const routes = selected.length ? findLadders(units, catalog.traits, emblem, selected).routes : base;
+        const suggestions = routes.length ? [] : findLadders(units, catalog.traits, emblem, selected, [...knownEmblems]).suggestions;
+        result = {route: routes[0] || null, routes, suggestions, withoutCollab: base.length > 0};
+      }
       else if (path === "complete") result = complete(body);
       else throw new Error("요청을 처리할 수 없어.");
     }

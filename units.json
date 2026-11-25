@@ -1,6 +1,7 @@
 [
     {
         "id":  "DA_Elise19",
+        "teamPlannerCode":  "3fd",
         "name":  "Elise",
         "nameKo":  "엘리스",
         "cost":  1,
@@ -23,6 +24,7 @@
     },
     {
         "id":  "DA_Gnar19",
+        "teamPlannerCode":  "402",
         "name":  "Gnar",
         "nameKo":  "나르",
         "cost":  1,
@@ -45,6 +47,7 @@
     },
     {
         "id":  "DA_Katarina19",
+        "teamPlannerCode":  "40c",
         "name":  "Katarina",
         "nameKo":  "카타리나",
         "cost":  1,
@@ -67,6 +70,7 @@
     },
     {
         "id":  "DA_Kayn19",
+        "teamPlannerCode":  "40e",
         "name":  "Kayn",
         "nameKo":  "케인",
         "cost":  1,
@@ -89,6 +93,7 @@
     },
     {
         "id":  "DA_Kennen19",
+        "teamPlannerCode":  "40f",
         "name":  "Kennen",
         "nameKo":  "케넨",
         "cost":  1,
@@ -111,6 +116,7 @@
     },
     {
         "id":  "DA_Kobuko19",
+        "teamPlannerCode":  "410",
         "name":  "Kobuko",
         "nameKo":  "코부코",
         "cost":  1,
@@ -133,6 +139,7 @@
     },
     {
         "id":  "DA_Lillia19",
+        "teamPlannerCode":  "413",
         "name":  "Lillia",
         "nameKo":  "릴리아",
         "cost":  1,
@@ -155,6 +162,7 @@
     },
     {
         "id":  "DA_Neeko19",
+        "teamPlannerCode":  "41c",
         "name":  "Neeko",
         "nameKo":  "니코",
         "cost":  1,
@@ -180,6 +188,7 @@
     },
     {
         "id":  "DA_Olaf19",
+        "teamPlannerCode":  "447",
         "name":  "Olaf",
         "nameKo":  "올라프",
         "cost":  1,
@@ -205,6 +214,7 @@
     },
     {
         "id":  "DA_Sett19",
+        "teamPlannerCode":  "428",
         "name":  "Sett",
         "nameKo":  "세트",
         "cost":  1,
@@ -227,6 +237,7 @@
     },
     {
         "id":  "DA_Taric19",
+        "teamPlannerCode":  "430",
         "name":  "Taric",
         "nameKo":  "타릭",
         "cost":  1,
@@ -249,6 +260,7 @@
     },
     {
         "id":  "DA_Varus19",
+        "teamPlannerCode":  "436",
         "name":  "Varus",
         "nameKo":  "바루스",
         "cost":  1,
@@ -271,6 +283,7 @@
     },
     {
         "id":  "DA_Yunara19",
+        "teamPlannerCode":  "440",
         "name":  "Yunara",
         "nameKo":  "유나라",
         "cost":  1,
@@ -293,6 +306,7 @@
     },
     {
         "id":  "DA_Ziggs19",
+        "teamPlannerCode":  "444",
         "name":  "Ziggs",
         "nameKo":  "직스",
         "cost":  1,
@@ -318,6 +332,7 @@
     },
     {
         "id":  "DA_Zoe19",
+        "teamPlannerCode":  "445",
         "name":  "Zoe",
         "nameKo":  "조이",
         "cost":  1,
@@ -340,6 +355,7 @@
     },
     {
         "id":  "DA_Annie19",
+        "teamPlannerCode":  "3f0",
         "name":  "Annie",
         "nameKo":  "애니",
         "cost":  2,
@@ -365,6 +381,7 @@
     },
     {
         "id":  "DA_Ashe19",
+        "teamPlannerCode":  "3f2",
         "name":  "Ashe",
         "nameKo":  "애쉬",
         "cost":  2,
@@ -387,6 +404,7 @@
     },
     {
         "id":  "DA_Camille19",
+        "teamPlannerCode":  "3f8",
         "name":  "Camille",
         "nameKo":  "카밀",
         "cost":  2,
@@ -409,6 +427,7 @@
     },
     {
         "id":  "DA_Ezreal19",
+        "teamPlannerCode":  "3ff",
         "name":  "Ezreal",
         "nameKo":  "이즈리얼",
         "cost":  2,
@@ -431,6 +450,7 @@
     },
     {
         "id":  "DA_Gragas19",
+        "teamPlannerCode":  "403",
         "name":  "Gragas",
         "nameKo":  "그라가스",
         "cost":  2,
@@ -453,6 +473,7 @@
     },
     {
         "id":  "DA_Illaoi19",
+        "teamPlannerCode":  "405",
         "name":  "Illaoi",
         "nameKo":  "일라오이",
         "cost":  2,
@@ -475,6 +496,7 @@
     },
     {
         "id":  "DA_Jax19",
+        "teamPlannerCode":  "407",
         "name":  "Jax",
         "nameKo":  "잭스",
         "cost":  2,
@@ -500,6 +522,7 @@
     },
     {
         "id":  "DA_Karthus19",
+        "teamPlannerCode":  "40b",
         "name":  "Karthus",
         "nameKo":  "카서스",
         "cost":  2,
@@ -522,6 +545,7 @@
     },
     {
         "id":  "DA_Lucian19",
+        "teamPlannerCode":  "415",
         "name":  "Lucian",
         "nameKo":  "루시안",
         "cost":  2,
@@ -547,6 +571,7 @@
     },
     {
         "id":  "DA_Lulu19",
+        "teamPlannerCode":  "416",
         "name":  "Lulu",
         "nameKo":  "룰루",
         "cost":  2,
@@ -569,6 +594,7 @@
     },
     {
         "id":  "DA_Lux19",
+        "teamPlannerCode":  "417",
         "name":  "Lux",
         "nameKo":  "럭스",
         "cost":  2,
@@ -591,6 +617,7 @@
     },
     {
         "id":  "DA_Nasus19",
+        "teamPlannerCode":  "44a",
         "name":  "Nasus",
         "nameKo":  "나서스",
         "cost":  2,
@@ -613,6 +640,7 @@
     },
     {
         "id":  "DA_Qiyana19",
+        "teamPlannerCode":  "421",
         "name":  "Qiyana",
         "nameKo":  "키아나",
         "cost":  2,
@@ -635,6 +663,7 @@
     },
     {
         "id":  "DA_RenataGlasc19",
+        "teamPlannerCode":  "423",
         "name":  "Renata Glasc",
         "nameKo":  "레나타 글라스크",
         "cost":  2,
@@ -657,6 +686,7 @@
     },
     {
         "id":  "DA_Renekton19",
+        "teamPlannerCode":  "424",
         "name":  "Renekton",
         "nameKo":  "레넥톤",
         "cost":  2,
@@ -679,6 +709,7 @@
     },
     {
         "id":  "DA_Samira19",
+        "teamPlannerCode":  "425",
         "name":  "Samira",
         "nameKo":  "사미라",
         "cost":  2,
@@ -704,6 +735,7 @@
     },
     {
         "id":  "DA_Seraphine19_Indie",
+        "teamPlannerCode":  "427",
         "name":  "Seraphine",
         "nameKo":  "세라핀",
         "cost":  2,
@@ -723,6 +755,7 @@
     },
     {
         "id":  "DA_Tristana19",
+        "teamPlannerCode":  "434",
         "name":  "Tristana",
         "nameKo":  "트리스타나",
         "cost":  2,
@@ -745,6 +778,7 @@
     },
     {
         "id":  "DA_Amumu19",
+        "teamPlannerCode":  "3ef",
         "name":  "Amumu",
         "nameKo":  "아무무",
         "cost":  3,
@@ -764,6 +798,7 @@
     },
     {
         "id":  "DA_Bard19",
+        "teamPlannerCode":  "3f4",
         "name":  "Bard",
         "nameKo":  "바드",
         "cost":  3,
@@ -786,6 +821,7 @@
     },
     {
         "id":  "DA_Braum19",
+        "teamPlannerCode":  "3f6",
         "name":  "Braum",
         "nameKo":  "브라움",
         "cost":  3,
@@ -808,6 +844,7 @@
     },
     {
         "id":  "DA_Briar19",
+        "teamPlannerCode":  "3f7",
         "name":  "Briar",
         "nameKo":  "브라이어",
         "cost":  3,
@@ -830,6 +867,7 @@
     },
     {
         "id":  "DA_Draven19",
+        "teamPlannerCode":  "3fa",
         "name":  "Draven",
         "nameKo":  "드레이븐",
         "cost":  3,
@@ -852,6 +890,7 @@
     },
     {
         "id":  "DA_Ekko19",
+        "teamPlannerCode":  "3fc",
         "name":  "Ekko",
         "nameKo":  "에코",
         "cost":  3,
@@ -877,6 +916,7 @@
     },
     {
         "id":  "DA_Evelynn19",
+        "teamPlannerCode":  "3fe",
         "name":  "Evelynn",
         "nameKo":  "이블린",
         "cost":  3,
@@ -899,6 +939,7 @@
     },
     {
         "id":  "DA_Galio19",
+        "teamPlannerCode":  "400",
         "name":  "Galio",
         "nameKo":  "갈리오",
         "cost":  3,
@@ -921,6 +962,7 @@
     },
     {
         "id":  "DA_Kaisa19",
+        "teamPlannerCode":  "40a",
         "name":  "Kai\u0027Sa",
         "nameKo":  "카이사",
         "cost":  3,
@@ -943,6 +985,7 @@
     },
     {
         "id":  "DA_KSante19",
+        "teamPlannerCode":  "411",
         "name":  "K\u0027Sante",
         "nameKo":  "크산테",
         "cost":  3,
@@ -965,6 +1008,7 @@
     },
     {
         "id":  "DA_Malzahar19",
+        "teamPlannerCode":  "418",
         "name":  "Malzahar",
         "nameKo":  "말자하",
         "cost":  3,
@@ -987,6 +1031,7 @@
     },
     {
         "id":  "DA_Senna19",
+        "teamPlannerCode":  "426",
         "name":  "Senna",
         "nameKo":  "세나",
         "cost":  3,
@@ -1009,6 +1054,7 @@
     },
     {
         "id":  "DA_Swain19",
+        "teamPlannerCode":  "42d",
         "name":  "Swain",
         "nameKo":  "스웨인",
         "cost":  3,
@@ -1034,6 +1080,7 @@
     },
     {
         "id":  "DA_Syndra19",
+        "teamPlannerCode":  "42e",
         "name":  "Syndra",
         "nameKo":  "신드라",
         "cost":  3,
@@ -1056,6 +1103,7 @@
     },
     {
         "id":  "DA_Tibbers19",
+        "teamPlannerCode":  "433",
         "name":  "Tibbers",
         "nameKo":  "티버",
         "cost":  3,
@@ -1078,6 +1126,7 @@
     },
     {
         "id":  "DA_Viego19",
+        "teamPlannerCode":  "439",
         "name":  "Viego",
         "nameKo":  "비에고",
         "cost":  3,
@@ -1103,6 +1152,7 @@
     },
     {
         "id":  "DA_19_Ahri",
+        "teamPlannerCode":  "3e9",
         "name":  "Ahri",
         "nameKo":  "아리",
         "cost":  4,
@@ -1125,6 +1175,7 @@
     },
     {
         "id":  "DA_Alistar19",
+        "teamPlannerCode":  "3ed",
         "name":  "Alistar",
         "nameKo":  "알리스타",
         "cost":  4,
@@ -1144,6 +1195,7 @@
     },
     {
         "id":  "DA_Alune19",
+        "teamPlannerCode":  "3ee",
         "name":  "Alune",
         "nameKo":  "알룬",
         "cost":  4,
@@ -1169,6 +1221,7 @@
     },
     {
         "id":  "DA_Aurora19",
+        "teamPlannerCode":  "3f3",
         "name":  "Aurora",
         "nameKo":  "오로라",
         "cost":  4,
@@ -1191,6 +1244,7 @@
     },
     {
         "id":  "DA_Garen19",
+        "teamPlannerCode":  "401",
         "name":  "Garen",
         "nameKo":  "가렌",
         "cost":  4,
@@ -1213,6 +1267,7 @@
     },
     {
         "id":  "DA_Graves19",
+        "teamPlannerCode":  "449",
         "name":  "Graves",
         "nameKo":  "그레이브즈",
         "cost":  4,
@@ -1235,6 +1290,7 @@
     },
     {
         "id":  "DA_Jhin19",
+        "teamPlannerCode":  "408",
         "name":  "Jhin",
         "nameKo":  "진",
         "cost":  4,
@@ -1257,6 +1313,7 @@
     },
     {
         "id":  "DA_Jinx19",
+        "teamPlannerCode":  "409",
         "name":  "Jinx",
         "nameKo":  "징크스",
         "cost":  4,
@@ -1279,6 +1336,7 @@
     },
     {
         "id":  "DA_Kayle19",
+        "teamPlannerCode":  "40d",
         "name":  "Kayle",
         "nameKo":  "케일",
         "cost":  4,
@@ -1301,6 +1359,7 @@
     },
     {
         "id":  "DA_Leona19",
+        "teamPlannerCode":  "412",
         "name":  "Leona",
         "nameKo":  "레오나",
         "cost":  4,
@@ -1326,6 +1385,7 @@
     },
     {
         "id":  "DA_Locke19",
+        "teamPlannerCode":  "414",
         "name":  "Locke",
         "nameKo":  "로크",
         "cost":  4,
@@ -1348,6 +1408,7 @@
     },
     {
         "id":  "DA_Mel19",
+        "teamPlannerCode":  "419",
         "name":  "Mel",
         "nameKo":  "멜",
         "cost":  4,
@@ -1370,6 +1431,7 @@
     },
     {
         "id":  "DA_Shyvana19",
+        "teamPlannerCode":  "429",
         "name":  "Shyvana",
         "nameKo":  "쉬바나",
         "cost":  4,
@@ -1392,6 +1454,7 @@
     },
     {
         "id":  "DA_Thresh19",
+        "teamPlannerCode":  "432",
         "name":  "Thresh",
         "nameKo":  "쓰레쉬",
         "cost":  4,
@@ -1414,6 +1477,7 @@
     },
     {
         "id":  "DA_Vayne19",
+        "teamPlannerCode":  "437",
         "name":  "Vayne",
         "nameKo":  "베인",
         "cost":  4,
@@ -1436,6 +1500,7 @@
     },
     {
         "id":  "DA_Wukong19",
+        "teamPlannerCode":  "43b",
         "name":  "Wukong",
         "nameKo":  "오공",
         "cost":  4,
@@ -1455,6 +1520,7 @@
     },
     {
         "id":  "DA_Xayah19",
+        "teamPlannerCode":  "43c",
         "name":  "Xayah",
         "nameKo":  "자야",
         "cost":  4,
@@ -1477,6 +1543,7 @@
     },
     {
         "id":  "DA_Yasuo19",
+        "teamPlannerCode":  "43d",
         "name":  "Yasuo",
         "nameKo":  "야스오",
         "cost":  4,
@@ -1499,6 +1566,7 @@
     },
     {
         "id":  "DA_Yone19",
+        "teamPlannerCode":  "43e",
         "name":  "Yone",
         "nameKo":  "요네",
         "cost":  4,
@@ -1521,6 +1589,7 @@
     },
     {
         "id":  "DA_Yorick19",
+        "teamPlannerCode":  "43f",
         "name":  "Yorick",
         "nameKo":  "요릭",
         "cost":  4,
@@ -1543,6 +1612,7 @@
     },
     {
         "id":  "DA_Yuumi19",
+        "teamPlannerCode":  "441",
         "name":  "Yuumi",
         "nameKo":  "유미",
         "cost":  4,
@@ -1565,6 +1635,7 @@
     },
     {
         "id":  "DA_Zac19",
+        "teamPlannerCode":  "442",
         "name":  "Zac",
         "nameKo":  "자크",
         "cost":  4,
@@ -1587,6 +1658,7 @@
     },
     {
         "id":  "DA_Akali_TrueDamage19",
+        "teamPlannerCode":  "3ea",
         "name":  "Akali (True Damage)",
         "nameKo":  "아칼리 (True Damage)",
         "cost":  5,
@@ -1609,6 +1681,7 @@
     },
     {
         "id":  "DA_AkaliKDA19",
+        "teamPlannerCode":  "3ec",
         "name":  "Akali (K/DA)",
         "nameKo":  "아칼리 (K/DA)",
         "cost":  5,
@@ -1628,6 +1701,7 @@
     },
     {
         "id":  "DA_Aphelios19",
+        "teamPlannerCode":  "3f1",
         "name":  "Aphelios",
         "nameKo":  "아펠리오스",
         "cost":  5,
@@ -1647,6 +1721,7 @@
     },
     {
         "id":  "DA_DrMundo19",
+        "teamPlannerCode":  "3fb",
         "name":  "Dr. Mundo",
         "nameKo":  "문도 박사",
         "cost":  5,
@@ -1669,6 +1744,7 @@
     },
     {
         "id":  "DA_Gwen19",
+        "teamPlannerCode":  "404",
         "name":  "Gwen",
         "nameKo":  "그웬",
         "cost":  5,
@@ -1691,6 +1767,7 @@
     },
     {
         "id":  "DA_Janna19",
+        "teamPlannerCode":  "406",
         "name":  "Janna",
         "nameKo":  "잔나",
         "cost":  5,
@@ -1716,6 +1793,7 @@
     },
     {
         "id":  "DA_LeeSin19",
+        "teamPlannerCode":  "44f",
         "name":  "Lee Sin",
         "nameKo":  "리 신",
         "cost":  5,
@@ -1735,6 +1813,7 @@
     },
     {
         "id":  "DA_MissFortune19",
+        "teamPlannerCode":  "41a",
         "name":  "Miss Fortune",
         "nameKo":  "미스 포츈",
         "cost":  5,
@@ -1757,6 +1836,7 @@
     },
     {
         "id":  "DA_Mordekaiser19",
+        "teamPlannerCode":  "44b",
         "name":  "Mordekaiser",
         "nameKo":  "모데카이저",
         "cost":  5,
@@ -1776,6 +1856,7 @@
     },
     {
         "id":  "DA_Nidalee19",
+        "teamPlannerCode":  "41d",
         "name":  "Nidalee",
         "nameKo":  "니달리",
         "cost":  5,
@@ -1798,6 +1879,7 @@
     },
     {
         "id":  "DA_Nunu19",
+        "teamPlannerCode":  "41e",
         "name":  "Nunu \u0026 Willump",
         "nameKo":  "누누와 윌럼프",
         "cost":  5,
@@ -1820,6 +1902,7 @@
     },
     {
         "id":  "DA_Pyke19",
+        "teamPlannerCode":  "420",
         "name":  "Pyke",
         "nameKo":  "파이크",
         "cost":  5,
@@ -1842,6 +1925,7 @@
     },
     {
         "id":  "DA_Rell19",
+        "teamPlannerCode":  "422",
         "name":  "Rell",
         "nameKo":  "렐",
         "cost":  5,
@@ -1864,6 +1948,7 @@
     },
     {
         "id":  "DA_Taliyah19",
+        "teamPlannerCode":  "42f",
         "name":  "Taliyah",
         "nameKo":  "탈리야",
         "cost":  5,
@@ -1886,6 +1971,7 @@
     },
     {
         "id":  "DA_Teemo19",
+        "teamPlannerCode":  "431",
         "name":  "Teemo",
         "nameKo":  "티모",
         "cost":  5,
@@ -1908,6 +1994,7 @@
     },
     {
         "id":  "DA_TwistedFate19",
+        "teamPlannerCode":  "435",
         "name":  "Twisted Fate",
         "nameKo":  "트위스티드 페이트",
         "cost":  5,
@@ -1930,6 +2017,7 @@
     },
     {
         "id":  "DA_Vi19",
+        "teamPlannerCode":  "438",
         "name":  "Vi",
         "nameKo":  "바이",
         "cost":  5,
@@ -1952,6 +2040,7 @@
     },
     {
         "id":  "DA_Vladimir19",
+        "teamPlannerCode":  "43a",
         "name":  "Vladimir",
         "nameKo":  "블라디미르",
         "cost":  5,
@@ -1974,6 +2063,7 @@
     },
     {
         "id":  "DA_Zeri19",
+        "teamPlannerCode":  "443",
         "name":  "Zeri",
         "nameKo":  "제리",
         "cost":  5,
@@ -1996,6 +2086,7 @@
     },
     {
         "id":  "DA_BaronNashor19",
+        "teamPlannerCode":  "3f5",
         "name":  "Baron Nashor",
         "nameKo":  "내셔 남작",
         "cost":  7,
@@ -2015,6 +2106,7 @@
     },
     {
         "id":  "DA_Rakan19",
+        "teamPlannerCode":  "448",
         "name":  "Rakan",
         "nameKo":  "라칸",
         "cost":  7,
@@ -2037,6 +2129,7 @@
     },
     {
         "id":  "DA_Smeech19",
+        "teamPlannerCode":  "42a",
         "name":  "Smeech",
         "nameKo":  "스미치",
         "cost":  7,
@@ -2059,6 +2152,7 @@
     },
     {
         "id":  "DA_Sona19",
+        "teamPlannerCode":  "42c",
         "name":  "Sona",
         "nameKo":  "소나",
         "cost":  7,

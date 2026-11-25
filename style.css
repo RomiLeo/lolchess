@@ -18,7 +18,7 @@ header{border-bottom:1px solid #2c3036;background:#141619}.nav{height:62px;displ
   align-items: start;
   column-gap: 16px;
 }
-#team > .quiet { grid-column: 1 / -1; }
+#team > .quiet, #team > .team-code { grid-column: 1 / -1; }
 @media (max-width: 580px) {
   .lineup-results { grid-template-columns: minmax(0, 1fr); gap: 0; }
 }
@@ -28,3 +28,29 @@ header{border-bottom:1px solid #2c3036;background:#141619}.nav{height:62px;displ
   align-items: start;
   gap: 8px;
 }
+.ladder { margin-bottom: 18px; }
+.nav a { color: var(--lime); font-size: .88rem; font-weight: 650; text-underline-offset: 4px; }
+.library .heading + .search { margin-top: 14px; }
+.ladder > .control { justify-content: flex-start; margin-top: 16px; }
+#ladder-guide h3 { margin: 18px 0 8px; font-size: 1rem; }
+#ladder-guide p { font-size: .85rem; margin: 5px 0; }
+.ladder-roster { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+.ladder-pick { display: inline-flex; align-items: center; gap: 6px; font-size: .85rem; }
+.ladder-roster .ladder-pick { padding: 3px 8px 3px 3px; background: #272d25; border-radius: 5px; }
+.ladder-pick img { width: 30px; height: 30px; object-fit: cover; border-radius: 3px; }
+.ladder-steps { list-style: none; padding: 0; margin: 0; }
+.ladder-steps li { border-top: 1px solid var(--edge); padding: 4px 0; }
+.ladder-steps summary { font-size: .85rem; }
+.ladder-steps summary b { display: inline-block; width: 4em; }
+.ladder-steps .ladder-pick { vertical-align: middle; }
+.ladder-steps small { margin-left: 10px; color: var(--lime); }
+.ladder-steps p { color: var(--soft); }
+.ladder-choices { display: grid; gap: 6px; }
+.ladder-choice { display: grid; gap: 6px; width: 100%; padding: 10px; text-align: left; }
+.ladder-choice[aria-pressed="true"] { border-color: var(--lime); }
+.ladder-choice .ladder-roster { margin: 0; }
+.ladder-unavailable { margin: 20px 0 12px; font-size: clamp(1.5rem, 4vw, 2.2rem); }
+.ladder-extra-emblems { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+.ladder-extra-emblems button { padding: 5px; }
+.ladder-extra-emblems img { display: block; width: 30px; height: 30px; object-fit: contain; }
+.ladder-alternative[aria-pressed="true"] { border-color: var(--lime); }

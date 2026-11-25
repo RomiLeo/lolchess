@@ -1,5 +1,6 @@
 ﻿"use strict";
 const $ = id => document.getElementById(id);
+const ladderPage = document.documentElement.dataset.page === "ladder";
 const sona = "DA_Sona19";
 const bands = ["Heartsteel", "Ionic Spark", "K/DA", "Pentakill", "True Damage"];
 const colors = {1: "#aeb4bd", 2: "#53c776", 3: "#429cf5", 4: "#bb70ec", 5: "#efbd40", 7: "#fb794b"};
@@ -37,6 +38,34 @@ function option(value, label) {
   return new Option(label, value);
 }
 function msg(text) { $("feedback").textContent = text; }
+function teamCodeControl(team) {
+  // Set 19 codes from https://data.metatft.com/lookups/TFTSet19_pbe_en_us.json
+  const slots = team.map(id => state.byId.get(id)?.teamPlannerCode);
+  if (team.length > 10) return element("p", "팀 코드는 최대 10명까지 담을 수 있어.", "note");
+  if (!slots.length || slots.some(code => !/^[0-9a-f]{3}$/i.test(code) || code === "000")) {
+    return element("p", "팀 코드가 없는 기물이 포함되어 있어.", "note");
+  }
+  const code = "02" + slots.join("").padEnd(30, "0") + "TFTSet19";
+  const group = element("div");
+  const status = element("span");
+  status.setAttribute("role", "status");
+  const button = btn("팀 코드 복사", async () => {
+    try {
+      await navigator.clipboard.writeText(code);
+      status.textContent = " 복사했어.";
+    } catch {
+      const input = element("input");
+      input.readOnly = true;
+      input.value = code;
+      input.setAttribute("aria-label", "수동 복사용 팀 코드");
+      status.replaceChildren(" 코드를 선택해서 복사해 줘. ", input);
+      input.focus();
+      input.select();
+    }
+  });
+  group.append(button, status);
+  return group;
+}
 function name(trait) { return state.traits.get(trait)?.nameKo || trait; }
 function invalidate() { state.revision++; state.result = null; }
 let plannerWorker;
@@ -82,6 +111,7 @@ async function setPool(selected, random = false) {
     state.pool = data.selected;
     state.candidates = data.candidates;
     invalidate();
+    if (ladderPage && $("ladder-collab").checked) renderLadder();
     msg("");
   } catch (error) { msg(error.message); }
   finally {
@@ -119,9 +149,11 @@ function renderRoster() {
     (!state.cost || u.cost === state.cost) &&
     (!term || [u.nameKo,u.name,...u.traitsKo,...u.traits].join(" ").toLowerCase().includes(term))
   );
-  $("drawn-filter").hidden = poolMode;
+  if (!ladderPage) {
+    $("drawn-filter").hidden = poolMode;
+    for (const b of $("library-tabs").children) b.setAttribute("aria-pressed", b.dataset.lib === state.library);
+  }
   $("library-hint").textContent = (poolMode ? "선택 가능한 콜라보 기물" : "선택해서 수동 배치") + " · " + visible.length + "명";
-  for (const b of $("library-tabs").children) b.setAttribute("aria-pressed", b.dataset.lib === state.library);
   for (const b of $("costs").children) b.setAttribute("aria-pressed", Number(b.value) === state.cost);
   const cards = visible.map(u => {
     const el = btn("", () => poolMode ? togglePick(u.id) : addUnit(u.id), "unit");
@@ -187,20 +219,23 @@ function renderEditor() {
   if (unit.unlock) box.append(element("p","해금 조건 · "+unit.unlock,"note"));
   root.append(box);
 }
-function renderSynergies(team, equipment) {
+function traitRows(team, equipment, collab, band) {
   const counts = new Map();
   for (const id of team) {
     const all = new Set([...state.byId.get(id).traits,...(equipment[id] || [])]);
-    if (state.pool.includes(id)) all.add("Collab");
-    const band = state.mode === "manual" ? state.band : state.result?.band;
+    if (collab.includes(id)) all.add("Collab");
     if (id === sona && band) all.add(band);
     for (const t of all) counts.set(t,(counts.get(t)||0)+(t==="K/DA"?2:1));
   }
-  const rows = [...counts].filter(([t]) => state.traits.has(t)).map(([t,count]) => {
+  return [...counts].filter(([t]) => state.traits.has(t)).map(([t,count]) => {
     const tiers = state.tiers[t] || [];
     const active = Math.max(0,...tiers.filter(n => n <= count));
     return {t,count,active,tiers};
   }).sort((a,b) => Number(!!b.active)-Number(!!a.active) || name(a.t).localeCompare(name(b.t),"ko"));
+}
+function renderSynergies(team, equipment) {
+  const band = state.mode === "manual" ? state.band : state.result?.band;
+  const rows = traitRows(team, equipment, state.pool, band);
   $("active-count").textContent = "고유 제외 활성 " + rows.filter(r => r.active && state.traits.get(r.t).type !== "unique").length + "개";
   $("synergies").replaceChildren(...(rows.length ? rows.map(({t,count,active,tiers}) => {
     const el = element("div",undefined,"synergy"+(active?" active":""));
@@ -233,6 +268,11 @@ function renderBoard() {
     return row;
   });
   $("team").replaceChildren(...(rows.length ? rows : [element("p",manual?"배치용 기물에서 라인업에 넣을 기물을 골라 봐.":"콜라보 후보를 2명 이상 고르고 덱 자동 완성을 눌러 줘.","quiet")]));
+  if (!manual && team.length) {
+    const copy = teamCodeControl(team);
+    copy.classList.add("team-code");
+    $("team").prepend(copy);
+  }
   const unused = {...state.inventory};
   for (const items of Object.values(equipment)) for (const item of items) unused[item]--;
   const remaining = Object.entries(unused).filter(([,n]) => n > 0).map(([t,n]) => name(t)+" ×"+n);
@@ -240,7 +280,131 @@ function renderBoard() {
   if (!manual && state.result && remaining.length) $("unused").append(element("p","미장착 상징 · "+remaining.join(", "),"note"));
   renderEditor();renderSynergies(team,equipment);
 }
-function render() { renderPool();renderRoster();renderBoard(); }
+function render() {
+  renderPool();
+  renderRoster();
+  if (!ladderPage) renderBoard();
+}
+let ladderPlans, ladderRevision = 0;
+async function renderLadder() {
+  const revision = ++ladderRevision;
+  const emblem = $("ladder-emblem").value;
+  const pool = $("ladder-collab").checked ? [...state.pool] : [];
+  const root = $("ladder-guide");
+  root.replaceChildren();
+  if (!emblem) return;
+  root.append(element("p", "9레벨 조합 계산 중…", "note"));
+  try {
+    const {routes, suggestions} = await workerRequest("ladder", {emblem, selected: pool});
+    if (revision !== ladderRevision) return;
+    const choices = routes.map((route, i) => {
+      const base = routes[0].team;
+      const delta = i ? route.team.filter(id => !base.includes(id)) : [];
+      return {route, label: "조합 "+(i+1)+(delta.length ? " · "+delta.map(id => state.byId.get(id).nameKo).join(", ")+" 포함" : "")};
+    });
+    if (!routes.length) {
+      for (const {extra, route} of suggestions) choices.push({route, extra, label: name(extra)+" 상징"});
+      if (!ladderPlans) {
+        ladderPlans = fetch("./ladder-plans.json").then(response => {
+          if (!response.ok) throw new Error();
+          return response.json();
+        }).catch(error => { ladderPlans = null; throw error; });
+      }
+      const team = (await ladderPlans)[emblem];
+      if (revision !== ladderRevision) return;
+      choices.push({label: "10레벨 · 시작 상징만 사용", route: {team, levels: team.map((_, i) => i + 1), equipment: {[team[0]]: [emblem]}}});
+    }
+    const context = pool.length ? "선택한 콜라보 풀" : "콜라보 미적용";
+    root.replaceChildren();
+    if (routes.length) {
+      root.append(element("p", context+" · "+name(emblem)+" 상징 1개로 9레벨 13특성 가능", "note"));
+      if (pool.length) root.append(element("p","반영한 콜라보 풀 · "+pool.map(id => state.byId.get(id).nameKo).join(", ")+" (★ 배치 후보)"));
+      root.append(element("h3", "9레벨 추천 조합"));
+    } else {
+      root.append(element("h2", "9레벨 13특성 달성 불가", "ladder-unavailable"));
+    }
+    const list = element("div", undefined, routes.length ? "ladder-choices" : "ladder-extra-emblems");
+    if (!routes.length) list.append(element("strong", "추가 필요 상징:"), ...(suggestions.length ? [] : ["없음"]));
+    const detail = element("div");
+    detail.id = "ladder-choice-detail";
+    const buttons = choices.map(({route, label, extra}) => {
+      const button = btn("", () => {
+        for (const other of buttons) other.setAttribute("aria-pressed", String(other === button));
+        renderLadderRoute(detail, route, pool);
+      }, routes.length ? "ladder-choice" : "ladder-alternative");
+      button.setAttribute("aria-controls", detail.id);
+      if (extra) {
+        button.title = label;
+        button.setAttribute("aria-label", label);
+        button.append(img(state.traits.get(extra).id));
+        return button;
+      }
+      if (!routes.length) {
+        button.textContent = label;
+        return button;
+      }
+      const roster = element("span", undefined, "ladder-roster");
+      roster.append(...route.team.map(id => ladderPick(id, pool)));
+      button.append(element("strong", label), roster);
+      return button;
+    });
+    if (routes.length) list.append(...buttons);
+    else list.append(...buttons.slice(0, suggestions.length));
+    root.append(list);
+    if (!routes.length) root.append(buttons.at(-1));
+    root.append(detail);
+    buttons[0].click();
+  } catch {
+    if (revision === ladderRevision) root.replaceChildren(element("p","사다리 조합을 불러오지 못했어. 상징을 다시 선택해 줘.","note"));
+  }
+}
+function ladderPick(id, pool) {
+  const unit = state.byId.get(id);
+  const item = element("span", undefined, "ladder-pick");
+  const portrait = img(id);
+  portrait.style.border = "2px solid " + (colors[unit.cost] || "#c7d4d9");
+  item.append(portrait, unit.nameKo + (pool.includes(id) ? " ★" : ""));
+  return item;
+}
+function renderLadderRoute(root, {team, levels, equipment}, pool) {
+  const activeTraits = ids => traitRows(ids, equipment, pool, "").filter(
+    row => row.active && state.traits.get(row.t).type !== "unique"
+  );
+  const card = id => ladderPick(id, pool);
+  const title = text => element("h3", text);
+  const roster = element("div", undefined, "ladder-roster");
+  roster.append(...team.map(card));
+  const active = activeTraits(team);
+  const steps = element("ol", undefined, "ladder-steps");
+  for (let level = 1; level <= team.length; level++) {
+    const members = team.filter((_, i) => levels[i] <= level);
+    const added = team.filter((_, i) => levels[i] === level);
+    const rows = activeTraits(members);
+    const line = element("li");
+    const detail = element("details"), summary = element("summary");
+    summary.append(element("b", level + "레벨"), ...(added.length ? added.map(card) : [element("span","추가 기물 없음")]), element("small","활성 "+rows.length+"개"));
+    detail.append(summary, element("p","배치 · "+members.map(uid => state.byId.get(uid).nameKo).join(", ")),
+      element("p","활성 특성 · "+(rows.map(row => name(row.t)).join(", ") || "없음")));
+    line.append(detail); steps.append(line);
+  }
+  const unlocks = team.filter(id => state.byId.get(id).unlock);
+  const kda = team.filter(id => state.byId.get(id).traits.includes("K/DA") || equipment[id]?.includes("K/DA"));
+  const assignments = Object.entries(equipment).map(([id, items]) =>
+    state.byId.get(id).nameKo+"에게 "+items.map(t => name(t)+" 상징").join(", "));
+  root.replaceChildren(title(team.length+"레벨 · "+active.length+"특성 조합"), roster,
+    teamCodeControl(team),
+    element("p", "상징 장착 · "+assignments.join(" / ")),
+    element("p", "활성 특성 · "+active.map(row => name(row.t)+" "+row.count).join(" / ")));
+  if (kda.length) root.append(element("p","K/DA는 "+kda.map(id => state.byId.get(id).nameKo).join(", ")+" 2성 기준이야.","note"));
+  root.append(title("해금 준비"));
+  if (!unlocks.length) root.append(element("p","이 경로에 필요한 해금 기물은 없어."));
+  for (const id of unlocks) {
+    const u = state.byId.get(id);
+    root.append(element("p",levels[team.indexOf(id)]+"레벨 배치 전 · "+u.nameKo+" — "+u.unlock));
+  }
+  root.append(title("레벨별 추가 기물"), steps);
+  if (levels.some((l, i) => l > i+1)) root.append(element("p","완성 기물이 들어오기 전 빈자리는 임시 기물로 채워도 돼.","note"));
+}
 async function build() {
   const revision = state.revision;
   state.building = true;renderBoard();msg("");
@@ -252,20 +416,26 @@ async function build() {
 }
 function initControls() {
   $("random").onclick = () => setPool([],true);
+  $("search").oninput = renderRoster;
+  for (const cost of [0,...new Set(state.units.map(u => u.cost).sort((a,b)=>a-b))]) {
+    const b = btn(cost ? cost+"코" : "전체",() => {state.cost=cost;renderRoster();});
+    b.value = cost;
+    $("costs").append(b);
+  }
+  if (ladderPage) {
+    $("ladder-emblem").append(...state.items.map(item => option(item.trait, item.nameKo)));
+    $("ladder-emblem").onchange = renderLadder;
+    $("ladder-collab").onchange = renderLadder;
+    return;
+  }
   $("build").onclick = build;
   $("only").onchange = renderRoster;
-  $("search").oninput = renderRoster;
   for (const b of $("library-tabs").children) b.onclick = () => switchLib(b.dataset.lib);
   for (const b of $("board-tabs").children) b.onclick = () => {
     state.mode = b.dataset.mode;
     state.library = state.mode === "auto" ? "pool" : "all";
     render();
   };
-  for (const cost of [0,...new Set(state.units.map(u => u.cost).sort((a,b)=>a-b))]) {
-    const b = btn(cost ? cost+"코" : "전체",() => {state.cost=cost;renderRoster();});
-    b.value = cost;
-    $("costs").append(b);
-  }
   for (let n=3;n<=11;n++) $("level").append(option(n,n+"명"));
   $("level").value = 10;
   $("level").onchange = () => {invalidate();renderBoard();};

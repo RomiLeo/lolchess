@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ko" data-backend="server" data-page="ladder">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>특성 사다리 도우미 · TFT</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./ui.js" defer></script>
+</head>
+<body>
+<header><nav class="wrap nav" aria-label="도구 이동"><div class="brand"><i class="brandmark" aria-hidden="true"><b></b><b></b><b></b><b></b></i>특성 사다리</div><a href="./index.html">콜라보 덱 스튜디오 →</a></nav></header>
+<main class="wrap">
+  <section class="hero">
+    <div class="art" aria-hidden="true"><div class="record"></div><div class="arm"></div></div>
+    <div class="hero-copy"><div class="eyebrow"><i></i> SET 19 &nbsp;/&nbsp; TRAIT LADDER</div><h1>특성 사다리 <em>도우미</em></h1><p>시작 상징을 고르면 9레벨에 고유 제외 13특성을 켤 수 있는 조합과 레벨별 배치 순서를 확인할 수 있어.</p></div>
+  </section>
+  <section class="panel ladder" aria-labelledby="route-heading">
+    <div class="heading"><h2 id="route-heading">사다리 경로</h2></div>
+    <label class="control" for="ladder-emblem">시작 상징 <select id="ladder-emblem"><option value="">상징 선택</option></select></label>
+    <label><input type="checkbox" id="ladder-collab" checked> 아래에서 선택하거나 추첨한 콜라보 풀 반영</label>
+    <div id="ladder-guide" aria-live="polite"></div>
+  </section>
+  <section class="panel pool">
+    <div class="heading"><div><span class="overline">COLLAB POOL</span><h2>콜라보 풀 <small id="pool-count">0명</small></h2></div><button id="random" class="lime"><span aria-hidden="true">⤨</span> 랜덤 추첨</button></div>
+    <div id="picks"></div>
+    <details class="rules"><summary>추첨 조건</summary><p>1코스트 2명, 2·3코스트 각 1명, 4·5코스트 중 한 명 또는 각각 한 명을 뽑아. 해금 기물을 제외하고, 기본 특성이 2개인 기물끼리 특성이 겹치지 않는 조합이야.</p></details>
+  </section>
+  <div id="feedback" role="status" aria-live="polite"></div>
+  <div class="workspace">
+    <section class="panel library">
+      <div class="heading"><h2>콜라보 후보</h2></div>
+      <label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="기물명 또는 특성 검색" aria-label="기물명 또는 특성 검색"></label>
+      <div class="filters" id="costs" aria-label="코스트 필터"></div>
+      <div class="sub"><span id="library-hint"></span></div>
+      <div id="roster" class="roster"></div>
+    </section>
+  </div>
+</main></body></html>
