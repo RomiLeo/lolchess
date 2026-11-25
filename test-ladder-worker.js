@@ -77,6 +77,24 @@ test("five-cost mode enforces eight active synergies and orders ties by synergy 
   await assert.rejects(request(null, selected, {...options, level:3}), /8개/);
 });
 
+test("Smeech inclusion overrides general unlocks for both Jazz targets", async () => {
+  const request = planner();
+  const selected = ["DA_Sett19", "DA_Taric19"];
+  for (const jazz of [2, 3]) {
+    for (const smeech of [false, true]) {
+      const {decks} = await request(null, selected, {level:5, jazz, smeech, inventory:{Jazz:jazz-1},
+        unlocked:smeech ? [] : [...units.keys()], guFeng:false});
+      assert(decks.length);
+      for (const {team, equipment} of decks) {
+        assert.equal(team.includes("DA_Smeech19"), smeech);
+        assert.equal(team.filter(id => units.get(id).traits.includes("Jazz")).length +
+          Object.values(equipment).flat().filter(t => t === "Jazz").length, jazz);
+        assert(team.every(id => !units.get(id).traits.includes("Gu Feng")));
+      }
+    }
+  }
+});
+
 function checkRoute(route, emblem, pool, extra) {
   assert.equal(new Set(route.team).size, 9);
   assert.equal(route.team.length, 9);

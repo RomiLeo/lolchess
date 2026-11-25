@@ -195,7 +195,7 @@ function compare(a, b) {
   return b.rank[0] - a.rank[0] || b.rank[1] - a.rank[1] || b.rank[2] - a.rank[2] || b.rank[3] - a.rank[3];
 }
 
-function complete({selected, level, unlocked, inventory = {}, collab = 3, jazz = null, guFeng = false, priority = "synergy"}) {
+function complete({selected, level, unlocked, inventory = {}, collab = 3, jazz = null, guFeng = false, priority = "synergy", smeech = false}) {
   const picks = new Set(selected);
   checkPool(selected.map(id => byId.get(id)));
   if (!Number.isInteger(level) || level < 3 || level > 11 || !Array.isArray(unlocked) ||
@@ -205,10 +205,13 @@ function complete({selected, level, unlocked, inventory = {}, collab = 3, jazz =
   const sona = byId.get("DA_Sona19");
   if (!["synergy", "five"].includes(priority)) throw new Error("추천 모드를 확인해 줘.");
   if (![3, 5].includes(collab) || ![null, 2, 3].includes(jazz) || typeof guFeng !== "boolean") throw new Error("추천 조건을 확인해 줘.");
-  const allowed = units.filter(u => u !== sona && (guFeng || !u.traits.includes("Gu Feng")));
+  if (typeof smeech !== "boolean") throw new Error("스미치 포함 설정을 확인해 줘.");
+  const smeechUnit = byId.get("DA_Smeech19");
+  if (smeech && level <= collab) throw new Error("스미치를 포함하려면 콜라보 외에 한 자리가 더 필요해.");
+  const allowed = units.filter(u => u !== sona && u !== smeechUnit && (guFeng || !u.traits.includes("Gu Feng")));
   const candidates = allowed.filter(u => picks.has(u.id));
   if (candidates.length < collab - 1 || level < collab) throw new Error("콜라보 후보 또는 목표 인원이 부족해.");
-  const recruits = allowed.filter(u => !picks.has(u.id) && (!u.unlock || unlocked.includes(u.id)));
+  const recruits = allowed.filter(u => !picks.has(u.id) && (u.traits.includes("Gu Feng") || !u.unlock || unlocked.includes(u.id)));
   const items = Object.keys(inventory).length ? inventory : null;
   const finalists = new Map();
   for (const band of bands) {
@@ -221,14 +224,14 @@ function complete({selected, level, unlocked, inventory = {}, collab = 3, jazz =
     };
     let states = [];
     function seed(team, start) {
-      if (team.length === collab) { states.push(rankTeam(team)); return; }
+      if (team.length === collab) { states.push(rankTeam(smeech ? [...team, smeechUnit] : team)); return; }
       for (let i = start; i < candidates.length; i++) {
         const u = candidates[i];
         if (!u.akali || !team.some(member => member.akali)) seed([...team, u], i + 1);
       }
     }
     seed([leader], 0);
-    for (let size = collab; size < level; size++) {
+    for (let size = collab + Number(smeech); size < level; size++) {
       const choices = new Map();
       for (const {team} of states) {
         const hasAkali = team.some(u => u.akali);

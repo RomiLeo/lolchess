@@ -112,7 +112,7 @@ def serve(complete, evaluate):
                 decks = []
                 for team, band in complete(UNITS, set(selected), level, set(data["unlocked"]), inventory,
                                            data.get("collab", 3), data.get("jazz"), data.get("guFeng", False),
-                                           data.get("priority", "synergy")):
+                                           data.get("priority", "synergy"), data.get("smeech", False)):
                     holders = evaluate(team, set(selected), inventory, band)[2]
                     decks.append({"team": [u["id"] for u in team], "band": band,
                                   "equipment": {u["id"]: sorted(h) for u, h in zip(team, holders)}})

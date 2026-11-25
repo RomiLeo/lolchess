@@ -132,22 +132,27 @@ def complete_with_band(units, selected, level, unlocked, inventory=None):
     return ranked_decks(units, selected, level, unlocked, inventory)[0]
 
 
-def ranked_decks(units, selected, level, unlocked, inventory=None, collab=3, jazz=None, gu_feng=False, priority="synergy"):
+def ranked_decks(units, selected, level, unlocked, inventory=None, collab=3, jazz=None, gu_feng=False, priority="synergy", smeech=False):
     if priority not in ("five", "synergy"):
         raise ValueError("추천 모드를 확인해 줘.")
     if collab not in (3, 5) or jazz not in (None, 2, 3) or type(gu_feng) is not bool:
         raise ValueError("추천 조건을 확인해 줘.")
-    allowed = [i for i, u in enumerate(units) if u["id"] != SONA and (gu_feng or "Gu Feng" not in u["traits"])]
+    if type(smeech) is not bool:
+        raise ValueError("스미치 포함 설정을 확인해 줘.")
+    if smeech and level <= collab:
+        raise ValueError("스미치를 포함하려면 콜라보 외에 한 자리가 더 필요해.")
+    allowed = [i for i, u in enumerate(units) if u["id"] not in (SONA, "DA_Smeech19") and (gu_feng or "Gu Feng" not in u["traits"])]
     candidates = [i for i in allowed if units[i]["id"] in selected]
     if len(candidates) < collab - 1 or level < collab:
         raise ValueError("콜라보 후보 또는 목표 인원이 부족해.")
     sona = next(i for i, u in enumerate(units) if u["id"] == SONA)
     recruits = [i for i in allowed if units[i]["id"] not in selected
-                and (not units[i]["unlock"] or units[i]["id"] in unlocked)]
+                and ("Gu Feng" in units[i]["traits"] or not units[i]["unlock"] or units[i]["id"] in unlocked)]
     akalis = {i for i, u in enumerate(units) if "Akali" in u["id"]}
     jazz_units = {i for i, u in enumerate(units) if "Jazz" in u["traits"]}
 
-    seeds = [(sona, *group) for group in combinations(candidates, collab - 1)
+    required = (next(i for i, u in enumerate(units) if u["id"] == "DA_Smeech19"),) if smeech else ()
+    seeds = [(sona, *group, *required) for group in combinations(candidates, collab - 1)
              if len(akalis.intersection(group)) <= 1]
     finalists = {}
     for band in BANDS:
@@ -166,7 +171,7 @@ def ranked_decks(units, selected, level, unlocked, inventory=None, collab=3, jaz
             return distance, 0, active_count if "Jazz" in active else 0, five_cost, score
 
         states = {seed: rank(seed) for seed in seeds}
-        for _ in range(level - collab):
+        for _ in range(level - collab - len(required)):
             choices = {}
             for state in states:
                 for i in recruits:

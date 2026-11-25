@@ -429,7 +429,8 @@ async function build() {
     const result = await api("complete",{selected:state.pool,level:Number($("level").value),unlocked:[...state.unlocked],inventory:state.inventory,
       priority:document.querySelector('[name="priority"]:checked').value,
       collab:Number(document.querySelector('[name="collab"]:checked').value),
-      jazz:Number(document.querySelector('[name="jazz"]:checked').value), guFeng:$("gu-feng").checked});
+      jazz:Number(document.querySelector('[name="jazz"]:checked').value), guFeng:$("gu-feng").checked,
+      smeech:$("smeech").checked});
     if (revision === state.revision) {
       state.result = result;
       state.deckIndex = 0;
@@ -463,7 +464,7 @@ function initControls() {
   for (let n=3;n<=11;n++) $("level").append(option(n,n+"명"));
   $("level").value = 10;
   $("level").onchange = () => {invalidate();renderBoard();};
-  for (const u of state.units.filter(u=>u.unlock && u.id !== sona)) {
+  for (const u of state.units.filter(u=>u.unlock && u.id !== sona && u.id !== "DA_Smeech19" && !u.traits.includes("Gu Feng"))) {
     const label = element("label"), check = element("input");
     check.type = "checkbox";
     check.value = u.id;
