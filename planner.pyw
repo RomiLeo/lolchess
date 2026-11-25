@@ -129,60 +129,74 @@ def complete(units, selected, level, unlocked, inventory=None):
 
 
 def complete_with_band(units, selected, level, unlocked, inventory=None):
-    candidates = [i for i, u in enumerate(units) if u["id"] in selected and u["id"] != SONA]
-    if len(candidates) < 2:
-        raise ValueError("3콜라보 추천을 받으려면 후보를 두 명 이상 입력해 줘.")
-    if level < 3:
-        raise ValueError("소나와 콜라보 두 명을 배치하려면 덱 인원이 3명 이상이어야 해.")
+    return ranked_decks(units, selected, level, unlocked, inventory)[0]
+
+
+def ranked_decks(units, selected, level, unlocked, inventory=None, collab=3, jazz=None, gu_feng=False, priority="synergy"):
+    if priority not in ("five", "synergy"):
+        raise ValueError("추천 모드를 확인해 줘.")
+    if collab not in (3, 5) or jazz not in (None, 2, 3) or type(gu_feng) is not bool:
+        raise ValueError("추천 조건을 확인해 줘.")
+    allowed = [i for i, u in enumerate(units) if u["id"] != SONA and (gu_feng or "Gu Feng" not in u["traits"])]
+    candidates = [i for i in allowed if units[i]["id"] in selected]
+    if len(candidates) < collab - 1 or level < collab:
+        raise ValueError("콜라보 후보 또는 목표 인원이 부족해.")
     sona = next(i for i, u in enumerate(units) if u["id"] == SONA)
-    recruits = [i for i, u in enumerate(units) if i != sona and u["id"] not in selected
-                and (not u["unlock"] or u["id"] in unlocked)]
+    recruits = [i for i in allowed if units[i]["id"] not in selected
+                and (not units[i]["unlock"] or units[i]["id"] in unlocked)]
     akalis = {i for i, u in enumerate(units) if "Akali" in u["id"]}
     jazz_units = {i for i, u in enumerate(units) if "Jazz" in u["traits"]}
 
-    pairs = [(sona, a, b) for a, b in combinations(candidates, 2)
-             if not (a in akalis and b in akalis)]
-    best_rank = None
-    winner = None
+    seeds = [(sona, *group) for group in combinations(candidates, collab - 1)
+             if len(akalis.intersection(group)) <= 1]
+    finalists = {}
     for band in BANDS:
         roster = list(units)
         roster[sona] = with_band(units[sona], band)
 
         def rank(state):
             team = [roster[i] for i in state]
-            score, active = assess(team, selected, inventory)
-            jazz_traits = len(NONUNIQUE.intersection(active)) if "Jazz" in active else 0
-            return jazz_traits, sum(u["cost"] == 5 for u in team), score
+            score, active, holders = evaluate(team, selected, inventory or {})
+            active_count = len(NONUNIQUE.intersection(active))
+            five_cost = sum(u["cost"] == 5 for u in team)
+            count = sum("Jazz" in u["traits"] for u in team) + sum("Jazz" in h for h in holders)
+            distance = -abs(jazz - count) if jazz else 0
+            if priority == "five":
+                return distance, min(active_count, 8), five_cost, active_count, score
+            return distance, 0, active_count if "Jazz" in active else 0, five_cost, score
 
-        states = {pair: rank(pair) for pair in pairs}
-        for _ in range(level - 3):
+        states = {seed: rank(seed) for seed in seeds}
+        for _ in range(level - collab):
             choices = {}
             for state in states:
                 for i in recruits:
                     if i in state or (i in akalis and not akalis.isdisjoint(state)):
                         continue
-                    key = (*state[:3], *sorted((*state[3:], i)))
+                    key = (*state[:collab], *sorted((*state[collab:], i)))
                     if key not in choices:
                         choices[key] = rank(key)
             ordered = sorted(choices, key=choices.get, reverse=True)
             states = {key: choices[key] for key in ordered[:24]}
             # Preserve a path to Jazz when high-cost units crowd out its first member.
-            if ordered and not choices[ordered[0]][0]:
+            if ordered and (priority == "five" or not choices[ordered[0]][2]):
                 starters = (key for key in ordered if not jazz_units.isdisjoint(key))
                 for key in islice(starters, 24):
                     states[key] = choices[key]
-        if states:
-            state = max(states, key=states.get)
-            if best_rank is None or states[state] > best_rank:
-                best_rank = states[state]
-                winner = [units[i] for i in state], band
-    if winner is None:
+        for state in sorted(states, key=states.get, reverse=True)[:3]:
+            if states[state][0] != 0 or (priority == "five" and states[state][1] < 8):
+                continue
+            if state not in finalists or states[state] > finalists[state][0]:
+                finalists[state] = states[state], band
+    if not finalists:
+        if priority == "five":
+            raise ValueError("선택한 조건에서 활성 시너지 8개 이상인 덱을 찾지 못했어.")
         raise ValueError("이 조건으로 채울 수 있는 조합이 없어.")
-    return winner
+    ordered = sorted(finalists, key=lambda state: finalists[state][0], reverse=True)
+    return [([units[i] for i in state], finalists[state][1]) for state in ordered[:3]]
 
 
 def main():
-    serve(complete_with_band, evaluate)
+    serve(ranked_decks, evaluate)
 
 
 if __name__ == "__main__":

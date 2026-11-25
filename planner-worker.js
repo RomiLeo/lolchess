@@ -188,14 +188,14 @@ function evaluate(team, selected, inventory) {
     const max = levels.at(-1);
     if (max > 1) score += 20 * tier + 3 * Math.min(counts[t], max);
   }
-  return {rank: [jazz ? activeCount : 0, fiveCost, score + (jazz ? 20 * activeCount : 0)], holders};
+  return {activeCount, fiveCost, score: score + (jazz ? 20 * activeCount : 0), holders, jazzCount: counts.Jazz || 0};
 }
 
 function compare(a, b) {
-  return b.rank[0] - a.rank[0] || b.rank[1] - a.rank[1] || b.rank[2] - a.rank[2];
+  return b.rank[0] - a.rank[0] || b.rank[1] - a.rank[1] || b.rank[2] - a.rank[2] || b.rank[3] - a.rank[3];
 }
 
-function complete({selected, level, unlocked, inventory = {}}) {
+function complete({selected, level, unlocked, inventory = {}, collab = 3, jazz = null, guFeng = false, priority = "synergy"}) {
   const picks = new Set(selected);
   checkPool(selected.map(id => byId.get(id)));
   if (!Number.isInteger(level) || level < 3 || level > 11 || !Array.isArray(unlocked) ||
@@ -203,46 +203,65 @@ function complete({selected, level, unlocked, inventory = {}}) {
     throw new Error("덱 인원과 상징 수량을 확인해 줘.");
   }
   const sona = byId.get("DA_Sona19");
-  const candidates = units.filter(u => u !== sona && picks.has(u.id));
-  if (candidates.length < 2) throw new Error("3콜라보 추천을 받으려면 후보를 두 명 이상 입력해 줘.");
-  const recruits = units.filter(u => u !== sona && !picks.has(u.id) && (!u.unlock || unlocked.includes(u.id)));
+  if (!["synergy", "five"].includes(priority)) throw new Error("추천 모드를 확인해 줘.");
+  if (![3, 5].includes(collab) || ![null, 2, 3].includes(jazz) || typeof guFeng !== "boolean") throw new Error("추천 조건을 확인해 줘.");
+  const allowed = units.filter(u => u !== sona && (guFeng || !u.traits.includes("Gu Feng")));
+  const candidates = allowed.filter(u => picks.has(u.id));
+  if (candidates.length < collab - 1 || level < collab) throw new Error("콜라보 후보 또는 목표 인원이 부족해.");
+  const recruits = allowed.filter(u => !picks.has(u.id) && (!u.unlock || unlocked.includes(u.id)));
   const items = Object.keys(inventory).length ? inventory : null;
-  let winner;
+  const finalists = new Map();
   for (const band of bands) {
     const leader = {...sona, traits: [...new Set([...sona.traits, band])]};
-    const rankTeam = team => ({team, rank: evaluate(team, picks, items).rank});
+    const rankTeam = team => {
+      const {activeCount, fiveCost, score, jazzCount} = evaluate(team, picks, items);
+      const rank = priority === "five" ? [Math.min(activeCount, 8), fiveCost, activeCount, score]
+        : [0, jazzCount >= 2 ? activeCount : 0, fiveCost, score];
+      return {team, rank, jazzCount, activeCount};
+    };
     let states = [];
-    for (const [i, a] of candidates.entries()) {
-      for (const b of candidates.slice(i + 1)) {
-        if (!(a.akali && b.akali)) states.push(rankTeam([leader, a, b]));
+    function seed(team, start) {
+      if (team.length === collab) { states.push(rankTeam(team)); return; }
+      for (let i = start; i < candidates.length; i++) {
+        const u = candidates[i];
+        if (!u.akali || !team.some(member => member.akali)) seed([...team, u], i + 1);
       }
     }
-    for (let size = 3; size < level; size++) {
+    seed([leader], 0);
+    for (let size = collab; size < level; size++) {
       const choices = new Map();
       for (const {team} of states) {
         const hasAkali = team.some(u => u.akali);
         for (const u of recruits) {
           if (team.includes(u) || (hasAkali && u.akali)) continue;
-          const next = [...team.slice(0, 3), ...[...team.slice(3), u].sort((a, b) => a.i - b.i)];
+          const next = [...team.slice(0, collab), ...[...team.slice(collab), u].sort((a, b) => a.i - b.i)];
           const key = next.map(member => member.i).join(",");
           if (!choices.has(key)) choices.set(key, rankTeam(next));
         }
       }
-      const ordered = [...choices.values()].sort(compare);
+      const ordered = [...choices.values()].sort((a,b) =>
+        (jazz && Math.abs(a.jazzCount-jazz) - Math.abs(b.jazzCount-jazz)) || compare(a,b));
       states = ordered.slice(0, 24);
-      if (ordered.length && !ordered[0].rank[0]) {
+      if (ordered.length && ordered[0].jazzCount < 2) {
         const starters = ordered.filter(s => s.team.some(u => u.traits.includes("Jazz"))).slice(0, 24);
         states = [...new Set([...states, ...starters])];
       }
     }
-    const best = states.sort(compare)[0];
-    if (best && (!winner || compare(best, winner) < 0)) winner = {...best, band};
+    const eligible = states.filter(s => (jazz === null || s.jazzCount === jazz) && (priority !== "five" || s.activeCount >= 8));
+    for (const state of eligible.sort(compare).slice(0, 3)) {
+      const key = state.team.map(u => u.id).join(",");
+      const previous = finalists.get(key);
+      if (!previous || compare(state, previous) < 0) finalists.set(key, {...state, band});
+    }
   }
-  if (!winner) throw new Error("이 조건으로 채울 수 있는 조합이 없어.");
-  const team = winner.team.map(u => u.id);
-  const {holders} = evaluate(winner.team, picks, items);
-  const equipment = Object.fromEntries(team.map((id, i) => [id, holders ? [...holders[i]].sort() : []]));
-  return {team, band: winner.band, equipment};
+  if (!finalists.size) throw new Error(priority === "five" ? "선택한 조건에서 활성 시너지 8개 이상인 덱을 찾지 못했어." : "이 조건으로 채울 수 있는 조합이 없어.");
+  const decks = [...finalists.values()].sort(compare).slice(0, 3).map(winner => {
+    const team = winner.team.map(u => u.id);
+    const {holders} = evaluate(winner.team, picks, items);
+    const equipment = Object.fromEntries(team.map((id, i) => [id, holders ? [...holders[i]].sort() : []]));
+    return {team, band: winner.band, equipment};
+  });
+  return {...decks[0], decks};
 }
 
 self.onmessage = async ({data: {id, path, body}}) => {

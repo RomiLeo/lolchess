@@ -234,7 +234,7 @@ function traitRows(team, equipment, collab, band) {
   }).sort((a,b) => Number(!!b.active)-Number(!!a.active) || name(a.t).localeCompare(name(b.t),"ko"));
 }
 function renderSynergies(team, equipment) {
-  const band = state.mode === "manual" ? state.band : state.result?.band;
+  const band = state.mode === "manual" ? state.band : currentDeck()?.band;
   const rows = traitRows(team, equipment, state.pool, band);
   $("active-count").textContent = "고유 제외 활성 " + rows.filter(r => r.active && state.traits.get(r.t).type !== "unique").length + "개";
   $("synergies").replaceChildren(...(rows.length ? rows.map(({t,count,active,tiers}) => {
@@ -244,12 +244,20 @@ function renderSynergies(team, equipment) {
     return el;
   }) : [element("p","기물을 배치하면 특성별 활성 단계가 표시돼.","quiet")]));
 }
+function currentDeck() {
+  return state.result?.decks?.[state.deckIndex] || state.result;
+}
 function renderBoard() {
   const manual = state.mode === "manual";
-  const team = manual ? state.board : state.result?.team || [];
-  const equipment = manual ? state.equipment : state.result?.equipment || {};
+  const deck = currentDeck();
+  const team = manual ? state.board : deck?.team || [];
+  const equipment = manual ? state.equipment : deck?.equipment || {};
   $("auto").hidden = manual;
-  $("build").disabled = state.pool.length < 2 || state.building || state.poolBusy;
+  const collab = Number(document.querySelector('[name="collab"]:checked').value);
+  const available = state.pool.filter(id => $("gu-feng").checked || !state.byId.get(id).traits.includes("Gu Feng")).length;
+  const needs = available < collab - 1 || Number($("level").value) < collab;
+  $("pool-needed").textContent = needs ? collab+"콜라보에는 사용 가능한 후보 "+(collab-1)+"명과 목표 인원 "+collab+"명 이상이 필요해." : "";
+  $("build").disabled = needs || state.building || state.poolBusy;
   $("build").textContent = state.building ? "조합 계산 중…" : "덱 자동 완성";
   for (const b of $("board-tabs").children) b.setAttribute("aria-pressed",b.dataset.mode === state.mode);
   $("team-title").textContent = manual ? "배치 라인업" : "추천 라인업";
@@ -260,18 +268,27 @@ function renderBoard() {
     if (manual) main.setAttribute("aria-pressed",state.focused === id);
     const labels = element("span",u.nameKo+(state.pool.includes(id) || id === sona ? " ★":""));
     labels.append(element("small", [u.cost+"코",u.roleKo,...u.traitsKo].join(" · ")));
-    if (!manual && id === sona && state.result?.band) labels.append(element("strong","추천 밴드 · "+name(state.result.band)));
+    if (!manual && id === sona && deck?.band) labels.append(element("strong","추천 밴드 · "+name(deck.band)));
     if (equipment[id]?.length) labels.append(element("small","상징 · "+equipment[id].map(name).join(", ")));
     if (!manual && u.unlock) labels.append(element("small","해금 · "+u.unlock));
     main.append(img(id),labels);row.append(main);
     if (manual) { const b = btn("×",() => removeUnit(id),"remove"); b.setAttribute("aria-label",u.nameKo+" 배치 해제");row.append(b); }
     return row;
   });
-  $("team").replaceChildren(...(rows.length ? rows : [element("p",manual?"배치용 기물에서 라인업에 넣을 기물을 골라 봐.":"콜라보 후보를 2명 이상 고르고 덱 자동 완성을 눌러 줘.","quiet")]));
+  $("team").replaceChildren(...(rows.length ? rows : [element("p",manual?"배치용 기물에서 라인업에 넣을 기물을 골라 봐.":"추천 조건을 선택하고 덱 자동 완성을 눌러 줘.","quiet")]));
   if (!manual && team.length) {
     const copy = teamCodeControl(team);
     copy.classList.add("team-code");
     $("team").prepend(copy);
+    if (state.result.decks?.length > 1) {
+      const ranks = element("div", undefined, "tabs");
+      state.result.decks.forEach((_, index) => {
+        const button = btn((index + 1) + "순위", () => { state.deckIndex = index; renderBoard(); });
+        button.setAttribute("aria-pressed", index === state.deckIndex);
+        ranks.append(button);
+      });
+      $("team").prepend(ranks);
+    }
   }
   const unused = {...state.inventory};
   for (const items of Object.values(equipment)) for (const item of items) unused[item]--;
@@ -409,8 +426,14 @@ async function build() {
   const revision = state.revision;
   state.building = true;renderBoard();msg("");
   try {
-    const result = await api("complete",{selected:state.pool,level:Number($("level").value),unlocked:[...state.unlocked],inventory:state.inventory});
-    if (revision === state.revision) state.result = result;
+    const result = await api("complete",{selected:state.pool,level:Number($("level").value),unlocked:[...state.unlocked],inventory:state.inventory,
+      priority:document.querySelector('[name="priority"]:checked').value,
+      collab:Number(document.querySelector('[name="collab"]:checked').value),
+      jazz:Number(document.querySelector('[name="jazz"]:checked').value), guFeng:$("gu-feng").checked});
+    if (revision === state.revision) {
+      state.result = result;
+      state.deckIndex = 0;
+    }
   } catch (error) { if (revision === state.revision) msg(error.message); }
   finally {state.building=false;renderBoard();}
 }
@@ -429,6 +452,7 @@ function initControls() {
     return;
   }
   $("build").onclick = build;
+  $("deck-conditions").onchange = () => {invalidate();renderBoard();};
   $("only").onchange = renderRoster;
   for (const b of $("library-tabs").children) b.onclick = () => switchLib(b.dataset.lib);
   for (const b of $("board-tabs").children) b.onclick = () => {

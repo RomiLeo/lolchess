@@ -18,8 +18,9 @@ function planner() {
     importScripts: file => vm.runInContext(read(file), worker)
   });
   vm.runInContext(read("planner-worker.js"), worker);
-  return async (emblem, selected) => {
-    await worker.self.onmessage({data: {id: 1, path: emblem ? "ladder" : "pool", body: {emblem, selected}}});
+  return async (emblem, selected, conditions) => {
+    const path = conditions ? "complete" : emblem ? "ladder" : "pool";
+    await worker.self.onmessage({data: {id: 1, path, body: {emblem, selected, ...conditions}}});
     assert.ifError(reply.error);
     return reply.result;
   };
@@ -34,6 +35,46 @@ test("selecting one two-cost keeps compatible two-cost picks until the second sl
   const afterSecond = await request(null, [first, second]);
   assert(!afterSecond.candidates.some(id => units.get(id).cost === 2));
   assert(afterSecond.candidates.some(id => units.get(id).cost === 1));
+});
+
+test("all recommended decks satisfy the selected collab and Jazz counts", async () => {
+  const request = planner();
+  const selected = ["DA_Sett19","DA_Taric19","DA_Karthus19","DA_Malzahar19"];
+  for (const collab of [3, 5]) {
+    for (const jazz of [2, 3]) {
+      const {decks} = await request(null, selected, {collab, jazz, guFeng:false,
+        level:collab + 1, unlocked:[...units.keys()], inventory:{Jazz:jazz - 1}});
+      assert(decks.length > 0);
+      for (const {team, equipment} of decks) {
+        assert.equal(team.filter(id => selected.includes(id) || id === "DA_Sona19").length, collab);
+        assert.equal(team.filter(id => units.get(id).traits.includes("Jazz")).length +
+          Object.values(equipment).flat().filter(t => t === "Jazz").length, jazz);
+        assert(team.every(id => !units.get(id).traits.includes("Gu Feng")));
+      }
+    }
+  }
+});
+
+test("five-cost mode enforces eight active synergies and orders ties by synergy count", async () => {
+  const request = planner();
+  const selected = ["DA_Sett19", "DA_Taric19", "DA_Karthus19", "DA_Malzahar19"];
+  const options = {priority:"five", level:8, jazz:2, unlocked:[...units.keys()], inventory:{Jazz:1}};
+  const {decks} = await request(null, selected, options);
+  const ranks = Array.from(decks, ({team, equipment, band}) => {
+    const counts = new Map();
+    for (const id of team) {
+      const names = new Set([...units.get(id).traits, ...equipment[id]]);
+      if (selected.includes(id)) names.add("Collab");
+      if (id === "DA_Sona19") names.add(band);
+      for (const t of names) counts.set(t, (counts.get(t) || 0) + (t === "K/DA" ? 2 : 1));
+    }
+    const active = traits.traits.filter(t => t.type !== "unique" && counts.get(t.name) >= traits.breakpoints[t.name]?.[0]).length;
+    assert(active >= 8);
+    return [team.filter(id => units.get(id).cost === 5).length, active];
+  });
+  assert.equal(ranks.length, 3);
+  assert.deepEqual(ranks, [...ranks].sort((a,b) => b[0]-a[0] || b[1]-a[1]));
+  await assert.rejects(request(null, selected, {...options, level:3}), /8개/);
 });
 
 function checkRoute(route, emblem, pool, extra) {

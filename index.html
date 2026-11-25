@@ -26,7 +26,15 @@
     <section class="panel board">
       <div class="heading"><div><span class="overline">LINEUP MIXER</span><h2>덱 작업대</h2></div><span class="wave" aria-hidden="true">▂▅▇▃▆▂▅</span></div>
       <div class="tabs" id="board-tabs"><button data-mode="manual" aria-pressed="true">수동 배치</button><button data-mode="auto" aria-pressed="false">자동 조합</button></div>
-      <div id="auto" hidden><p class="note">소나 해금 후의 덱을 추천해. 콜라보 풀에서 2명을 고르고 소나를 더해 3콜라보를 맞춰.</p><label class="control">목표 인원 <select id="level"></select></label>
+      <div id="auto" hidden><p class="note">소나는 콜라보 인원에 포함돼. 재즈는 장착한 상징까지 합산해.</p><label class="control">목표 인원 <select id="level"></select></label>
+        <div id="deck-conditions">
+          <fieldset><legend>추천 모드</legend><label><input type="radio" name="priority" value="five" checked> 5코스트 우선</label> <label><input type="radio" name="priority" value="synergy"> 시너지 우선</label>
+            <p class="note">5코스트 우선은 고유 특성을 제외한 시너지 8개 이상이 필요해. 5코 수가 같으면 활성 시너지가 많은 덱이 앞서.</p></fieldset>
+          <fieldset><legend>콜라보</legend><label><input type="radio" name="collab" value="3" checked> 3콜라보</label> <label><input type="radio" name="collab" value="5"> 5콜라보</label></fieldset>
+          <fieldset><legend>재즈</legend><label><input type="radio" name="jazz" value="2" checked> 2재즈</label> <label><input type="radio" name="jazz" value="3"> 3재즈</label></fieldset>
+          <label><input type="checkbox" id="gu-feng"> 고풍 유닛 사용</label>
+          <p class="note" id="pool-needed"></p>
+        </div>
         <div class="unlock-controls">
           <details><summary>해금 기물 <small id="unlock-count"></small></summary><div id="unlocks"></div></details>
           <div>

@@ -109,10 +109,14 @@ def serve(complete, evaluate):
                 if level not in range(3, 12) or any(t not in known or type(n) != int or n < 0
                                                       for t, n in inventory.items()):
                     raise ValueError("덱 인원과 상징 수량을 확인해 줘.")
-                team, band = complete(UNITS, set(selected), level, set(data["unlocked"]), inventory)
-                holders = evaluate(team, set(selected), inventory, band)[2]
-                self.send_json({"team": [u["id"] for u in team], "band": band,
-                                "equipment": {u["id"]: sorted(h) for u, h in zip(team, holders)}})
+                decks = []
+                for team, band in complete(UNITS, set(selected), level, set(data["unlocked"]), inventory,
+                                           data.get("collab", 3), data.get("jazz"), data.get("guFeng", False),
+                                           data.get("priority", "synergy")):
+                    holders = evaluate(team, set(selected), inventory, band)[2]
+                    decks.append({"team": [u["id"] for u in team], "band": band,
+                                  "equipment": {u["id"]: sorted(h) for u, h in zip(team, holders)}})
+                self.send_json({**decks[0], "decks": decks})
             except (KeyError, TypeError, ValueError, AttributeError) as exc:
                 self.send_json({"error": str(exc)}, 400)
 
