@@ -2,7 +2,7 @@
 const $ = id => document.getElementById(id);
 const sona = "DA_Sona19";
 const bands = ["Heartsteel", "Ionic Spark", "K/DA", "Pentakill", "True Damage"];
-const colors = ["", "#babfc6", "#90d68f", "#86c6fa", "#d5a0ef", "#f2c96c", "#ff956a"];
+const colors = {1: "#aeb4bd", 2: "#53c776", 3: "#429cf5", 4: "#bb70ec", 5: "#efbd40", 7: "#fb794b"};
 const state = {
   units: [], byId: new Map(), traits: new Map(), tiers: {}, items: [],
   pool: [], candidates: [], board: [], equipment: {}, focused: null, band: "",
@@ -25,6 +25,11 @@ function img(id) {
   const el = element("img");
   el.alt = "";
   el.loading = "lazy";
+  const unit = state.byId.get(id);
+  if (unit) {
+    el.className = "champion-portrait";
+    el.style.setProperty("--cost", colors[unit.cost] || "#c7d4d9");
+  }
   el.src = "./assets/" + encodeURIComponent(id) + ".png";
   return el;
 }
