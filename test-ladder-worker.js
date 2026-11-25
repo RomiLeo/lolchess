@@ -19,11 +19,22 @@ function planner() {
   });
   vm.runInContext(read("planner-worker.js"), worker);
   return async (emblem, selected) => {
-    await worker.self.onmessage({data: {id: 1, path: "ladder", body: {emblem, selected}}});
+    await worker.self.onmessage({data: {id: 1, path: emblem ? "ladder" : "pool", body: {emblem, selected}}});
     assert.ifError(reply.error);
     return reply.result;
   };
 }
+
+test("selecting one two-cost keeps compatible two-cost picks until the second slot is filled", async () => {
+  const request = planner();
+  const [first, second] = ["Camille", "Ezreal"].map(name =>
+    [...units.values()].find(unit => unit.name === name && unit.cost === 2).id);
+  const afterFirst = await request(null, [first]);
+  assert(afterFirst.candidates.includes(second));
+  const afterSecond = await request(null, [first, second]);
+  assert(!afterSecond.candidates.some(id => units.get(id).cost === 2));
+  assert(afterSecond.candidates.some(id => units.get(id).cost === 1));
+});
 
 function checkRoute(route, emblem, pool, extra) {
   assert.equal(new Set(route.team).size, 9);

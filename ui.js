@@ -73,7 +73,7 @@ let requestId = 0;
 const pending = new Map();
 function workerRequest(path, body) {
   if (!plannerWorker) {
-    plannerWorker = new Worker("./planner-worker.js");
+    plannerWorker = new Worker(document.documentElement.dataset.worker || "./planner-worker.js");
     plannerWorker.onmessage = ({data: {id, result, error}}) => {
       const request = pending.get(id);
       if (!request) return;
