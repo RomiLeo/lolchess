@@ -1,0 +1,316 @@
+﻿"use strict";
+const $ = id => document.getElementById(id);
+const sona = "DA_Sona19";
+const bands = ["Heartsteel", "Ionic Spark", "K/DA", "Pentakill", "True Damage"];
+const colors = ["", "#babfc6", "#90d68f", "#86c6fa", "#d5a0ef", "#f2c96c", "#ff956a"];
+const state = {
+  units: [], byId: new Map(), traits: new Map(), tiers: {}, items: [],
+  pool: [], candidates: [], board: [], equipment: {}, focused: null, band: "",
+  inventory: {}, unlocked: new Set(), result: null, mode: "manual", library: "pool",
+  cost: 0, poolBusy: false, building: false, revision: 0
+};
+function element(tag, text, cls) {
+  const el = document.createElement(tag);
+  if (text !== undefined) el.textContent = text;
+  if (cls) el.className = cls;
+  return el;
+}
+function btn(text, action, cls) {
+  const el = element("button", text, cls);
+  el.type = "button";
+  el.onclick = action;
+  return el;
+}
+function img(id) {
+  const el = element("img");
+  el.alt = "";
+  el.loading = "lazy";
+  el.src = "./assets/" + encodeURIComponent(id) + ".png";
+  return el;
+}
+function option(value, label) {
+  return new Option(label, value);
+}
+function msg(text) { $("feedback").textContent = text; }
+function name(trait) { return state.traits.get(trait)?.nameKo || trait; }
+function invalidate() { state.revision++; state.result = null; }
+let plannerWorker;
+let requestId = 0;
+const pending = new Map();
+function workerRequest(path, body) {
+  if (!plannerWorker) {
+    plannerWorker = new Worker("./planner-worker.js");
+    plannerWorker.onmessage = ({data: {id, result, error}}) => {
+      const request = pending.get(id);
+      if (!request) return;
+      pending.delete(id);
+      if (error) request.reject(new Error(error));
+      else request.resolve(result);
+    };
+    plannerWorker.onerror = () => {
+      for (const request of pending.values()) request.reject(new Error("덱 계산기를 불러올 수 없어."));
+      pending.clear();
+      plannerWorker.terminate();
+      plannerWorker = null;
+    };
+  }
+  return new Promise((resolve, reject) => {
+    const id = ++requestId;
+    plannerWorker.postMessage({id, path, body});
+    pending.set(id, {resolve, reject});
+  });
+}
+async function api(path, body) {
+  if (document.documentElement.dataset.backend === "static") return workerRequest(path, body);
+  const response = await fetch("./api/" + path, body ? {method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify(body)} : {});
+  const data = await response.json();
+  if (!response.ok || data.error) throw new Error(data.error || "요청을 처리할 수 없어.");
+  return data;
+}
+async function setPool(selected, random = false) {
+  if (state.poolBusy) return;
+  state.poolBusy = true;
+  renderPool();
+  renderRoster();
+  try {
+    const data = await api("pool", {selected, random});
+    state.pool = data.selected;
+    state.candidates = data.candidates;
+    invalidate();
+    msg("");
+  } catch (error) { msg(error.message); }
+  finally {
+    state.poolBusy = false;
+    render();
+  }
+}
+function togglePick(id) {
+  setPool(state.pool.includes(id) ? state.pool.filter(p => p !== id) : [...state.pool,id]);
+}
+function renderPool() {
+  $("pool-count").textContent = state.pool.length + "명";
+  $("random").disabled = state.poolBusy || !state.units.length;
+  const picks = state.pool.map(id => {
+    const unit = state.byId.get(id);
+    const item = btn("", () => togglePick(id), "pick");
+    item.disabled = state.poolBusy;
+    item.title = unit.nameKo + " 선택 해제";
+    item.append(img(id), element("span",unit.nameKo),element("b","×"));
+    return item;
+  });
+  $("picks").replaceChildren(...(picks.length ? picks : [element("p","아래 후보에서 기물을 선택하거나 랜덤으로 추첨해.","empty-picks")]));
+}
+function switchLib(value) {
+  state.library = value;
+  if (value === "all") state.mode = "manual";
+  render();
+}
+function renderRoster() {
+  const poolMode = state.library === "pool";
+  const term = $("search").value.trim().toLowerCase();
+  const candidates = new Set(state.candidates);
+  const visible = state.units.filter(u =>
+    (poolMode ? candidates.has(u.id) : !$("only").checked || state.pool.includes(u.id)) &&
+    (!state.cost || u.cost === state.cost) &&
+    (!term || [u.nameKo,u.name,...u.traitsKo,...u.traits].join(" ").toLowerCase().includes(term))
+  );
+  $("drawn-filter").hidden = poolMode;
+  $("library-hint").textContent = (poolMode ? "선택 가능한 콜라보 기물" : "선택해서 수동 배치") + " · " + visible.length + "명";
+  for (const b of $("library-tabs").children) b.setAttribute("aria-pressed", b.dataset.lib === state.library);
+  for (const b of $("costs").children) b.setAttribute("aria-pressed", Number(b.value) === state.cost);
+  const cards = visible.map(u => {
+    const el = btn("", () => poolMode ? togglePick(u.id) : addUnit(u.id), "unit");
+    el.disabled = poolMode && state.poolBusy;
+    el.setAttribute("aria-pressed", (poolMode ? state.pool : state.board).includes(u.id));
+    el.style.setProperty("--cost", colors[u.cost] || "#c7d4d9");
+    el.title = [u.nameKo,u.cost+"코",u.roleKo,...u.traitsKo,u.unlock].filter(Boolean).join(" · ");
+    const frame = element("div",undefined,"portrait");
+    frame.append(img(u.id),element("span",u.cost+"코","coin"));
+    el.append(frame,element("strong",u.nameKo),element("span",u.traitsKo.join(" · "),"traits"));
+    return el;
+  });
+  $("roster").replaceChildren(...(cards.length ? cards : [element("p","이 조건에 맞는 기물이 없어.","quiet")]));
+}
+function addUnit(id) {
+  if (state.board.includes(id)) {
+    state.focused = id;
+  } else {
+    if (id.includes("Akali") && state.board.some(u => u.includes("Akali"))) return msg("아칼리는 한 형태만 배치할 수 있어.");
+    state.board.push(id);
+    state.equipment[id] = [];
+    state.focused = id;
+  }
+  msg(""); render();
+}
+function removeUnit(id) {
+  state.board = state.board.filter(u => u !== id);
+  delete state.equipment[id];
+  if (state.focused === id) state.focused = state.board[0] || null;
+  if (id === sona) state.band = "";
+  render();
+}
+function renderEditor() {
+  const id = state.focused;
+  const root = $("editor");
+  root.replaceChildren();
+  if (state.mode !== "manual" || !id) return;
+  const unit = state.byId.get(id), equipped = state.equipment[id];
+  const box = element("div",undefined,"editor");
+  box.append(element("strong", unit.nameKo + " · 상징 장착"));
+  const choices = state.items.filter(item => !unit.traits.includes(item.trait) && !equipped.includes(item.trait) && !(id === sona && item.trait === state.band));
+  const picker = element("select");
+  picker.setAttribute("aria-label","장착할 상징");
+  picker.append(...choices.map(item => option(item.trait,item.nameKo)));
+  const add = btn("장착", () => { equipped.push(picker.value); renderBoard(); });
+  add.disabled = equipped.length >= 3 || !choices.length;
+  const row = element("div",undefined,"control"); row.append(picker,add);
+  box.append(row);
+  const group = element("div",undefined,"equipment");
+  for (const trait of equipped) {
+    const b = btn(name(trait)+" ×", () => { state.equipment[id] = equipped.filter(t => t !== trait); renderBoard(); });
+    b.title = name(trait)+" 상징 해제";
+    group.append(b);
+  }
+  box.append(group);
+  if (id === sona) {
+    const label = element("label","소나 밴드","control"), select = element("select");
+    select.append(option("","미선택"),...bands.filter(t => !equipped.includes(t)).map(t => option(t,name(t))));
+    select.value = state.band;
+    select.onchange = () => {state.band = select.value;renderBoard();};
+    label.append(select);box.append(label);
+  }
+  if (unit.unlock) box.append(element("p","해금 조건 · "+unit.unlock,"note"));
+  root.append(box);
+}
+function renderSynergies(team, equipment) {
+  const counts = new Map();
+  for (const id of team) {
+    const all = new Set([...state.byId.get(id).traits,...(equipment[id] || [])]);
+    if (state.pool.includes(id)) all.add("Collab");
+    const band = state.mode === "manual" ? state.band : state.result?.band;
+    if (id === sona && band) all.add(band);
+    for (const t of all) counts.set(t,(counts.get(t)||0)+(t==="K/DA"?2:1));
+  }
+  const rows = [...counts].filter(([t]) => state.traits.has(t)).map(([t,count]) => {
+    const tiers = state.tiers[t] || [];
+    const active = Math.max(0,...tiers.filter(n => n <= count));
+    return {t,count,active,tiers};
+  }).sort((a,b) => Number(!!b.active)-Number(!!a.active) || name(a.t).localeCompare(name(b.t),"ko"));
+  $("active-count").textContent = "고유 제외 활성 " + rows.filter(r => r.active && state.traits.get(r.t).type !== "unique").length + "개";
+  $("synergies").replaceChildren(...(rows.length ? rows.map(({t,count,active,tiers}) => {
+    const el = element("div",undefined,"synergy"+(active?" active":""));
+    const unique = state.traits.get(t).type === "unique";
+    el.append(img(state.traits.get(t).id),element("span",name(t)+" · "+count),element("small",(active ? "활성 "+active : tiers[0]+" 필요")+(unique ? " · 고유" : "")));
+    return el;
+  }) : [element("p","기물을 배치하면 특성별 활성 단계가 표시돼.","quiet")]));
+}
+function renderBoard() {
+  const manual = state.mode === "manual";
+  const team = manual ? state.board : state.result?.team || [];
+  const equipment = manual ? state.equipment : state.result?.equipment || {};
+  $("auto").hidden = manual;
+  $("build").disabled = state.pool.length < 2 || state.building || state.poolBusy;
+  $("build").textContent = state.building ? "조합 계산 중…" : "덱 자동 완성";
+  for (const b of $("board-tabs").children) b.setAttribute("aria-pressed",b.dataset.mode === state.mode);
+  $("team-title").textContent = manual ? "배치 라인업" : "추천 라인업";
+  $("team-count").textContent = team.length + "명";
+  const rows = team.map(id => {
+    const u = state.byId.get(id), row = element("div",undefined,"team-row");
+    const main = manual ? btn("",() => {state.focused=id;renderBoard();}) : element("div",undefined,"result");
+    if (manual) main.setAttribute("aria-pressed",state.focused === id);
+    const labels = element("span",u.nameKo+(state.pool.includes(id) || id === sona ? " ★":""));
+    labels.append(element("small", [u.cost+"코",u.roleKo,...u.traitsKo].join(" · ")));
+    if (!manual && id === sona && state.result?.band) labels.append(element("strong","추천 밴드 · "+name(state.result.band)));
+    if (equipment[id]?.length) labels.append(element("small","상징 · "+equipment[id].map(name).join(", ")));
+    if (!manual && u.unlock) labels.append(element("small","해금 · "+u.unlock));
+    main.append(img(id),labels);row.append(main);
+    if (manual) { const b = btn("×",() => removeUnit(id),"remove"); b.setAttribute("aria-label",u.nameKo+" 배치 해제");row.append(b); }
+    return row;
+  });
+  $("team").replaceChildren(...(rows.length ? rows : [element("p",manual?"배치용 기물에서 라인업에 넣을 기물을 골라 봐.":"콜라보 후보를 2명 이상 고르고 덱 자동 완성을 눌러 줘.","quiet")]));
+  const unused = {...state.inventory};
+  for (const items of Object.values(equipment)) for (const item of items) unused[item]--;
+  const remaining = Object.entries(unused).filter(([,n]) => n > 0).map(([t,n]) => name(t)+" ×"+n);
+  $("unused").replaceChildren();
+  if (!manual && state.result && remaining.length) $("unused").append(element("p","미장착 상징 · "+remaining.join(", "),"note"));
+  renderEditor();renderSynergies(team,equipment);
+}
+function render() { renderPool();renderRoster();renderBoard(); }
+async function build() {
+  const revision = state.revision;
+  state.building = true;renderBoard();msg("");
+  try {
+    const result = await api("complete",{selected:state.pool,level:Number($("level").value),unlocked:[...state.unlocked],inventory:state.inventory});
+    if (revision === state.revision) state.result = result;
+  } catch (error) { if (revision === state.revision) msg(error.message); }
+  finally {state.building=false;renderBoard();}
+}
+function initControls() {
+  $("random").onclick = () => setPool([],true);
+  $("build").onclick = build;
+  $("only").onchange = renderRoster;
+  $("search").oninput = renderRoster;
+  for (const b of $("library-tabs").children) b.onclick = () => switchLib(b.dataset.lib);
+  for (const b of $("board-tabs").children) b.onclick = () => {
+    state.mode = b.dataset.mode;
+    state.library = state.mode === "auto" ? "pool" : "all";
+    render();
+  };
+  for (const cost of [0,...new Set(state.units.map(u => u.cost).sort((a,b)=>a-b))]) {
+    const b = btn(cost ? cost+"코" : "전체",() => {state.cost=cost;renderRoster();});
+    b.value = cost;
+    $("costs").append(b);
+  }
+  for (let n=3;n<=11;n++) $("level").append(option(n,n+"명"));
+  $("level").value = 10;
+  $("level").onchange = () => {invalidate();renderBoard();};
+  for (const u of state.units.filter(u=>u.unlock && u.id !== sona)) {
+    const label = element("label"), check = element("input");
+    check.type = "checkbox";
+    check.value = u.id;
+    check.onchange = () => {
+      if (check.checked) state.unlocked.add(u.id); else state.unlocked.delete(u.id);
+      $("unlock-count").textContent = state.unlocked.size+"명";
+      invalidate();renderBoard();
+    };
+    label.append(check," "+u.nameKo+" · "+u.cost+"코",element("small",u.unlock));
+    $("unlocks").append(label);
+  }
+  function setAllUnlocks(enabled) {
+    state.unlocked.clear();
+    for (const check of $("unlocks").querySelectorAll("input")) {
+      check.checked = enabled;
+      if (enabled) state.unlocked.add(check.value);
+    }
+    $("unlock-count").textContent = state.unlocked.size+"명";
+    invalidate();
+    renderBoard();
+  }
+  $("unlock-all").onclick = () => setAllUnlocks(true);
+  $("unlock-none").onclick = () => setAllUnlocks(false);
+  for (const item of state.items) {
+    const label = element("label",item.nameKo,"inventory-row"), input = element("input");
+    input.type = "number";input.min = 0;input.step = 1;input.value = 0;
+    input.oninput = () => {
+      const n = Math.max(0,Math.floor(Number(input.value)||0));
+      if (n) state.inventory[item.trait]=n; else delete state.inventory[item.trait];
+      if (input.value && input.value !== String(n)) input.value=n;
+      $("owned-count").textContent = Object.values(state.inventory).reduce((a,b)=>a+b,0)+"개";
+      invalidate();renderBoard();
+    };
+    label.append(input);$("inventory").append(label);
+  }
+}
+async function init() {
+  try {
+    const {units,traits,emblems} = await api("catalog");
+    state.units = units;
+    state.byId = new Map(units.map(u=>[u.id,u]));
+    state.traits = new Map(traits.traits.map(t=>[t.name,t]));
+    state.tiers = traits.breakpoints;
+    state.items = [...emblems.items].sort((a,b)=>a.nameKo.localeCompare(b.nameKo,"ko"));
+    initControls();
+    await setPool([]);
+  } catch (error) {msg("데이터를 불러올 수 없어. "+error.message);}
+}
+init();

@@ -1,0 +1,138 @@
+{
+  "source": "https://data.metatft.com/lookups/TFTSet19_pbe_ko_kr.json",
+  "release": "rls-19.1.0.6028987.Set19.Shipping.pbe",
+  "items": [
+    {
+      "id": "DA_Arcanist19_Emblem",
+      "trait": "Arcanist",
+      "name": "Arcanist Emblem",
+      "nameKo": "비전 마법사 상징"
+    },
+    {
+      "id": "DA_Bodyguard19_Emblem",
+      "trait": "Bodyguard",
+      "name": "Bodyguard Emblem",
+      "nameKo": "경호대 상징"
+    },
+    {
+      "id": "DA_Choreographer19_Emblem",
+      "trait": "Choreographer",
+      "name": "Choreographer Emblem",
+      "nameKo": "안무가 상징"
+    },
+    {
+      "id": "DA_DemonVision19_Emblem",
+      "trait": "Rock",
+      "name": "Rock Emblem",
+      "nameKo": "락 상징"
+    },
+    {
+      "id": "DA_Frontman19_Emblem",
+      "trait": "Frontman",
+      "name": "Frontman Emblem",
+      "nameKo": "프론트맨 상징"
+    },
+    {
+      "id": "DA_GlitterBomb19_Emblem",
+      "trait": "Hyperpop",
+      "name": "Hyperpop Emblem",
+      "nameKo": "하이퍼팝 상징"
+    },
+    {
+      "id": "DA_Heartsteel19_Emblem",
+      "trait": "Heartsteel",
+      "name": "Heartsteel Emblem",
+      "nameKo": "HEARTSTEEL 상징"
+    },
+    {
+      "id": "DA_Hitmaker19_Emblem",
+      "trait": "Hitmaker",
+      "name": "Hitmaker Emblem",
+      "nameKo": "스타 제조기 상징"
+    },
+    {
+      "id": "DA_IllBeats19_Emblem",
+      "trait": "Illbeats",
+      "name": "IllBeats Emblem",
+      "nameKo": "일류 비트 상징"
+    },
+    {
+      "id": "DA_IonicSpark19_Emblem",
+      "trait": "Ionic Spark",
+      "name": "Ionic Spark Emblem",
+      "nameKo": "Ionic Spark 상징"
+    },
+    {
+      "id": "DA_Jazz19_Emblem",
+      "trait": "Jazz",
+      "name": "Jazz Emblem",
+      "nameKo": "재즈 상징"
+    },
+    {
+      "id": "DA_Juggernaut19_Emblem",
+      "trait": "Juggernaut",
+      "name": "Juggernaut Emblem",
+      "nameKo": "전쟁기계 상징"
+    },
+    {
+      "id": "DA_KDA19_Emblem",
+      "trait": "K/DA",
+      "name": "K/DA Emblem",
+      "nameKo": "K/DA 상징"
+    },
+    {
+      "id": "DA_Manager19_Emblem",
+      "trait": "Manager",
+      "name": "Manager Emblem",
+      "nameKo": "매니저 상징"
+    },
+    {
+      "id": "DA_Mosher19_Emblem",
+      "trait": "Slayer",
+      "name": "Slayer Emblem",
+      "nameKo": "학살자 상징"
+    },
+    {
+      "id": "DA_Oceansong19_Emblem",
+      "trait": "Beach Pop",
+      "name": "Beach Pop Emblem",
+      "nameKo": "비치 팝 상징"
+    },
+    {
+      "id": "DA_Pentakill19_Emblem",
+      "trait": "Pentakill",
+      "name": "Pentakill Emblem",
+      "nameKo": "펜타킬 상징"
+    },
+    {
+      "id": "TFT_Emblem_CHANGEME",
+      "trait": "Prodigy",
+      "name": "Prodigy Emblem",
+      "nameKo": "신동 상징"
+    },
+    {
+      "id": "DA_Renegade19_Emblem",
+      "trait": "Renegade",
+      "name": "Renegade Emblem",
+      "nameKo": "무법자 상징"
+    },
+    {
+      "id": "DA_Swiftstriker19_Emblem",
+      "trait": "Swiftstriker",
+      "name": "Swiftstriker Emblem",
+      "nameKo": "신속타격대 상징"
+    },
+    {
+      "id": "DA_TrueDamage19_Emblem",
+      "trait": "True Damage",
+      "name": "True Damage Emblem",
+      "nameKo": "True Damage 상징"
+    },
+    {
+      "id": "DA_Virtuosos19_Emblem",
+      "trait": "Classical",
+      "name": "Classical Emblem",
+      "nameKo": "클래식 상징"
+    }
+  ]
+}

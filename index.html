@@ -1,0 +1,59 @@
+﻿<!doctype html>
+<html lang="ko" data-backend="server">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>콜라보 덱 스튜디오 · TFT</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./ui.js" defer></script>
+</head>
+<body>
+<header><div class="wrap nav"><div class="brand"><i class="brandmark" aria-hidden="true"><b></b><b></b><b></b><b></b></i>덱 스튜디오</div><span>TEAMFIGHT TACTICS <b>/</b> SET 19</span></div></header>
+<main class="wrap">
+  <section class="hero">
+    <div class="art" aria-hidden="true"><div class="record"></div><div class="arm"></div></div>
+    <div class="hero-copy"><div class="eyebrow"><i></i> SET 19 &nbsp;/&nbsp; COLLAB</div><h1>콜라보 덱 <em>스튜디오</em></h1><p>콜라보 기물을 고르고, 나만의 라인업을 완성해 봐.</p></div>
+  </section>
+  <section class="panel pool">
+    <div class="heading"><div><span class="overline">COLLAB POOL</span><h2>콜라보 풀 <small id="pool-count">0명</small></h2></div><button id="random" class="lime"><span aria-hidden="true">⤨</span> 랜덤 추첨</button></div>
+    <div id="picks"></div>
+    <details class="rules"><summary>추첨 조건</summary><p>1코스트 2명, 2·3코스트 각 1명, 4·5코스트 중 한 명 또는 각각 한 명을 뽑아. 해금 기물을 제외하고, 기본 특성이 2개인 기물끼리 특성이 겹치지 않는 조합이야.</p></details>
+  </section>
+  <div id="feedback" role="status" aria-live="polite"></div>
+  <div class="workspace">
+    <section class="panel board">
+      <div class="heading"><div><span class="overline">LINEUP MIXER</span><h2>덱 작업대</h2></div><span class="wave" aria-hidden="true">▂▅▇▃▆▂▅</span></div>
+      <div class="tabs" id="board-tabs"><button data-mode="manual" aria-pressed="true">수동 배치</button><button data-mode="auto" aria-pressed="false">자동 조합</button></div>
+      <div id="auto" hidden><p class="note">소나 해금 후의 덱을 추천해. 콜라보 풀에서 2명을 고르고 소나를 더해 3콜라보를 맞춰.</p><label class="control">목표 인원 <select id="level"></select></label>
+        <div class="unlock-controls">
+          <details><summary>해금 기물 <small id="unlock-count"></small></summary><div id="unlocks"></div></details>
+          <div>
+            <button type="button" id="unlock-all">모든 해금 기물 사용</button>
+            <button type="button" id="unlock-none">전체 해제</button>
+          </div>
+        </div>
+        <details><summary>보유 상징 <small id="owned-count"></small></summary><div id="inventory"></div></details>
+        <button id="build" class="lime">덱 자동 완성</button>
+      </div>
+      <div class="lineup-results">
+        <div>
+          <div class="section-title"><h3 id="team-title">배치 라인업</h3><small id="team-count">0명</small></div>
+          <div id="team"></div><div id="editor"></div><div id="unused"></div>
+        </div>
+        <div>
+          <div class="section-title"><h3>특성 시너지</h3><small id="active-count"></small></div><div id="synergies"></div>
+          <p class="footnote">K/DA 기물과 상징 장착자는 2성 기준으로 계산해.</p>
+        </div>
+      </div>
+    </section>
+    <section class="panel library">
+      <div class="heading"><div><span class="overline">UNIT LIBRARY</span><h2>기물 라이브러리</h2></div></div>
+      <div class="tabs" id="library-tabs"><button data-lib="pool" aria-pressed="true">콜라보 후보</button><button data-lib="all" aria-pressed="false">배치용 기물</button></div>
+      <label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="기물명 또는 특성 검색" aria-label="기물명 또는 특성 검색"></label>
+      <div class="filters" id="costs" aria-label="코스트 필터"></div>
+      <div class="sub"><span id="library-hint"></span><label id="drawn-filter" hidden><input id="only" type="checkbox"> 콜라보만</label></div>
+      <div id="roster" class="roster"></div>
+    </section>
+  </div>
+</main></body></html>

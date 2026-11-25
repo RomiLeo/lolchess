@@ -1,0 +1,581 @@
+{
+  "source": "https://data.metatft.com/lookups/TFTSet19_pbe_ko_kr.json",
+  "metadata": {
+    "set": "TFTSet19",
+    "setName": "Set 19",
+    "patch": "pbe",
+    "generated": "2026-11-25T02:44:20.370Z",
+    "coreHash": "e90741dda4defe9774c1c27ee6860be54a2dba1e",
+    "release": "rls-19.1.0.6028987.Set19.Shipping.pbe",
+    "manifest": "8988AD9C3EFDA6FD",
+    "tooltips": "curvetable"
+  },
+  "breakpoints": {
+    "Freestyle": [
+      1
+    ],
+    "Country": [
+      1
+    ],
+    "Emo": [
+      1
+    ],
+    "One Monster Band": [
+      1
+    ],
+    "Record Mogul": [
+      1
+    ],
+    "Synthwave": [
+      1
+    ],
+    "Melodic Heart": [
+      1
+    ],
+    "Windblessed": [
+      1
+    ],
+    "Composer": [
+      1
+    ],
+    "8-Bit": [
+      1
+    ],
+    "Mariachi": [
+      1
+    ],
+    "Disco": [
+      1
+    ],
+    "Boy Band": [
+      1
+    ],
+    "Beat Master": [
+      1
+    ],
+    "Indie": [
+      1
+    ],
+    "Rising Star": [
+      1
+    ],
+    "Superstar": [
+      1
+    ],
+    "Producer": [
+      1
+    ],
+    "Hype Man": [
+      1
+    ],
+    "Tango": [
+      1
+    ],
+    "Goth": [
+      1
+    ],
+    "Arcanist": [
+      2,
+      4,
+      6
+    ],
+    "Bodyguard": [
+      2,
+      4,
+      6
+    ],
+    "Choreographer": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "Collab": [
+      3,
+      5
+    ],
+    "Rock": [
+      3,
+      4,
+      5,
+      7
+    ],
+    "EDM": [
+      2
+    ],
+    "Encore": [
+      2,
+      4
+    ],
+    "Frontman": [
+      2,
+      4,
+      6
+    ],
+    "Hyperpop": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "Heartsteel": [
+      1,
+      3,
+      5,
+      7
+    ],
+    "Gu Feng": [
+      2,
+      3,
+      4
+    ],
+    "Hitmaker": [
+      2,
+      4
+    ],
+    "Illbeats": [
+      2,
+      3,
+      4
+    ],
+    "Ionic Spark": [
+      3,
+      5,
+      7,
+      10
+    ],
+    "Jazz": [
+      2,
+      3,
+      4
+    ],
+    "Juggernaut": [
+      2,
+      4,
+      6
+    ],
+    "K/DA": [
+      3,
+      5,
+      7,
+      10,
+      13,
+      15,
+      21
+    ],
+    "Manager": [
+      2,
+      3,
+      4
+    ],
+    "Slayer": [
+      2,
+      4,
+      6
+    ],
+    "Mystical Instrument": [
+      0
+    ],
+    "Beach Pop": [
+      3,
+      5,
+      7
+    ],
+    "Pentakill": [
+      3,
+      5,
+      7
+    ],
+    "Prodigy": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "Renegade": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "R&B": [
+      1,
+      2
+    ],
+    "Swiftstriker": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "Trickshot": [
+      2,
+      3,
+      4
+    ],
+    "True Damage": [
+      3,
+      5
+    ],
+    "Classical": [
+      2,
+      4,
+      6
+    ]
+  },
+  "traits": [
+    {
+      "id": "DA_Akali_TrueDamage19_UniqueTrait",
+      "name": "Freestyle",
+      "nameKo": "프리스타일",
+      "type": "unique",
+      "description": "아칼리는 True Damage 레코드 면에 따라 서로 다른 기본 지속 효과를 얻습니다. A면에서는 골드를 획득합니다. B면에서는 플레이어 체력을 회복시킵니다."
+    },
+    {
+      "id": "DA_Alistar19_UniqueTrait",
+      "name": "Country",
+      "nameKo": "컨트리",
+      "type": "unique",
+      "description": "전투 시작: 가장 강한 아군 알리스타의 추가 체력이 <TFTCurveTable row=\"Country_HealthThreshold\"/> 이상일 경우 알리스타가 내구력을 <TFTCurveTable row=\"Country_Durability\" format=\"p\"/> 얻습니다.\r\n\r\n<Rules>현재:</> <TFTAttribute style=\"rules\" attributeID=\"TFTTraitAttributes.Stack7\"/> <Rules>추가</> <img id=\"Icon.Health\"/>"
+    },
+    {
+      "id": "DA_Amumu19_UniqueTrait",
+      "name": "Emo",
+      "nameKo": "이모코어",
+      "type": "unique",
+      "description": "전투 시작 시 인접한 아군이 없을 경우 아무무가 방어력 및 마법 저항력을 <TFTCurveTable row=\"BonusArmorMR\" column=\"1\"/>/<TFTCurveTable row=\"BonusArmorMR\" column=\"2\"/>/<TFTCurveTable row=\"BonusArmorMR\" column=\"3\"/> 얻습니다."
+    },
+    {
+      "id": "DA_BaronNashor19_UniqueTrait",
+      "name": "One Monster Band",
+      "nameKo": "원 몬스터 밴드",
+      "type": "unique",
+      "description": "내셔 남작은 2개의 팀 슬롯을 차지하며 저지 불가 상태입니다.\r\n\r\n내셔 남작이 처음 스킬을 사용한 후 전장을 노래로 감싸 모든 적으로부터 공격력, 주문력, 공격 속도, 치명타 확률을 <TFTCurveTable row=\"UniqueTrait_StatSteal\" format=\"p\"/> 훔칩니다."
+    },
+    {
+      "id": "DA_DrMundo19_UniqueTrait",
+      "name": "Record Mogul",
+      "nameKo": "음반계 거물",
+      "type": "unique",
+      "description": "즉시 및 <TFTCurveTable row=\"NumRounds\"/>라운드마다 음반 계약을 얻습니다. 계약한 챔피언은 피해 증폭을 <TFTCurveTable row=\"HeadlinerDA\" format=\"percent\"/> 얻고, 해당 챔피언이 적을 처치하면 문도 박사가 영구히 체력을 <TFTCurveTable row=\"PermanentHealth\"/> 얻습니다.\r\n\r\n<rules>체력:</> 총 <TFTAttribute style=\"rules\" attributeId=\"TFTCalculationAttributes.GenericCalc1\"/><rules></>\r\n<rules>다음 계약:</> <TFTAttribute style=\"rules\" attributeId=\"TFTTraitAttributes.Stack2\"/><rules>/</><TFTCurveTable style=\"rules\" row=\"NumRounds\"/>\r\n\r\n<Rules>음반 계약은 계약 아티스트를 판매하거나 대기석에 놓으면 반환됩니다.</>"
+    },
+    {
+      "id": "DA_Garen19_UniqueTrait",
+      "name": "Synthwave",
+      "nameKo": "신스웨이브",
+      "type": "unique",
+      "description": "체력이 <TFTCurveTable row=\"UniqueTrait_HealthThreshold\" format=\"p\"/>일 때 <TFTCurveTable row=\"UniqueTrait_ShieldDuration\"/>초 동안 이번 전투에서 받은 체력 회복 및 보호막 흡수량의 <TFTCurveTable row=\"UniqueTrait_PercentHealShieldRepeat\" format=\"p\"/>에 해당하는 보호막을 얻습니다."
+    },
+    {
+      "id": "DA_Gwen19_UniqueTrait",
+      "name": "Melodic Heart",
+      "nameKo": "선율의 심장",
+      "type": "unique",
+      "description": "전투 시작 후 <TFTCurveTable row=\"UniqueTraitSeconds\"/>초 동안 가장 강한 아군 그웬이 안개에 둘러싸이고 기본 공격 대상으로 지정되지 않습니다. 안개 안에 있는 아군은 내구력을 <TFTCurveTable row=\"UniqueTraitDR\" format=\"percent\"/> 얻습니다."
+    },
+    {
+      "id": "DA_Janna19_UniqueTrait",
+      "name": "Windblessed",
+      "nameKo": "바람의 축복",
+      "type": "unique",
+      "description": "전투 시작: 가장 강한 아군 잔나가 전방으로 이동하는 회오리바람을 날려 경로상에 있는 적을 <TFTCurveTable row=\"UniqueKnockupDuration\" column=\"1\"/>/<TFTCurveTable row=\"UniqueKnockupDuration\" column=\"2\"/>/<TFTCurveTable row=\"UniqueKnockupDuration\" column=\"3\"/>초 동안 공중에 띄웁니다."
+    },
+    {
+      "id": "DA_Malzahar19_UniqueTrait",
+      "name": "Composer",
+      "nameKo": "작곡가",
+      "type": "unique",
+      "description": "신비로운 악기가 상점에 등장할 수 있습니다. 악기는 등급별로 하나씩 존재합니다.\r\n\r\n보유한 악기 하나당 아군이 주문력을 <TFTCurveTable row=\"UniqueTrait_APPerInstrument\" format=\"percent\"/> 얻습니다. 말자하는 두 배로 얻습니다.\r\n\r\n말자하가 <TFTCurveTable row=\"UniqueTrait_DamageDealt_TOOLTIPONLYEDITUNLOCKCONDITION\"/>의 피해를 입혔으며 악기 5개를 모두 보유한 경우, 말자하가 걸작을 작곡하고 내셔 남작을 해금합니다."
+    },
+    {
+      "id": "DA_MissFortune19_UniqueTrait",
+      "name": "8-Bit",
+      "nameKo": "8비트",
+      "type": "unique",
+      "description": "아군이 입히는 피해량으로 점수를 얻습니다. 미스 포츈의 피해량은 세 배로 계산됩니다. 고득점을 경신하면 보상을 받습니다.\r\n\r\n현재 점수: <TFTAttribute attributeID=\"TFTTraitAttributes.Stack\"/>\r\n{Set19.Unit.MissFortune.Tooltip.NextBreakpoint}\r\n\r\n<colorStat>고득점:</>\r\n{Set19.Unit.MissFortune.Tooltip.DimPre1} <TFTCurveTable row=\"BreakpointToPoints\" column=\"1\"{Set19.Unit.MissFortune.Tooltip.Dim1}/>\r\n{Set19.Unit.MissFortune.Tooltip.DimPre2} <TFTCurveTable row=\"BreakpointToPoints\" column=\"2\"{Set19.Unit.MissFortune.Tooltip.Dim2}/>\r\n{Set19.Unit.MissFortune.Tooltip.DimPre3} <TFTCurveTable row=\"BreakpointToPoints\" column=\"3\"{Set19.Unit.MissFortune.Tooltip.Dim3}/>\r\n{Set19.Unit.MissFortune.Tooltip.DimPre4} <TFTCurveTable row=\"BreakpointToPoints\" column=\"4\"{Set19.Unit.MissFortune.Tooltip.Dim4}/>\r\n{Set19.Unit.MissFortune.Tooltip.DimPre5} <TFTCurveTable row=\"BreakpointToPoints\" column=\"5\"{Set19.Unit.MissFortune.Tooltip.Dim5}/>\r\n{Set19.Unit.MissFortune.Tooltip.DimPre6} <TFTCurveTable row=\"BreakpointToPoints\" column=\"6\"{Set19.Unit.MissFortune.Tooltip.Dim6}/>\r\n{Set19.Unit.MissFortune.Tooltip.DimPre7} <TFTCurveTable row=\"BreakpointToPoints\" column=\"7\"{Set19.Unit.MissFortune.Tooltip.Dim7}/>\r\n{Set19.Unit.MissFortune.Tooltip.DimPre8} <TFTCurveTable row=\"BreakpointToPoints\" column=\"8\"{Set19.Unit.MissFortune.Tooltip.Dim8}/>"
+    },
+    {
+      "id": "DA_Nidalee19_UniqueTrait",
+      "name": "Mariachi",
+      "nameKo": "마리아치",
+      "type": "unique",
+      "description": "니달리가 체력이 <TFTCurveTable row=\"HealthThresholdCougar\" column=\"1\" format=\"percent\"/> 이상일 때 스킬을 사용하면 쿠거 형태로 변신하고 급습 파티를 사용합니다. 그 외의 경우 생명의 춤을 사용합니다.\r\n\r\n체력이 <TFTCurveTable row=\"HealthThresholdHuman\" column=\"1\" format=\"percent\"/> 아래로 떨어지면 물러나며 인간 형태로 돌아옵니다."
+    },
+    {
+      "id": "DA_Nunu19_UniqueTrait",
+      "name": "Disco",
+      "nameKo": "디스코",
+      "type": "unique",
+      "description": "아군이 매초 최대 체력의 <TFTCurveTable row=\"PercentHealthPerSecond\" format=\"percent\"/>만큼 체력을 회복합니다.\r\n\r\n스킬을 <TFTCurveTable row=\"CastRequirement\"/>회 사용하면 디스코 열풍에 돌입해 아군에게 공격 속도를 <TFTCurveTable row=\"PercentAttackSpeed\" format=\"percent\"/> 부여합니다."
+    },
+    {
+      "id": "DA_Rakan19_UniqueTrait",
+      "name": "Boy Band",
+      "nameKo": "보이 밴드",
+      "type": "unique",
+      "description": "라칸은 전장에 놓을 수 있는 분신 <TFTCurveTable row=\"NumClones\"/>명과 함께 등장합니다. 분신은 라칸 최대 체력의 <TFTCurveTable row=\"CloneHealthMulitiplier\" format=\"p\"/>를 지니고 <TFTCurveTable row=\"CloneDamageMultiplier\" format=\"p\"/>의 피해를 입히며 라칸이 장착한 완성 아이템, 찬란한 아이템, 상징을 복제합니다."
+    },
+    {
+      "id": "DA_Rell19_UniqueTrait",
+      "name": "Beat Master",
+      "nameKo": "비트의 대가",
+      "type": "unique",
+      "description": "체력이 <TFTCurveTable row=\"Trait_PercentHealthTransform\" format=\"p\"/>일 때 렐이 말에 올라타 <TFTCurveTable row=\"Trait_ReviveTime\"/>초에 걸쳐 전체 체력을 회복합니다.\r\n\r\n말에 올라탄 동안 최대 마나가 <TFTCurveTable row=\"Trait_MaxManaReduction\"/> 감소하고, 기본 공격 3회마다 일직선상에 전체 방어력 및 마법 저항력의 <TFTAttribute attributeID=\"TFTCalculationAttributes.GenericCalc1\"/>/<TFTAttribute attributeID=\"TFTCalculationAttributes.GenericCalc2\"/>/<TFTCurveTable row=\"Trait_LineDamagePercentArmorMR_Level3\" format=\"p\"/>에 해당하는 마법 피해를 입힙니다. "
+    },
+    {
+      "id": "DA_Seraphine19_IndieTrait",
+      "name": "Indie",
+      "nameKo": "인디",
+      "type": "unique",
+      "description": "전투 후 세라핀이 새로운 추종자를 끌어모으고 무작위 챔피언 1명을 제공합니다.\r\n \r\n챔피언을 3성으로 업그레이드하면 세라핀이 떠오르는 별이 되어 스킬이 업그레이드되고 특별 구독자 보상을 제공합니다.\r\n\r\n챔피언 <TFTCurveTable row=\"RewardsForSecondUpgrade\" column=\"1\"/>명을 3성으로 업그레이드하면 세라핀이 슈퍼스타가 됩니다!"
+    },
+    {
+      "id": "DA_Seraphine19_RisingStarTrait",
+      "name": "Rising Star",
+      "nameKo": "떠오르는 별",
+      "type": "unique",
+      "description": "전투 후 세라핀이 새로운 추종자를 끌어모으고 무작위 챔피언 1명을 제공합니다.\r\n \r\n챔피언을 3성으로 업그레이드하면 세라핀이 떠오르는 별이 되어 스킬이 업그레이드되고 특별 구독자 보상을 제공합니다.\r\n\r\n챔피언 <TFTCurveTable row=\"RewardsForSecondUpgrade\" column=\"1\"/>명을 3성으로 업그레이드하면 세라핀이 슈퍼스타가 됩니다!"
+    },
+    {
+      "id": "DA_Seraphine19_SuperstarTrait",
+      "name": "Superstar",
+      "nameKo": "슈퍼스타",
+      "type": "unique",
+      "description": "전투 후 세라핀이 새로운 추종자를 끌어모으고 무작위 챔피언 1명을 제공합니다.\r\n \r\n챔피언을 3성으로 업그레이드하면 세라핀이 떠오르는 별이 되어 스킬이 업그레이드되고 특별 구독자 보상을 제공합니다.\r\n\r\n챔피언 <TFTCurveTable row=\"RewardsForSecondUpgrade\" column=\"1\"/>명을 3성으로 업그레이드하면 세라핀이 슈퍼스타가 됩니다!"
+    },
+    {
+      "id": "DA_Sona19_UniqueTrait",
+      "name": "Producer",
+      "nameKo": "프로듀서",
+      "type": "unique",
+      "description": "소나를 배치하면, 참여할 밴드를 선택하고 해당 밴드의 특성을 얻습니다.\r\n\r\n소나는 모든 추가 공격력 및 공격 속도를 주문력으로 전환합니다."
+    },
+    {
+      "id": "DA_Teemo19_UniqueTrait",
+      "name": "Hype Man",
+      "nameKo": "바람잡이",
+      "type": "unique",
+      "description": null
+    },
+    {
+      "id": "DA_TwistedFate19_UniqueTrait",
+      "name": "Tango",
+      "nameKo": "탱고",
+      "type": "unique",
+      "description": "트위스티드 페이트가 가장 가까운 아군을 탱고 파트너로 지정합니다. 트위스티드 페이트와 탱고 파트너는 열정을 불태우며 공격 속도를 <TFTCurveTable row=\"TraitAttackSpeed\" format=\"p\"/> 얻습니다. 두 챔피언이 피해를 입히면 적에게 <TFTCurveTable row=\"Duration\"/>초 동안 <TFTCurveTable row=\"BurnPercent\"/>% <keyword>화상</> 및 <TFTCurveTable row=\"WoundPercent\"/>% <keyword>상처</>를 적용합니다."
+    },
+    {
+      "id": "DA_Zeri19_UniqueTrait",
+      "name": "Goth",
+      "nameKo": "고스족",
+      "type": "unique",
+      "description": "가장 강한 아군 제리가 전투마다 처음 적에게 피해를 입힐 때, 흡혈 박쥐가 대상의 공격력 <TFTCurveTable row=\"UniqueTraitADSteal\" format=\"percent\"/>를 훔쳐 제리에게 되돌아옵니다."
+    },
+    {
+      "id": "DA_Arcanist19",
+      "name": "Arcanist",
+      "nameKo": "비전 마법사",
+      "type": "class",
+      "description": "아군이 주문력을 얻습니다. 비전 마법사는 더 얻습니다."
+    },
+    {
+      "id": "DA_Bodyguard19",
+      "name": "Bodyguard",
+      "nameKo": "경호대",
+      "type": "class",
+      "description": "경호대가 1명 이상 생존하는 동안, 아군이 방어력 및 마법 저항력을 <TFTCurveTable row=\"NonBodyguardDefenses\" column=\"1\"/> 얻습니다. 경호대는 능력치를 더 얻습니다."
+    },
+    {
+      "id": "DA_Choreographer19",
+      "name": "Choreographer",
+      "nameKo": "안무가",
+      "type": "class",
+      "description": "전방 가로 2열에서 시작하는 아군이 보호막을 얻습니다. 다른 모든 아군은 피해 증폭을 얻습니다. 안무가는 능력치를 두 배로 얻습니다. "
+    },
+    {
+      "id": "DA_Collab19",
+      "name": "Collab",
+      "nameKo": "콜라보",
+      "type": "class",
+      "description": "콜라보 챔피언은 피해를 <TFTCurveTable row=\"CollabDamageInstancesToTrigger\"/>회 받거나 입힌 후 영감 상태가 되어 공격력과 주문력을 얻습니다.\r\n\r\n플레이어 대상 전투 중 영감 돌입 <TFTCurveTable row=\"CollabInspirationToCashNum\"/>회마다 콜라보 챔피언 복사본을 획득합니다. (<TFTAttribute attributeID=\"TFTTraitAttributes.Stack\" precision=\"0\"/>/<TFTCurveTable row=\"CollabInspirationToCashNum\" precision=\"0\"/>)"
+    },
+    {
+      "id": "DA_DemonVision19",
+      "name": "Rock",
+      "nameKo": "락",
+      "type": null,
+      "description": null
+    },
+    {
+      "id": "DA_EDM19",
+      "name": "EDM",
+      "nameKo": "EDM",
+      "type": null,
+      "description": null
+    },
+    {
+      "id": "DA_Encore19",
+      "name": "Encore",
+      "nameKo": "앙코르",
+      "type": "class",
+      "description": "앙코르 챔피언이 자신의 스킬로 투사체를 발사하면 감소된 효과로 투사체를 1개 더 발사합니다. "
+    },
+    {
+      "id": "DA_Frontman19",
+      "name": "Frontman",
+      "nameKo": "프론트맨",
+      "type": "class",
+      "description": "아군이 체력을 <TFTCurveTable row=\"AllyMaxHealth\" column=\"1\"/> 얻습니다. 프론트맨은 더 얻으며, 스킬을 처음 사용한 후 수치가 증가합니다."
+    },
+    {
+      "id": "DA_GlitterBomb19",
+      "name": "Hyperpop",
+      "nameKo": "하이퍼팝",
+      "type": null,
+      "description": "하이퍼팝 챔피언이 체력 및 공격 속도를 얻습니다. 플레이어 대상 전투 후, 하이퍼팝 챔피언이 자신의 별 레벨에 따라 <TFTCurveTable row=\"1StarPoints\" column=\"1\"/>/<TFTCurveTable row=\"2StarPoints\" column=\"1\"/>/<TFTCurveTable row=\"3StarPoints\" column=\"1\"/>/<TFTCurveTable row=\"4StarPoints\" column=\"1\"/>+처치 관여당 <TFTCurveTable row=\"KillsPerPoint\" column=\"1\"/>만큼 열광을 생성합니다.\r\n\r\n새 열광 레벨에 도달할 때마다, 특별한 보상을 받습니다! 높은 특성 단계에서는 더 많은 열광을 얻습니다!"
+    },
+    {
+      "id": "DA_Heartsteel19",
+      "name": "Heartsteel",
+      "nameKo": "HEARTSTEEL",
+      "type": null,
+      "description": null
+    },
+    {
+      "id": "DA_Heavenscale19",
+      "name": "Gu Feng",
+      "nameKo": "고풍",
+      "type": null,
+      "description": "고풍 챔피언이 플레이어 레벨에 따라 능력치를 얻습니다."
+    },
+    {
+      "id": "DA_Hitmaker19",
+      "name": "Hitmaker",
+      "nameKo": "스타 제조기",
+      "type": "class",
+      "description": "스타 제조기가 공격력을 <TFTCurveTable row=\"BaseAD\" format=\"percent\" column=\"1\"/> 얻습니다. 아이템이 가장 많은 스타 제조기가 거물이 되고 더 많은 공격력을 얻습니다."
+    },
+    {
+      "id": "DA_Illbeats19",
+      "name": "Illbeats",
+      "nameKo": "일류 비트",
+      "type": null,
+      "description": "일류 비트 믹서를 열고 데시벨을 조정하세요. 일류 비트 챔피언은 조정한 믹스에 따라 다른 능력치를 얻습니다. 아군이 믹스의 <TFTCurveTable row=\"SelflessStatMult\" format=\"percent\"/>를 얻습니다."
+    },
+    {
+      "id": "DA_IonicSpark19",
+      "name": "Ionic Spark",
+      "nameKo": "Ionic Spark",
+      "type": "origin",
+      "description": "<TFTCurveTable row=\"LetterFrequency\"/>초마다 팬들이 Ionic Spark 멤버들을 응원하며 선물을 보냅니다. Ionic Spark 멤버는 체력을 얻습니다."
+    },
+    {
+      "id": "DA_Jazz19",
+      "name": "Jazz",
+      "nameKo": "재즈",
+      "type": null,
+      "description": "활성화된 특성 (고유 특성 제외) 하나당 아군이 추가 체력 및 피해 증폭을 얻습니다."
+    },
+    {
+      "id": "DA_Juggernaut19",
+      "name": "Juggernaut",
+      "nameKo": "전쟁기계",
+      "type": "class",
+      "description": "전쟁기계는 내구력을 얻으며, 이 수치는 잃은 체력에 비례해 증가합니다."
+    },
+    {
+      "id": "DA_KDA19",
+      "name": "K/DA",
+      "nameKo": "K/DA",
+      "type": null,
+      "description": "K/DA 챔피언은 별 레벨 총합에 따라 신곡을 발표합니다. 전투 시작 시 및 <TFTCurveTable row=\"MidCombatTrigger\"/>초 후, 노래 하나당 위력을 얻습니다."
+    },
+    {
+      "id": "DA_Manager19",
+      "name": "Manager",
+      "nameKo": "매니저",
+      "type": "class",
+      "description": "스포트라이트 칸을 1개 획득합니다. 해당 칸에 서 있는 아군은 전투 시작 시 및 <TFTCurveTable row=\"Interval\" column=\"1\"/>초마다 추가 효과를 얻습니다."
+    },
+    {
+      "id": "DA_Mosher19",
+      "name": "Slayer",
+      "nameKo": "학살자",
+      "type": "class",
+      "description": "학살자가 공격 속도 및 모든 피해 흡혈을 얻습니다. 각 수치는 잃은 체력에 비례해 <TFTCurveTable row=\"IncreaseMaxBasedOnMissingHealth\" column=\"1\" format=\"percent\"/>까지 증가합니다."
+    },
+    {
+      "id": "DA_MysticInstrument19",
+      "name": "Mystical Instrument",
+      "nameKo": "신비로운 악기",
+      "type": "class",
+      "description": "신비로운 악기 5개를 모두 모아 말자하의 걸작을 완성하고 내셔 남작을 해금하세요!\r\n\r\n전투에 배치할 수 없습니다."
+    },
+    {
+      "id": "DA_OceanSong19",
+      "name": "Beach Pop",
+      "nameKo": "비치 팝",
+      "type": null,
+      "description": "인접한 아군을 강화하는 배치할 수 있는 악기를 획득합니다. 강화된 아군은 <TFTCurveTable row=\"RegenEveryXSeconds\" column=\"1\"/>초마다 <TFTCurveTable row=\"HPRegen\" format=\"percent\" column=\"1\"/>의 체력을 회복합니다.\r\n\r\n강화된 비치 팝 챔피언은 공격 속도를 얻고 추가로 <TFTCurveTable row=\"RegenEveryXSeconds\" column=\"1\"/>초마다 마나를 회복합니다."
+    },
+    {
+      "id": "DA_Pentakill19",
+      "name": "Pentakill",
+      "nameKo": "펜타킬",
+      "type": null,
+      "description": "펜타킬 멤버가 공격력 및 주문력을 얻습니다.\r\n\r\n체력이 <TFTCurveTable row=\"ExecuteThreshold\" format=\"p\"/> 아래로 떨어진 첫 몇몇 적이 처형당하고 그 자리에 아군 망령이 소환됩니다."
+    },
+    {
+      "id": "DA_Prodigy19",
+      "name": "Prodigy",
+      "nameKo": "신동",
+      "type": "class",
+      "description": "아군이 마나 재생을 <TFTCurveTable row=\"AllyBonusManaRegen\" column=\"1\"/> 얻습니다. 신동은 능력치를 더 얻습니다. "
+    },
+    {
+      "id": "DA_Renegade19",
+      "name": "Renegade",
+      "nameKo": "무법자",
+      "type": "class",
+      "description": "무법자가 <Keyword>정밀</>, 치명타 확률, 치명타 피해량을 얻습니다."
+    },
+    {
+      "id": "DA_RnB19",
+      "name": "R&B",
+      "nameKo": "R&B",
+      "type": null,
+      "description": null
+    },
+    {
+      "id": "DA_Swiftstriker19",
+      "name": "Swiftstriker",
+      "nameKo": "신속타격대",
+      "type": "class",
+      "description": "아군이 공격 속도를 <TFTCurveTable row=\"TeamAS\" column=\"1\" format=\"percent\"/> 얻습니다.\r\n\r\n신속타격대는 <TFTCurveTable row=\"Period\" column=\"1\"/>초마다 능력치를 더 얻습니다. (최대 <TFTCurveTable row=\"Stacks\" column=\"1\"/>회)"
+    },
+    {
+      "id": "DA_Trickshot19",
+      "name": "Trickshot",
+      "nameKo": "재주꾼",
+      "type": "class",
+      "description": "재주꾼의 기본 공격 및 스킬이 튕깁니다. 튕길 때마다 이전에 입힌 피해량의 일정 비율만큼 피해를 입힙니다."
+    },
+    {
+      "id": "DA_TrueDamage19",
+      "name": "True Damage",
+      "nameKo": "True Damage",
+      "type": null,
+      "description": "A면에서는 플레이어 대상 전투 승리 시 블링을 얻습니다. B면에서는 패배 시 블링을 얻습니다.\r\n\r\n<TFTCurveTable row=\"RoundsBetweenCashouts\"/>라운드마다 블링을 보상으로 전환할지 계속 모을지 선택합니다."
+    },
+    {
+      "id": "DA_Virtuosos19",
+      "name": "Classical",
+      "nameKo": "클래식",
+      "type": null,
+      "description": "클래식 챔피언은 고유한 방식으로 적을 <keyword>매료</>시킵니다. 클래식 챔피언이 피해 증폭을 얻습니다. 수치는 적이 매료된 <TFTCurveTable row=\"SecondsPerDA\" column=\"1\"/>초마다 <TFTCurveTable row=\"DAFromCaptivating\" format=\"percent\" column=\"1\"/> 증가합니다."
+    }
+  ],
+  "breakpointSources": {
+    "Beach Pop": "https://tft.ninja/sets/19/traits"
+  }
+}
