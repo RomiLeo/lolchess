@@ -150,6 +150,8 @@ def ranked_decks(units, selected, level, unlocked, inventory=None, collab=3, jaz
                 and ("Gu Feng" in units[i]["traits"] or not units[i]["unlock"] or units[i]["id"] in unlocked)]
     akalis = {i for i, u in enumerate(units) if "Akali" in u["id"]}
     jazz_units = {i for i, u in enumerate(units) if "Jazz" in u["traits"]}
+    tanks = {i for i, u in enumerate(units) if "tank" in u["role"].lower()}
+    frontline = tanks | {i for i, u in enumerate(units) if "fighter" in u["role"].lower()}
 
     required = (next(i for i, u in enumerate(units) if u["id"] == "DA_Smeech19"),) if smeech else ()
     seeds = [(sona, *group, *required) for group in combinations(candidates, collab - 1)
@@ -179,6 +181,10 @@ def ranked_decks(units, selected, level, unlocked, inventory=None, collab=3, jaz
                         continue
                     key = (*state[:collab], *sorted((*state[collab:], i)))
                     if key not in choices:
+                        remaining = level - len(key)
+                        if (level == 10 and len(tanks.intersection(key)) + remaining < 4
+                                and len(frontline.intersection(key)) + remaining < 5):
+                            continue
                         choices[key] = rank(key)
             ordered = sorted(choices, key=choices.get, reverse=True)
             states = {key: choices[key] for key in ordered[:24]}

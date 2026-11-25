@@ -37,6 +37,20 @@ test("selecting one two-cost keeps compatible two-cost picks until the second sl
   assert(afterSecond.candidates.some(id => units.get(id).cost === 1));
 });
 
+test("ten-slot recommendations satisfy the frontline minimum in both modes", async () => {
+  const request = planner();
+  const selected = ["DA_Sett19","DA_Taric19","DA_Karthus19","DA_Malzahar19"];
+  for (const priority of ["five", "synergy"]) {
+    const {decks} = await request(null, selected, {priority, level:10, unlocked:[...units.keys()]});
+    assert(decks.length);
+    for (const {team} of decks) {
+      const roles = team.map(id => units.get(id).role);
+      assert(roles.filter(role => /tank/i.test(role)).length >= 4 ||
+        roles.filter(role => /tank|fighter/i.test(role)).length >= 5);
+    }
+  }
+});
+
 test("all recommended decks satisfy the selected collab and Jazz counts", async () => {
   const request = planner();
   const selected = ["DA_Sett19","DA_Taric19","DA_Karthus19","DA_Malzahar19"];

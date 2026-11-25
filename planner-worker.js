@@ -239,7 +239,15 @@ function complete({selected, level, unlocked, inventory = {}, collab = 3, jazz =
           if (team.includes(u) || (hasAkali && u.akali)) continue;
           const next = [...team.slice(0, collab), ...[...team.slice(collab), u].sort((a, b) => a.i - b.i)];
           const key = next.map(member => member.i).join(",");
-          if (!choices.has(key)) choices.set(key, rankTeam(next));
+          if (!choices.has(key)) {
+            if (level === 10) {
+              const remaining = level - next.length;
+              const tanks = next.filter(member => member.tank).length;
+              const frontline = tanks + next.filter(member => /fighter/i.test(member.role)).length;
+              if (tanks + remaining < 4 && frontline + remaining < 5) continue;
+            }
+            choices.set(key, rankTeam(next));
+          }
         }
       }
       const ordered = [...choices.values()].sort((a,b) =>
