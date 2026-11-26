@@ -2,11 +2,14 @@
 
 importScripts("./ladder-worker.js");
 const bands = ["Heartsteel", "Ionic Spark", "K/DA", "Pentakill", "True Damage"];
+const bonusSlot = 6; // Separate pool slot for an extra unlockable three-cost.
+const bonusUnits = new Set(["DA_Evelynn19", "DA_Tibbers19"]);
+const poolSlot = u => u.unlock ? bonusSlot : u.cost;
 const profiles = [[1, 1, 2], [1, 2, 2]].flatMap(low =>
-  [[4], [5], [4, 5]].map(high => [...low, 3, ...high])
+  [[4], [5], [4, 5], [4, bonusSlot], [5, bonusSlot]].map(high => [...low, 3, ...high])
 );
 const weight = trait => trait === "K/DA" ? 2 : 1;
-const byCost = Array.from({length: 6}, () => []);
+const byCost = Array.from({length: bonusSlot + 1}, () => []);
 let catalog, units, byId, tiers, nonunique, knownEmblems, eligible, loading;
 
 async function load() {
@@ -26,8 +29,8 @@ async function load() {
   tiers = traits.breakpoints;
   nonunique = new Set(traits.traits.filter(t => t.type !== "unique").map(t => t.name));
   knownEmblems = new Set(emblems.items.map(e => e.trait));
-  eligible = units.filter(u => !u.unlock && u.traits.length === 2 && u.cost >= 1 && u.cost <= 5);
-  for (const u of eligible) byCost[u.cost].push(u);
+  eligible = units.filter(u => (!u.unlock || (u.cost === 3 && bonusUnits.has(u.id))) && u.traits.length === 2 && u.cost >= 1 && u.cost <= 5);
+  for (const u of eligible) byCost[poolSlot(u)].push(u);
 }
 
 function shuffle(values) {
@@ -71,7 +74,7 @@ function possible(selected) {
   return profiles.some(profile => {
     const remaining = [...profile];
     for (const u of selected) {
-      const i = remaining.indexOf(u.cost);
+      const i = remaining.indexOf(poolSlot(u));
       if (i < 0) return false;
       remaining.splice(i, 1);
     }

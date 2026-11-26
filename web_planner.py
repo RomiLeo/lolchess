@@ -8,7 +8,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import urlsplit
 
-from manual_builder import PROFILES, draw_collab
+from manual_builder import PROFILES, draw_collab, pool_slot
 
 
 ROOT = Path(__file__).resolve().parent
@@ -21,8 +21,8 @@ def read_json(filename):
 UNITS = read_json("units.json")
 CATALOG = {"units": UNITS, "traits": read_json("traits.json"), "emblems": read_json("emblems.json")}
 BY_ID = {u["id"]: u for u in UNITS}
-ELIGIBLE = {u["id"]: u for u in UNITS if not u["unlock"] and
-            len(set(u["traits"])) == 2 and 1 <= u["cost"] <= 5}
+SLOTS = {u["id"]: pool_slot(u) for u in UNITS}
+ELIGIBLE = {u["id"]: u for u in UNITS if SLOTS[u["id"]] is not None}
 FILES = {"/": "index.html", "/index.html": "index.html", "/ui.js": "ui.js", "/style.css": "style.css", "/theme.js": "theme.js"}
 for name in ("ladder.html", "ladder-plans.json", "planner-worker.js", "ladder-worker.js", "units.json", "traits.json", "emblems.json"):
     FILES["/" + name] = name
@@ -40,13 +40,13 @@ def can_complete(selected):
         if not unit or used.intersection(unit["traits"]):
             return False
         used.update(unit["traits"])
-        counts[unit["cost"]] += 1
+        counts[SLOTS[uid]] += 1
 
     def fill(remaining, taken):
         if not remaining:
             return True
         return any(fill(remaining[1:], taken.union(unit["traits"]))
-                   for unit in ELIGIBLE.values() if unit["cost"] == remaining[0]
+                   for unit in ELIGIBLE.values() if SLOTS[unit["id"]] == remaining[0]
                    and taken.isdisjoint(unit["traits"]))
 
     for profile in PROFILES:

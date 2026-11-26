@@ -8,8 +8,20 @@ SONA = "DA_Sona19"
 BANDS = ("Heartsteel", "Ionic Spark", "K/DA", "Pentakill", "True Damage")
 
 
+BONUS_SLOT = "bonus"
 PROFILES = tuple(low + (3,) + high for low in ((1, 1, 2), (1, 2, 2))
-                 for high in ((4,), (5,), (4, 5)))
+                 for high in ((4,), (5,), (4, 5), (4, BONUS_SLOT), (5, BONUS_SLOT)))
+
+
+def pool_slot(unit):
+    if len(set(unit["traits"])) != 2:
+        return None
+    if unit["unlock"]:
+        if unit["cost"] == 3 and unit["id"] in ("DA_Evelynn19", "DA_Tibbers19"):
+            return BONUS_SLOT
+    elif 1 <= unit["cost"] <= 5:
+        return unit["cost"]
+    return None
 
 
 def draw_collab(units, rng=None):
@@ -17,8 +29,9 @@ def draw_collab(units, rng=None):
     by_cost = defaultdict(list)
     for unit in units:
         traits = frozenset(unit["traits"])
-        if not unit["unlock"] and len(traits) == 2:
-            by_cost[unit["cost"]].append((unit, traits))
+        slot = pool_slot(unit)
+        if slot is not None:
+            by_cost[slot].append((unit, traits))
     for candidates in by_cost.values():
         rng.shuffle(candidates)
 
@@ -75,7 +88,7 @@ class ManualBuilder(tk.Toplevel):
         ttk.Button(header, text="콜라보 다시 추첨", command=self.reroll).pack(side="left")
         self.pool_text = ttk.Label(header)
         self.pool_text.pack(side="left", padx=8)
-        rules = "추정 규칙 · 1코와 2코는 한쪽에서 2명, 다른 쪽에서 1명. 3코는 1명. 4코, 5코 중 한 명 또는 각각 한 명.\n해금 기물 제외 · 고유 포함 기본 특성 2개 · 추첨 기물끼리 기본 특성 중복 없음."
+        rules = "추정 규칙 · 1코와 2코는 한쪽에서 2명, 다른 쪽에서 1명. 3코는 1명. 4코, 5코 중 한 명 또는 각각 한 명.\n기본 5명에 이블린 또는 티버를 추가해 6명이 될 수 있어. 다른 해금 기물 제외 · 고유 포함 기본 특성 2개 · 추첨 기물끼리 기본 특성 중복 없음."
         ttk.Label(self, text=rules, justify="left").grid(row=1, sticky="w", padx=8)
         ttk.Separator(self).grid(row=2, sticky="ew", pady=5)
         columns = ttk.Frame(self, padding=(8, 0))

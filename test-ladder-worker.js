@@ -109,6 +109,19 @@ test("Smeech inclusion overrides general unlocks for both Jazz targets", async (
   }
 });
 
+test("a five-unit pool can add one unlockable three-cost alongside its regular three-cost", async () => {
+  const request = planner();
+  for (const [bonus, ...base] of [
+    ["DA_Tibbers19", "DA_Zoe19", "DA_Katarina19", "DA_Ezreal19", "DA_Malzahar19", "DA_Yorick19"],
+    ["DA_Evelynn19", "DA_Kayn19", "DA_Taric19", "DA_RenataGlasc19", "DA_Malzahar19", "DA_Yuumi19"]
+  ]) {
+    assert((await request(null, base)).candidates.includes(bonus));
+    assert((await request(null, [bonus])).candidates.includes("DA_Malzahar19"));
+    assert.equal((await request(null, [...base, bonus])).candidates.length, 0);
+  }
+  await assert.rejects(request(null, ["DA_Evelynn19", "DA_Tibbers19"]));
+});
+
 function checkRoute(route, emblem, pool, extra) {
   assert.equal(new Set(route.team).size, 9);
   assert.equal(route.team.length, 9);
