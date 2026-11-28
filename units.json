@@ -1,2176 +1,4720 @@
 [
-    {
-        "id":  "DA_Elise19",
-        "teamPlannerCode":  "3fd",
-        "name":  "Elise",
-        "nameKo":  "엘리스",
-        "cost":  1,
-        "role":  "Magic Tank",
-        "roleKo":  "주문력 탱커",
-        "traits":  [
-                       "Ionic Spark",
-                       "Frontman"
-                   ],
-        "traitsKo":  [
-                         "Ionic Spark",
-                         "프론트맨"
-                     ],
-        "traitIds":  [
-                         "DA_IonicSpark19",
-                         "DA_Frontman19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Gnar19",
-        "teamPlannerCode":  "402",
-        "name":  "Gnar",
-        "nameKo":  "나르",
-        "cost":  1,
-        "role":  "Hybrid Specialist",
-        "roleKo":  "혼합 전문가",
-        "traits":  [
-                       "Pentakill",
-                       "Trickshot"
-                   ],
-        "traitsKo":  [
-                         "펜타킬",
-                         "재주꾼"
-                     ],
-        "traitIds":  [
-                         "DA_Pentakill19",
-                         "DA_Trickshot19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Katarina19",
-        "teamPlannerCode":  "40c",
-        "name":  "Katarina",
-        "nameKo":  "카타리나",
-        "cost":  1,
-        "role":  "Magic Fighter",
-        "roleKo":  "주문력 전사",
-        "traits":  [
-                       "Classical",
-                       "Slayer"
-                   ],
-        "traitsKo":  [
-                         "클래식",
-                         "학살자"
-                     ],
-        "traitIds":  [
-                         "DA_Virtuosos19",
-                         "DA_Mosher19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Kayn19",
-        "teamPlannerCode":  "40e",
-        "name":  "Kayn",
-        "nameKo":  "케인",
-        "cost":  1,
-        "role":  "Attack Fighter",
-        "roleKo":  "공격력 전사",
-        "traits":  [
-                       "Heartsteel",
-                       "Slayer"
-                   ],
-        "traitsKo":  [
-                         "HEARTSTEEL",
-                         "학살자"
-                     ],
-        "traitIds":  [
-                         "DA_Heartsteel19",
-                         "DA_Mosher19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Kennen19",
-        "teamPlannerCode":  "40f",
-        "name":  "Kennen",
-        "nameKo":  "케넨",
-        "cost":  1,
-        "role":  "Magic Tank",
-        "roleKo":  "주문력 탱커",
-        "traits":  [
-                       "True Damage",
-                       "Bodyguard"
-                   ],
-        "traitsKo":  [
-                         "True Damage",
-                         "경호대"
-                     ],
-        "traitIds":  [
-                         "DA_TrueDamage19",
-                         "DA_Bodyguard19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Kobuko19",
-        "teamPlannerCode":  "410",
-        "name":  "Kobuko",
-        "nameKo":  "코부코",
-        "cost":  1,
-        "role":  "Magic Tank",
-        "roleKo":  "주문력 탱커",
-        "traits":  [
-                       "Hyperpop",
-                       "Frontman"
-                   ],
-        "traitsKo":  [
-                         "하이퍼팝",
-                         "프론트맨"
-                     ],
-        "traitIds":  [
-                         "DA_GlitterBomb19",
-                         "DA_Frontman19"
-                     ],
-        "unlock":  "아이템 1개를 장착한 2성 직스",
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Lillia19",
-        "teamPlannerCode":  "413",
-        "name":  "Lillia",
-        "nameKo":  "릴리아",
-        "cost":  1,
-        "role":  "Magic Tank",
-        "roleKo":  "주문력 탱커",
-        "traits":  [
-                       "K/DA",
-                       "Bodyguard"
-                   ],
-        "traitsKo":  [
-                         "K/DA",
-                         "경호대"
-                     ],
-        "traitIds":  [
-                         "DA_KDA19",
-                         "DA_Bodyguard19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Neeko19",
-        "teamPlannerCode":  "41c",
-        "name":  "Neeko",
-        "nameKo":  "니코",
-        "cost":  1,
-        "role":  "Magic Caster",
-        "roleKo":  "주문력 마법사",
-        "traits":  [
-                       "K/DA",
-                       "Encore",
-                       "Prodigy"
-                   ],
-        "traitsKo":  [
-                         "K/DA",
-                         "앙코르",
-                         "신동"
-                     ],
-        "traitIds":  [
-                         "DA_KDA19",
-                         "DA_Encore19",
-                         "DA_Prodigy19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Olaf19",
-        "teamPlannerCode":  "447",
-        "name":  "Olaf",
-        "nameKo":  "올라프",
-        "cost":  1,
-        "role":  "Attack Tank",
-        "roleKo":  "공격력 탱커",
-        "traits":  [
-                       "Pentakill",
-                       "Rock",
-                       "Juggernaut"
-                   ],
-        "traitsKo":  [
-                         "펜타킬",
-                         "락",
-                         "전쟁기계"
-                     ],
-        "traitIds":  [
-                         "DA_Pentakill19",
-                         "DA_DemonVision19",
-                         "DA_Juggernaut19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Sett19",
-        "teamPlannerCode":  "428",
-        "name":  "Sett",
-        "nameKo":  "세트",
-        "cost":  1,
-        "role":  "Attack Tank",
-        "roleKo":  "공격력 탱커",
-        "traits":  [
-                       "Heartsteel",
-                       "Frontman"
-                   ],
-        "traitsKo":  [
-                         "HEARTSTEEL",
-                         "프론트맨"
-                     ],
-        "traitIds":  [
-                         "DA_Heartsteel19",
-                         "DA_Frontman19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Taric19",
-        "teamPlannerCode":  "430",
-        "name":  "Taric",
-        "nameKo":  "타릭",
-        "cost":  1,
-        "role":  "Magic Tank",
-        "roleKo":  "주문력 탱커",
-        "traits":  [
-                       "Beach Pop",
-                       "Juggernaut"
-                   ],
-        "traitsKo":  [
-                         "비치 팝",
-                         "전쟁기계"
-                     ],
-        "traitIds":  [
-                         "DA_OceanSong19",
-                         "DA_Juggernaut19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Varus19",
-        "teamPlannerCode":  "436",
-        "name":  "Varus",
-        "nameKo":  "바루스",
-        "cost":  1,
-        "role":  "Attack Caster",
-        "roleKo":  "공격력 마법사",
-        "traits":  [
-                       "Rock",
-                       "Encore"
-                   ],
-        "traitsKo":  [
-                         "락",
-                         "앙코르"
-                     ],
-        "traitIds":  [
-                         "DA_DemonVision19",
-                         "DA_Encore19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Yunara19",
-        "teamPlannerCode":  "440",
-        "name":  "Yunara",
-        "nameKo":  "유나라",
-        "cost":  1,
-        "role":  "Attack Marksman",
-        "roleKo":  "공격력 원거리 딜러",
-        "traits":  [
-                       "Ionic Spark",
-                       "Swiftstriker"
-                   ],
-        "traitsKo":  [
-                         "Ionic Spark",
-                         "신속타격대"
-                     ],
-        "traitIds":  [
-                         "DA_IonicSpark19",
-                         "DA_Swiftstriker19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Ziggs19",
-        "teamPlannerCode":  "444",
-        "name":  "Ziggs",
-        "nameKo":  "직스",
-        "cost":  1,
-        "role":  "Magic Marksman",
-        "roleKo":  "주문력 원거리 딜러",
-        "traits":  [
-                       "Hyperpop",
-                       "Arcanist",
-                       "Swiftstriker"
-                   ],
-        "traitsKo":  [
-                         "하이퍼팝",
-                         "비전 마법사",
-                         "신속타격대"
-                     ],
-        "traitIds":  [
-                         "DA_GlitterBomb19",
-                         "DA_Arcanist19",
-                         "DA_Swiftstriker19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Zoe19",
-        "teamPlannerCode":  "445",
-        "name":  "Zoe",
-        "nameKo":  "조이",
-        "cost":  1,
-        "role":  "Magic Caster",
-        "roleKo":  "주문력 마법사",
-        "traits":  [
-                       "Beach Pop",
-                       "Arcanist"
-                   ],
-        "traitsKo":  [
-                         "비치 팝",
-                         "비전 마법사"
-                     ],
-        "traitIds":  [
-                         "DA_OceanSong19",
-                         "DA_Arcanist19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Annie19",
-        "teamPlannerCode":  "3f0",
-        "name":  "Annie",
-        "nameKo":  "애니",
-        "cost":  2,
-        "role":  "Magic Tank",
-        "roleKo":  "주문력 탱커",
-        "traits":  [
-                       "Ionic Spark",
-                       "Arcanist",
-                       "Juggernaut"
-                   ],
-        "traitsKo":  [
-                         "Ionic Spark",
-                         "비전 마법사",
-                         "전쟁기계"
-                     ],
-        "traitIds":  [
-                         "DA_IonicSpark19",
-                         "DA_Arcanist19",
-                         "DA_Juggernaut19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Ashe19",
-        "teamPlannerCode":  "3f2",
-        "name":  "Ashe",
-        "nameKo":  "애쉬",
-        "cost":  2,
-        "role":  "Attack Marksman",
-        "roleKo":  "공격력 원거리 딜러",
-        "traits":  [
-                       "Beach Pop",
-                       "Swiftstriker"
-                   ],
-        "traitsKo":  [
-                         "비치 팝",
-                         "신속타격대"
-                     ],
-        "traitIds":  [
-                         "DA_OceanSong19",
-                         "DA_Swiftstriker19"
-                     ],
-        "unlock":  "아이템 2개를 장착한 비치 팝 챔피언",
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Camille19",
-        "teamPlannerCode":  "3f8",
-        "name":  "Camille",
-        "nameKo":  "카밀",
-        "cost":  2,
-        "role":  "Attack Fighter",
-        "roleKo":  "공격력 전사",
-        "traits":  [
-                       "Rock",
-                       "Slayer"
-                   ],
-        "traitsKo":  [
-                         "락",
-                         "학살자"
-                     ],
-        "traitIds":  [
-                         "DA_DemonVision19",
-                         "DA_Mosher19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Ezreal19",
-        "teamPlannerCode":  "3ff",
-        "name":  "Ezreal",
-        "nameKo":  "이즈리얼",
-        "cost":  2,
-        "role":  "Attack Caster",
-        "roleKo":  "공격력 마법사",
-        "traits":  [
-                       "Heartsteel",
-                       "Encore"
-                   ],
-        "traitsKo":  [
-                         "HEARTSTEEL",
-                         "앙코르"
-                     ],
-        "traitIds":  [
-                         "DA_Heartsteel19",
-                         "DA_Encore19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Gragas19",
-        "teamPlannerCode":  "403",
-        "name":  "Gragas",
-        "nameKo":  "그라가스",
-        "cost":  2,
-        "role":  "Magic Tank",
-        "roleKo":  "주문력 탱커",
-        "traits":  [
-                       "K/DA",
-                       "Juggernaut"
-                   ],
-        "traitsKo":  [
-                         "K/DA",
-                         "전쟁기계"
-                     ],
-        "traitIds":  [
-                         "DA_KDA19",
-                         "DA_Juggernaut19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Illaoi19",
-        "teamPlannerCode":  "405",
-        "name":  "Illaoi",
-        "nameKo":  "일라오이",
-        "cost":  2,
-        "role":  "Magic Tank",
-        "roleKo":  "주문력 탱커",
-        "traits":  [
-                       "Illbeats",
-                       "Frontman"
-                   ],
-        "traitsKo":  [
-                         "일류 비트",
-                         "프론트맨"
-                     ],
-        "traitIds":  [
-                         "DA_Illbeats19",
-                         "DA_Frontman19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Jax19",
-        "teamPlannerCode":  "407",
-        "name":  "Jax",
-        "nameKo":  "잭스",
-        "cost":  2,
-        "role":  "Magic Fighter",
-        "roleKo":  "주문력 전사",
-        "traits":  [
-                       "EDM",
-                       "Bodyguard",
-                       "Swiftstriker"
-                   ],
-        "traitsKo":  [
-                         "EDM",
-                         "경호대",
-                         "신속타격대"
-                     ],
-        "traitIds":  [
-                         "DA_EDM19",
-                         "DA_Bodyguard19",
-                         "DA_Swiftstriker19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Karthus19",
-        "teamPlannerCode":  "40b",
-        "name":  "Karthus",
-        "nameKo":  "카서스",
-        "cost":  2,
-        "role":  "Magic Caster",
-        "roleKo":  "주문력 마법사",
-        "traits":  [
-                       "Pentakill",
-                       "Arcanist"
-                   ],
-        "traitsKo":  [
-                         "펜타킬",
-                         "비전 마법사"
-                     ],
-        "traitIds":  [
-                         "DA_Pentakill19",
-                         "DA_Arcanist19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Lucian19",
-        "teamPlannerCode":  "415",
-        "name":  "Lucian",
-        "nameKo":  "루시안",
-        "cost":  2,
-        "role":  "Attack Caster",
-        "roleKo":  "공격력 마법사",
-        "traits":  [
-                       "Jazz",
-                       "Hitmaker",
-                       "Encore"
-                   ],
-        "traitsKo":  [
-                         "재즈",
-                         "스타 제조기",
-                         "앙코르"
-                     ],
-        "traitIds":  [
-                         "DA_Jazz19",
-                         "DA_Hitmaker19",
-                         "DA_Encore19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Lulu19",
-        "teamPlannerCode":  "416",
-        "name":  "Lulu",
-        "nameKo":  "룰루",
-        "cost":  2,
-        "role":  "Magic Caster",
-        "roleKo":  "주문력 마법사",
-        "traits":  [
-                       "Hyperpop",
-                       "Choreographer"
-                   ],
-        "traitsKo":  [
-                         "하이퍼팝",
-                         "안무가"
-                     ],
-        "traitIds":  [
-                         "DA_GlitterBomb19",
-                         "DA_Choreographer19"
-                     ],
-        "unlock":  "특성을 활성화한 상태에서 하이퍼팝 챔피언이 스킬 10회 사용",
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Lux19",
-        "teamPlannerCode":  "417",
-        "name":  "Lux",
-        "nameKo":  "럭스",
-        "cost":  2,
-        "role":  "Magic Caster",
-        "roleKo":  "주문력 마법사",
-        "traits":  [
-                       "Ionic Spark",
-                       "Prodigy"
-                   ],
-        "traitsKo":  [
-                         "Ionic Spark",
-                         "신동"
-                     ],
-        "traitIds":  [
-                         "DA_IonicSpark19",
-                         "DA_Prodigy19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Nasus19",
-        "teamPlannerCode":  "44a",
-        "name":  "Nasus",
-        "nameKo":  "나서스",
-        "cost":  2,
-        "role":  "Magic Tank",
-        "roleKo":  "주문력 탱커",
-        "traits":  [
-                       "Classical",
-                       "Bodyguard"
-                   ],
-        "traitsKo":  [
-                         "클래식",
-                         "경호대"
-                     ],
-        "traitIds":  [
-                         "DA_Virtuosos19",
-                         "DA_Bodyguard19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Qiyana19",
-        "teamPlannerCode":  "421",
-        "name":  "Qiyana",
-        "nameKo":  "키아나",
-        "cost":  2,
-        "role":  "Attack Fighter",
-        "roleKo":  "공격력 전사",
-        "traits":  [
-                       "True Damage",
-                       "Renegade"
-                   ],
-        "traitsKo":  [
-                         "True Damage",
-                         "무법자"
-                     ],
-        "traitIds":  [
-                         "DA_TrueDamage19",
-                         "DA_Renegade19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_RenataGlasc19",
-        "teamPlannerCode":  "423",
-        "name":  "Renata Glasc",
-        "nameKo":  "레나타 글라스크",
-        "cost":  2,
-        "role":  "Magic Caster",
-        "roleKo":  "주문력 마법사",
-        "traits":  [
-                       "Classical",
-                       "Choreographer"
-                   ],
-        "traitsKo":  [
-                         "클래식",
-                         "안무가"
-                     ],
-        "traitIds":  [
-                         "DA_Virtuosos19",
-                         "DA_Choreographer19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Renekton19",
-        "teamPlannerCode":  "424",
-        "name":  "Renekton",
-        "nameKo":  "레넥톤",
-        "cost":  2,
-        "role":  "Attack Tank",
-        "roleKo":  "공격력 탱커",
-        "traits":  [
-                       "Beach Pop",
-                       "Frontman"
-                   ],
-        "traitsKo":  [
-                         "비치 팝",
-                         "프론트맨"
-                     ],
-        "traitIds":  [
-                         "DA_OceanSong19",
-                         "DA_Frontman19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Samira19",
-        "teamPlannerCode":  "425",
-        "name":  "Samira",
-        "nameKo":  "사미라",
-        "cost":  2,
-        "role":  "Attack Caster",
-        "roleKo":  "공격력 마법사",
-        "traits":  [
-                       "Classical",
-                       "Renegade",
-                       "Trickshot"
-                   ],
-        "traitsKo":  [
-                         "클래식",
-                         "무법자",
-                         "재주꾼"
-                     ],
-        "traitIds":  [
-                         "DA_Virtuosos19",
-                         "DA_Renegade19",
-                         "DA_Trickshot19"
-                     ],
-        "unlock":  "클래식, 무법자 또는 재주꾼 챔피언에게 아이템 2개 장착",
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Seraphine19_Indie",
-        "teamPlannerCode":  "427",
-        "name":  "Seraphine",
-        "nameKo":  "세라핀",
-        "cost":  2,
-        "role":  "Magic Caster",
-        "roleKo":  "주문력 마법사",
-        "traits":  [
-                       "Indie"
-                   ],
-        "traitsKo":  [
-                         "인디"
-                     ],
-        "traitIds":  [
-                         "DA_Seraphine19_IndieTrait"
-                     ],
-        "unlock":  "스테이지 2 공동 선택 전에 새로고침 4회",
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Tristana19",
-        "teamPlannerCode":  "434",
-        "name":  "Tristana",
-        "nameKo":  "트리스타나",
-        "cost":  2,
-        "role":  "Attack Caster",
-        "roleKo":  "공격력 마법사",
-        "traits":  [
-                       "Hyperpop",
-                       "Hitmaker"
-                   ],
-        "traitsKo":  [
-                         "하이퍼팝",
-                         "스타 제조기"
-                     ],
-        "traitIds":  [
-                         "DA_GlitterBomb19",
-                         "DA_Hitmaker19"
-                     ],
-        "unlock":  "하이퍼팝이 활성화된 상태로 5킬 달성",
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Amumu19",
-        "teamPlannerCode":  "3ef",
-        "name":  "Amumu",
-        "nameKo":  "아무무",
-        "cost":  3,
-        "role":  "Magic Tank",
-        "roleKo":  "주문력 탱커",
-        "traits":  [
-                       "Emo"
-                   ],
-        "traitsKo":  [
-                         "이모코어"
-                     ],
-        "traitIds":  [
-                         "DA_Amumu19_UniqueTrait"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Bard19",
-        "teamPlannerCode":  "3f4",
-        "name":  "Bard",
-        "nameKo":  "바드",
-        "cost":  3,
-        "role":  "Magic Marksman",
-        "roleKo":  "주문력 원거리 딜러",
-        "traits":  [
-                       "Jazz",
-                       "Swiftstriker"
-                   ],
-        "traitsKo":  [
-                         "재즈",
-                         "신속타격대"
-                     ],
-        "traitIds":  [
-                         "DA_Jazz19",
-                         "DA_Swiftstriker19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Braum19",
-        "teamPlannerCode":  "3f6",
-        "name":  "Braum",
-        "nameKo":  "브라움",
-        "cost":  3,
-        "role":  "Magic Tank",
-        "roleKo":  "주문력 탱커",
-        "traits":  [
-                       "Illbeats",
-                       "Juggernaut"
-                   ],
-        "traitsKo":  [
-                         "일류 비트",
-                         "전쟁기계"
-                     ],
-        "traitIds":  [
-                         "DA_Illbeats19",
-                         "DA_Juggernaut19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Briar19",
-        "teamPlannerCode":  "3f7",
-        "name":  "Briar",
-        "nameKo":  "브라이어",
-        "cost":  3,
-        "role":  "Attack Assassin",
-        "roleKo":  "공격력 암살자",
-        "traits":  [
-                       "Ionic Spark",
-                       "Slayer"
-                   ],
-        "traitsKo":  [
-                         "Ionic Spark",
-                         "학살자"
-                     ],
-        "traitIds":  [
-                         "DA_IonicSpark19",
-                         "DA_Mosher19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Draven19",
-        "teamPlannerCode":  "3fa",
-        "name":  "Draven",
-        "nameKo":  "드레이븐",
-        "cost":  3,
-        "role":  "Attack Caster",
-        "roleKo":  "공격력 마법사",
-        "traits":  [
-                       "Illbeats",
-                       "Trickshot"
-                   ],
-        "traitsKo":  [
-                         "일류 비트",
-                         "재주꾼"
-                     ],
-        "traitIds":  [
-                         "DA_Illbeats19",
-                         "DA_Trickshot19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Ekko19",
-        "teamPlannerCode":  "3fc",
-        "name":  "Ekko",
-        "nameKo":  "에코",
-        "cost":  3,
-        "role":  "Magic Tank",
-        "roleKo":  "주문력 탱커",
-        "traits":  [
-                       "True Damage",
-                       "Juggernaut",
-                       "Prodigy"
-                   ],
-        "traitsKo":  [
-                         "True Damage",
-                         "전쟁기계",
-                         "신동"
-                     ],
-        "traitIds":  [
-                         "DA_TrueDamage19",
-                         "DA_Juggernaut19",
-                         "DA_Prodigy19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Evelynn19",
-        "teamPlannerCode":  "3fe",
-        "name":  "Evelynn",
-        "nameKo":  "이블린",
-        "cost":  3,
-        "role":  "Magic Fighter",
-        "roleKo":  "주문력 전사",
-        "traits":  [
-                       "K/DA",
-                       "Renegade"
-                   ],
-        "traitsKo":  [
-                         "K/DA",
-                         "무법자"
-                     ],
-        "traitIds":  [
-                         "DA_KDA19",
-                         "DA_Renegade19"
-                     ],
-        "unlock":  "서로 다른 K/DA 또는 무법자 챔피언 3명",
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Galio19",
-        "teamPlannerCode":  "400",
-        "name":  "Galio",
-        "nameKo":  "갈리오",
-        "cost":  3,
-        "role":  "Magic Tank",
-        "roleKo":  "주문력 탱커",
-        "traits":  [
-                       "Jazz",
-                       "Frontman"
-                   ],
-        "traitsKo":  [
-                         "재즈",
-                         "프론트맨"
-                     ],
-        "traitIds":  [
-                         "DA_Jazz19",
-                         "DA_Frontman19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Kaisa19",
-        "teamPlannerCode":  "40a",
-        "name":  "Kai\u0027Sa",
-        "nameKo":  "카이사",
-        "cost":  3,
-        "role":  "Attack Marksman",
-        "roleKo":  "공격력 원거리 딜러",
-        "traits":  [
-                       "K/DA",
-                       "Trickshot"
-                   ],
-        "traitsKo":  [
-                         "K/DA",
-                         "재주꾼"
-                     ],
-        "traitIds":  [
-                         "DA_KDA19",
-                         "DA_Trickshot19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_KSante19",
-        "teamPlannerCode":  "411",
-        "name":  "K\u0027Sante",
-        "nameKo":  "크산테",
-        "cost":  3,
-        "role":  "Attack Tank",
-        "roleKo":  "공격력 탱커",
-        "traits":  [
-                       "Heartsteel",
-                       "Bodyguard"
-                   ],
-        "traitsKo":  [
-                         "HEARTSTEEL",
-                         "경호대"
-                     ],
-        "traitIds":  [
-                         "DA_Heartsteel19",
-                         "DA_Bodyguard19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Malzahar19",
-        "teamPlannerCode":  "418",
-        "name":  "Malzahar",
-        "nameKo":  "말자하",
-        "cost":  3,
-        "role":  "Magic Caster",
-        "roleKo":  "주문력 마법사",
-        "traits":  [
-                       "Composer",
-                       "Prodigy"
-                   ],
-        "traitsKo":  [
-                         "작곡가",
-                         "신동"
-                     ],
-        "traitIds":  [
-                         "DA_Malzahar19_UniqueTrait",
-                         "DA_Prodigy19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Senna19",
-        "teamPlannerCode":  "426",
-        "name":  "Senna",
-        "nameKo":  "세나",
-        "cost":  3,
-        "role":  "Attack Caster",
-        "roleKo":  "공격력 마법사",
-        "traits":  [
-                       "True Damage",
-                       "Hitmaker"
-                   ],
-        "traitsKo":  [
-                         "True Damage",
-                         "스타 제조기"
-                     ],
-        "traitIds":  [
-                         "DA_TrueDamage19",
-                         "DA_Hitmaker19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Swain19",
-        "teamPlannerCode":  "42d",
-        "name":  "Swain",
-        "nameKo":  "스웨인",
-        "cost":  3,
-        "role":  "Magic Tank",
-        "roleKo":  "주문력 탱커",
-        "traits":  [
-                       "Rock",
-                       "Arcanist",
-                       "Frontman"
-                   ],
-        "traitsKo":  [
-                         "락",
-                         "비전 마법사",
-                         "프론트맨"
-                     ],
-        "traitIds":  [
-                         "DA_DemonVision19",
-                         "DA_Arcanist19",
-                         "DA_Frontman19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Syndra19",
-        "teamPlannerCode":  "42e",
-        "name":  "Syndra",
-        "nameKo":  "신드라",
-        "cost":  3,
-        "role":  "Magic Caster",
-        "roleKo":  "주문력 마법사",
-        "traits":  [
-                       "Beach Pop",
-                       "Choreographer"
-                   ],
-        "traitsKo":  [
-                         "비치 팝",
-                         "안무가"
-                     ],
-        "traitIds":  [
-                         "DA_OceanSong19",
-                         "DA_Choreographer19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Tibbers19",
-        "teamPlannerCode":  "433",
-        "name":  "Tibbers",
-        "nameKo":  "티버",
-        "cost":  3,
-        "role":  "Attack Tank",
-        "roleKo":  "공격력 탱커",
-        "traits":  [
-                       "Ionic Spark",
-                       "Bodyguard"
-                   ],
-        "traitsKo":  [
-                         "Ionic Spark",
-                         "경호대"
-                     ],
-        "traitIds":  [
-                         "DA_IonicSpark19",
-                         "DA_Bodyguard19"
-                     ],
-        "unlock":  "아이템 1개를 장착한 2성 애니",
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Viego19",
-        "teamPlannerCode":  "439",
-        "name":  "Viego",
-        "nameKo":  "비에고",
-        "cost":  3,
-        "role":  "Attack Fighter",
-        "roleKo":  "공격력 전사",
-        "traits":  [
-                       "Pentakill",
-                       "Choreographer",
-                       "Slayer"
-                   ],
-        "traitsKo":  [
-                         "펜타킬",
-                         "안무가",
-                         "학살자"
-                     ],
-        "traitIds":  [
-                         "DA_Pentakill19",
-                         "DA_Choreographer19",
-                         "DA_Mosher19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_19_Ahri",
-        "teamPlannerCode":  "3e9",
-        "name":  "Ahri",
-        "nameKo":  "아리",
-        "cost":  4,
-        "role":  "Magic Caster",
-        "roleKo":  "주문력 마법사",
-        "traits":  [
-                       "K/DA",
-                       "Choreographer"
-                   ],
-        "traitsKo":  [
-                         "K/DA",
-                         "안무가"
-                     ],
-        "traitIds":  [
-                         "DA_KDA19",
-                         "DA_Choreographer19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Alistar19",
-        "teamPlannerCode":  "3ed",
-        "name":  "Alistar",
-        "nameKo":  "알리스타",
-        "cost":  4,
-        "role":  "Magic Tank",
-        "roleKo":  "주문력 탱커",
-        "traits":  [
-                       "Country"
-                   ],
-        "traitsKo":  [
-                         "컨트리"
-                     ],
-        "traitIds":  [
-                         "DA_Alistar19_UniqueTrait"
-                     ],
-        "unlock":  "7레벨 이상 · 마법사 또는 원거리 딜러에게 쇠사슬 조끼 1개 장착",
-        "levelRequired":  7
-    },
-    {
-        "id":  "DA_Alune19",
-        "teamPlannerCode":  "3ee",
-        "name":  "Alune",
-        "nameKo":  "알룬",
-        "cost":  4,
-        "role":  "Magic Caster",
-        "roleKo":  "주문력 마법사",
-        "traits":  [
-                       "Heartsteel",
-                       "Manager",
-                       "Prodigy"
-                   ],
-        "traitsKo":  [
-                         "HEARTSTEEL",
-                         "매니저",
-                         "신동"
-                     ],
-        "traitIds":  [
-                         "DA_Heartsteel19",
-                         "DA_Manager19",
-                         "DA_Prodigy19"
-                     ],
-        "unlock":  "7레벨 이상 · 서로 다른 HEARTSTEEL 또는 신동 챔피언 4명",
-        "levelRequired":  7
-    },
-    {
-        "id":  "DA_Aurora19",
-        "teamPlannerCode":  "3f3",
-        "name":  "Aurora",
-        "nameKo":  "오로라",
-        "cost":  4,
-        "role":  "Magic Caster",
-        "roleKo":  "주문력 마법사",
-        "traits":  [
-                       "Ionic Spark",
-                       "Renegade"
-                   ],
-        "traitsKo":  [
-                         "Ionic Spark",
-                         "무법자"
-                     ],
-        "traitIds":  [
-                         "DA_IonicSpark19",
-                         "DA_Renegade19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Garen19",
-        "teamPlannerCode":  "401",
-        "name":  "Garen",
-        "nameKo":  "가렌",
-        "cost":  4,
-        "role":  "Attack Tank",
-        "roleKo":  "공격력 탱커",
-        "traits":  [
-                       "Synthwave",
-                       "Choreographer"
-                   ],
-        "traitsKo":  [
-                         "신스웨이브",
-                         "안무가"
-                     ],
-        "traitIds":  [
-                         "DA_Garen19_UniqueTrait",
-                         "DA_Choreographer19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Graves19",
-        "teamPlannerCode":  "449",
-        "name":  "Graves",
-        "nameKo":  "그레이브즈",
-        "cost":  4,
-        "role":  "Attack Fighter",
-        "roleKo":  "공격력 전사",
-        "traits":  [
-                       "Beach Pop",
-                       "Renegade"
-                   ],
-        "traitsKo":  [
-                         "비치 팝",
-                         "무법자"
-                     ],
-        "traitIds":  [
-                         "DA_OceanSong19",
-                         "DA_Renegade19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Jhin19",
-        "teamPlannerCode":  "408",
-        "name":  "Jhin",
-        "nameKo":  "진",
-        "cost":  4,
-        "role":  "Attack Specialist",
-        "roleKo":  "공격력 전문가",
-        "traits":  [
-                       "Classical",
-                       "Encore"
-                   ],
-        "traitsKo":  [
-                         "클래식",
-                         "앙코르"
-                     ],
-        "traitIds":  [
-                         "DA_Virtuosos19",
-                         "DA_Encore19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Jinx19",
-        "teamPlannerCode":  "409",
-        "name":  "Jinx",
-        "nameKo":  "징크스",
-        "cost":  4,
-        "role":  "Attack Marksman",
-        "roleKo":  "공격력 원거리 딜러",
-        "traits":  [
-                       "Ionic Spark",
-                       "Hitmaker"
-                   ],
-        "traitsKo":  [
-                         "Ionic Spark",
-                         "스타 제조기"
-                     ],
-        "traitIds":  [
-                         "DA_IonicSpark19",
-                         "DA_Hitmaker19"
-                     ],
-        "unlock":  "7레벨 이상 · Ionic Spark 또는 스타 제조기 챔피언에게 장착한 아이템 3개",
-        "levelRequired":  7
-    },
-    {
-        "id":  "DA_Kayle19",
-        "teamPlannerCode":  "40d",
-        "name":  "Kayle",
-        "nameKo":  "케일",
-        "cost":  4,
-        "role":  "Magic Marksman",
-        "roleKo":  "주문력 원거리 딜러",
-        "traits":  [
-                       "Pentakill",
-                       "Swiftstriker"
-                   ],
-        "traitsKo":  [
-                         "펜타킬",
-                         "신속타격대"
-                     ],
-        "traitIds":  [
-                         "DA_Pentakill19",
-                         "DA_Swiftstriker19"
-                     ],
-        "unlock":  "7레벨 이상 · 서로 다른 펜타킬 또는 신속타격대 챔피언 4명",
-        "levelRequired":  7
-    },
-    {
-        "id":  "DA_Leona19",
-        "teamPlannerCode":  "412",
-        "name":  "Leona",
-        "nameKo":  "레오나",
-        "cost":  4,
-        "role":  "Magic Tank",
-        "roleKo":  "주문력 탱커",
-        "traits":  [
-                       "K/DA",
-                       "Bodyguard",
-                       "Manager"
-                   ],
-        "traitsKo":  [
-                         "K/DA",
-                         "경호대",
-                         "매니저"
-                     ],
-        "traitIds":  [
-                         "DA_KDA19",
-                         "DA_Bodyguard19",
-                         "DA_Manager19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Locke19",
-        "teamPlannerCode":  "414",
-        "name":  "Locke",
-        "nameKo":  "로크",
-        "cost":  4,
-        "role":  "Magic Assassin",
-        "roleKo":  "주문력 암살자",
-        "traits":  [
-                       "Rock",
-                       "Swiftstriker"
-                   ],
-        "traitsKo":  [
-                         "락",
-                         "신속타격대"
-                     ],
-        "traitIds":  [
-                         "DA_DemonVision19",
-                         "DA_Swiftstriker19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Mel19",
-        "teamPlannerCode":  "419",
-        "name":  "Mel",
-        "nameKo":  "멜",
-        "cost":  4,
-        "role":  "Magic Caster",
-        "roleKo":  "주문력 마법사",
-        "traits":  [
-                       "R\u0026B",
-                       "Arcanist"
-                   ],
-        "traitsKo":  [
-                         "R\u0026B",
-                         "비전 마법사"
-                     ],
-        "traitIds":  [
-                         "DA_RnB19",
-                         "DA_Arcanist19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Shyvana19",
-        "teamPlannerCode":  "429",
-        "name":  "Shyvana",
-        "nameKo":  "쉬바나",
-        "cost":  4,
-        "role":  "Magic Tank",
-        "roleKo":  "주문력 탱커",
-        "traits":  [
-                       "Ionic Spark",
-                       "Frontman"
-                   ],
-        "traitsKo":  [
-                         "Ionic Spark",
-                         "프론트맨"
-                     ],
-        "traitIds":  [
-                         "DA_IonicSpark19",
-                         "DA_Frontman19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Thresh19",
-        "teamPlannerCode":  "432",
-        "name":  "Thresh",
-        "nameKo":  "쓰레쉬",
-        "cost":  4,
-        "role":  "Magic Tank",
-        "roleKo":  "주문력 탱커",
-        "traits":  [
-                       "Classical",
-                       "Frontman"
-                   ],
-        "traitsKo":  [
-                         "클래식",
-                         "프론트맨"
-                     ],
-        "traitIds":  [
-                         "DA_Virtuosos19",
-                         "DA_Frontman19"
-                     ],
-        "unlock":  "클래식으로 적 250초 동안 매료 상태로 만들기",
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Vayne19",
-        "teamPlannerCode":  "437",
-        "name":  "Vayne",
-        "nameKo":  "베인",
-        "cost":  4,
-        "role":  "Attack Marksman",
-        "roleKo":  "공격력 원거리 딜러",
-        "traits":  [
-                       "Rock",
-                       "Trickshot"
-                   ],
-        "traitsKo":  [
-                         "락",
-                         "재주꾼"
-                     ],
-        "traitIds":  [
-                         "DA_DemonVision19",
-                         "DA_Trickshot19"
-                     ],
-        "unlock":  "7레벨 이상 · 서로 다른 락 또는 재주꾼 유닛 별 레벨 총합 5",
-        "levelRequired":  7
-    },
-    {
-        "id":  "DA_Wukong19",
-        "teamPlannerCode":  "43b",
-        "name":  "Wukong",
-        "nameKo":  "오공",
-        "cost":  4,
-        "role":  "Attack Tank",
-        "roleKo":  "공격력 탱커",
-        "traits":  [
-                       "Gu Feng"
-                   ],
-        "traitsKo":  [
-                         "고풍"
-                     ],
-        "traitIds":  [
-                         "DA_Heavenscale19"
-                     ],
-        "unlock":  "자야를 배치한 상태로 아군이 25000의 피해 입히기",
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Xayah19",
-        "teamPlannerCode":  "43c",
-        "name":  "Xayah",
-        "nameKo":  "자야",
-        "cost":  4,
-        "role":  "Attack Caster",
-        "roleKo":  "공격력 마법사",
-        "traits":  [
-                       "Gu Feng",
-                       "Hitmaker"
-                   ],
-        "traitsKo":  [
-                         "고풍",
-                         "스타 제조기"
-                     ],
-        "traitIds":  [
-                         "DA_Heavenscale19",
-                         "DA_Hitmaker19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Yasuo19",
-        "teamPlannerCode":  "43d",
-        "name":  "Yasuo",
-        "nameKo":  "야스오",
-        "cost":  4,
-        "role":  "Attack Fighter",
-        "roleKo":  "공격력 전사",
-        "traits":  [
-                       "True Damage",
-                       "Slayer"
-                   ],
-        "traitsKo":  [
-                         "True Damage",
-                         "학살자"
-                     ],
-        "traitIds":  [
-                         "DA_TrueDamage19",
-                         "DA_Mosher19"
-                     ],
-        "unlock":  "7레벨 이상 · 서로 다른 True Damage 또는 학살자 챔피언 별 레벨 총합 6",
-        "levelRequired":  7
-    },
-    {
-        "id":  "DA_Yone19",
-        "teamPlannerCode":  "43e",
-        "name":  "Yone",
-        "nameKo":  "요네",
-        "cost":  4,
-        "role":  "Attack Fighter",
-        "roleKo":  "공격력 전사",
-        "traits":  [
-                       "Heartsteel",
-                       "Slayer"
-                   ],
-        "traitsKo":  [
-                         "HEARTSTEEL",
-                         "학살자"
-                     ],
-        "traitIds":  [
-                         "DA_Heartsteel19",
-                         "DA_Mosher19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Yorick19",
-        "teamPlannerCode":  "43f",
-        "name":  "Yorick",
-        "nameKo":  "요릭",
-        "cost":  4,
-        "role":  "Magic Tank",
-        "roleKo":  "주문력 탱커",
-        "traits":  [
-                       "Pentakill",
-                       "Juggernaut"
-                   ],
-        "traitsKo":  [
-                         "펜타킬",
-                         "전쟁기계"
-                     ],
-        "traitIds":  [
-                         "DA_Pentakill19",
-                         "DA_Juggernaut19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Yuumi19",
-        "teamPlannerCode":  "441",
-        "name":  "Yuumi",
-        "nameKo":  "유미",
-        "cost":  4,
-        "role":  "Magic Caster",
-        "roleKo":  "주문력 마법사",
-        "traits":  [
-                       "Illbeats",
-                       "Encore"
-                   ],
-        "traitsKo":  [
-                         "일류 비트",
-                         "앙코르"
-                     ],
-        "traitIds":  [
-                         "DA_Illbeats19",
-                         "DA_Encore19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Zac19",
-        "teamPlannerCode":  "442",
-        "name":  "Zac",
-        "nameKo":  "자크",
-        "cost":  4,
-        "role":  "Magic Tank",
-        "roleKo":  "주문력 탱커",
-        "traits":  [
-                       "Beach Pop",
-                       "Juggernaut"
-                   ],
-        "traitsKo":  [
-                         "비치 팝",
-                         "전쟁기계"
-                     ],
-        "traitIds":  [
-                         "DA_OceanSong19",
-                         "DA_Juggernaut19"
-                     ],
-        "unlock":  "7레벨 이상 · 서로 다른 비치 팝 또는 전쟁기계 챔피언 5명",
-        "levelRequired":  7
-    },
-    {
-        "id":  "DA_Akali_TrueDamage19",
-        "teamPlannerCode":  "3ea",
-        "name":  "Akali (True Damage)",
-        "nameKo":  "아칼리 (True Damage)",
-        "cost":  5,
-        "role":  "Magic Fighter",
-        "roleKo":  "주문력 전사",
-        "traits":  [
-                       "True Damage",
-                       "Freestyle"
-                   ],
-        "traitsKo":  [
-                         "True Damage",
-                         "프리스타일"
-                     ],
-        "traitIds":  [
-                         "DA_TrueDamage19",
-                         "DA_Akali_TrueDamage19_UniqueTrait"
-                     ],
-        "unlock":  "K/DA 아칼리가 해금되지 않은 상태에서 True Damage 블링 320개 획득",
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_AkaliKDA19",
-        "teamPlannerCode":  "3ec",
-        "name":  "Akali (K/DA)",
-        "nameKo":  "아칼리 (K/DA)",
-        "cost":  5,
-        "role":  "Attack Assassin",
-        "roleKo":  "공격력 암살자",
-        "traits":  [
-                       "K/DA"
-                   ],
-        "traitsKo":  [
-                         "K/DA"
-                     ],
-        "traitIds":  [
-                         "DA_KDA19"
-                     ],
-        "unlock":  "True Damage 아칼리가 해금되지 않은 상태에서 서로 다른 K/DA 별 레벨 총합 12",
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Aphelios19",
-        "teamPlannerCode":  "3f1",
-        "name":  "Aphelios",
-        "nameKo":  "아펠리오스",
-        "cost":  5,
-        "role":  "Attack Marksman",
-        "roleKo":  "공격력 원거리 딜러",
-        "traits":  [
-                       "Heartsteel"
-                   ],
-        "traitsKo":  [
-                         "HEARTSTEEL"
-                     ],
-        "traitIds":  [
-                         "DA_Heartsteel19"
-                     ],
-        "unlock":  "2성 알룬 또는 요네",
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_DrMundo19",
-        "teamPlannerCode":  "3fb",
-        "name":  "Dr. Mundo",
-        "nameKo":  "문도 박사",
-        "cost":  5,
-        "role":  "Magic Tank",
-        "roleKo":  "주문력 탱커",
-        "traits":  [
-                       "Record Mogul",
-                       "Manager"
-                   ],
-        "traitsKo":  [
-                         "음반계 거물",
-                         "매니저"
-                     ],
-        "traitIds":  [
-                         "DA_DrMundo19_UniqueTrait",
-                         "DA_Manager19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Gwen19",
-        "teamPlannerCode":  "404",
-        "name":  "Gwen",
-        "nameKo":  "그웬",
-        "cost":  5,
-        "role":  "Magic Fighter",
-        "roleKo":  "주문력 전사",
-        "traits":  [
-                       "Ionic Spark",
-                       "Melodic Heart"
-                   ],
-        "traitsKo":  [
-                         "Ionic Spark",
-                         "선율의 심장"
-                     ],
-        "traitIds":  [
-                         "DA_IonicSpark19",
-                         "DA_Gwen19_UniqueTrait"
-                     ],
-        "unlock":  "Ionic Spark 팬들이 250회 응원합니다.",
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Janna19",
-        "teamPlannerCode":  "406",
-        "name":  "Janna",
-        "nameKo":  "잔나",
-        "cost":  5,
-        "role":  "Magic Caster",
-        "roleKo":  "주문력 마법사",
-        "traits":  [
-                       "Windblessed",
-                       "Gu Feng",
-                       "Prodigy"
-                   ],
-        "traitsKo":  [
-                         "바람의 축복",
-                         "고풍",
-                         "신동"
-                     ],
-        "traitIds":  [
-                         "DA_Janna19_UniqueTrait",
-                         "DA_Heavenscale19",
-                         "DA_Prodigy19"
-                     ],
-        "unlock":  "자야를 배치한 상태로 이자 25골드 획득",
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_LeeSin19",
-        "teamPlannerCode":  "44f",
-        "name":  "Lee Sin",
-        "nameKo":  "리 신",
-        "cost":  5,
-        "role":  "Attack Fighter",
-        "roleKo":  "공격력 전사",
-        "traits":  [
-                       "Gu Feng"
-                   ],
-        "traitsKo":  [
-                         "고풍"
-                     ],
-        "traitIds":  [
-                         "DA_Heavenscale19"
-                     ],
-        "unlock":  "자야를 배치하고 플레이어 피해 40 입히기",
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_MissFortune19",
-        "teamPlannerCode":  "41a",
-        "name":  "Miss Fortune",
-        "nameKo":  "미스 포츈",
-        "cost":  5,
-        "role":  "Attack Caster",
-        "roleKo":  "공격력 마법사",
-        "traits":  [
-                       "8-Bit",
-                       "Hitmaker"
-                   ],
-        "traitsKo":  [
-                         "8비트",
-                         "스타 제조기"
-                     ],
-        "traitIds":  [
-                         "DA_MissFortune19_UniqueTrait",
-                         "DA_Hitmaker19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Mordekaiser19",
-        "teamPlannerCode":  "44b",
-        "name":  "Mordekaiser",
-        "nameKo":  "모데카이저",
-        "cost":  5,
-        "role":  "Magic Fighter",
-        "roleKo":  "주문력 전사",
-        "traits":  [
-                       "Pentakill"
-                   ],
-        "traitsKo":  [
-                         "펜타킬"
-                     ],
-        "traitIds":  [
-                         "DA_Pentakill19"
-                     ],
-        "unlock":  "서로 다른 펜타킬 유닛 별 레벨 총합 9",
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Nidalee19",
-        "teamPlannerCode":  "41d",
-        "name":  "Nidalee",
-        "nameKo":  "니달리",
-        "cost":  5,
-        "role":  "Magic Fighter",
-        "roleKo":  "주문력 전사",
-        "traits":  [
-                       "Mariachi",
-                       "Choreographer"
-                   ],
-        "traitsKo":  [
-                         "마리아치",
-                         "안무가"
-                     ],
-        "traitIds":  [
-                         "DA_Nidalee19_UniqueTrait",
-                         "DA_Choreographer19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Nunu19",
-        "teamPlannerCode":  "41e",
-        "name":  "Nunu \u0026 Willump",
-        "nameKo":  "누누와 윌럼프",
-        "cost":  5,
-        "role":  "Magic Specialist",
-        "roleKo":  "주문력 전문가",
-        "traits":  [
-                       "Disco",
-                       "Frontman"
-                   ],
-        "traitsKo":  [
-                         "디스코",
-                         "프론트맨"
-                     ],
-        "traitIds":  [
-                         "DA_Nunu19_UniqueTrait",
-                         "DA_Frontman19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Pyke19",
-        "teamPlannerCode":  "420",
-        "name":  "Pyke",
-        "nameKo":  "파이크",
-        "cost":  5,
-        "role":  "Attack Fighter",
-        "roleKo":  "공격력 전사",
-        "traits":  [
-                       "Rock",
-                       "Renegade"
-                   ],
-        "traitsKo":  [
-                         "락",
-                         "무법자"
-                     ],
-        "traitIds":  [
-                         "DA_DemonVision19",
-                         "DA_Renegade19"
-                     ],
-        "unlock":  "7레벨 이상 · 전투 종료 시 85골드 이상 소지",
-        "levelRequired":  7
-    },
-    {
-        "id":  "DA_Rell19",
-        "teamPlannerCode":  "422",
-        "name":  "Rell",
-        "nameKo":  "렐",
-        "cost":  5,
-        "role":  "Magic Tank",
-        "roleKo":  "주문력 탱커",
-        "traits":  [
-                       "R\u0026B",
-                       "Beat Master"
-                   ],
-        "traitsKo":  [
-                         "R\u0026B",
-                         "비트의 대가"
-                     ],
-        "traitIds":  [
-                         "DA_RnB19",
-                         "DA_Rell19_UniqueTrait"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Taliyah19",
-        "teamPlannerCode":  "42f",
-        "name":  "Taliyah",
-        "nameKo":  "탈리야",
-        "cost":  5,
-        "role":  "Magic Caster",
-        "roleKo":  "주문력 마법사",
-        "traits":  [
-                       "Beach Pop",
-                       "Encore"
-                   ],
-        "traitsKo":  [
-                         "비치 팝",
-                         "앙코르"
-                     ],
-        "traitIds":  [
-                         "DA_OceanSong19",
-                         "DA_Encore19"
-                     ],
-        "unlock":  "각 단계의 챔피언이 비치 팝 칸에서 시작",
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Teemo19",
-        "teamPlannerCode":  "431",
-        "name":  "Teemo",
-        "nameKo":  "티모",
-        "cost":  5,
-        "role":  "Magic Caster",
-        "roleKo":  "주문력 마법사",
-        "traits":  [
-                       "Hyperpop",
-                       "Hype Man"
-                   ],
-        "traitsKo":  [
-                         "하이퍼팝",
-                         "바람잡이"
-                     ],
-        "traitIds":  [
-                         "DA_GlitterBomb19",
-                         "DA_Teemo19_UniqueTrait"
-                     ],
-        "unlock":  "하이퍼팝 열광 900개 수집",
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_TwistedFate19",
-        "teamPlannerCode":  "435",
-        "name":  "Twisted Fate",
-        "nameKo":  "트위스티드 페이트",
-        "cost":  5,
-        "role":  "Magic Marksman",
-        "roleKo":  "주문력 원거리 딜러",
-        "traits":  [
-                       "Tango",
-                       "Trickshot"
-                   ],
-        "traitsKo":  [
-                         "탱고",
-                         "재주꾼"
-                     ],
-        "traitIds":  [
-                         "DA_TwistedFate19_UniqueTrait",
-                         "DA_Trickshot19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Vi19",
-        "teamPlannerCode":  "438",
-        "name":  "Vi",
-        "nameKo":  "바이",
-        "cost":  5,
-        "role":  "Attack Fighter",
-        "roleKo":  "공격력 전사",
-        "traits":  [
-                       "EDM",
-                       "Juggernaut"
-                   ],
-        "traitsKo":  [
-                         "EDM",
-                         "전쟁기계"
-                     ],
-        "traitIds":  [
-                         "DA_EDM19",
-                         "DA_Juggernaut19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Vladimir19",
-        "teamPlannerCode":  "43a",
-        "name":  "Vladimir",
-        "nameKo":  "블라디미르",
-        "cost":  5,
-        "role":  "Magic Fighter",
-        "roleKo":  "주문력 전사",
-        "traits":  [
-                       "Classical",
-                       "Arcanist"
-                   ],
-        "traitsKo":  [
-                         "클래식",
-                         "비전 마법사"
-                     ],
-        "traitIds":  [
-                         "DA_Virtuosos19",
-                         "DA_Arcanist19"
-                     ],
-        "unlock":  "8레벨 이상 · 전장 전방 가로 2열에 챔피언 1명만 배치",
-        "levelRequired":  8
-    },
-    {
-        "id":  "DA_Zeri19",
-        "teamPlannerCode":  "443",
-        "name":  "Zeri",
-        "nameKo":  "제리",
-        "cost":  5,
-        "role":  "Attack Caster",
-        "roleKo":  "공격력 마법사",
-        "traits":  [
-                       "Goth",
-                       "Swiftstriker"
-                   ],
-        "traitsKo":  [
-                         "고스족",
-                         "신속타격대"
-                     ],
-        "traitIds":  [
-                         "DA_Zeri19_UniqueTrait",
-                         "DA_Swiftstriker19"
-                     ],
-        "unlock":  null,
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_BaronNashor19",
-        "teamPlannerCode":  "3f5",
-        "name":  "Baron Nashor",
-        "nameKo":  "내셔 남작",
-        "cost":  7,
-        "role":  "Attack Fighter",
-        "roleKo":  "공격력 전사",
-        "traits":  [
-                       "One Monster Band"
-                   ],
-        "traitsKo":  [
-                         "원 몬스터 밴드"
-                     ],
-        "traitIds":  [
-                         "DA_BaronNashor19_UniqueTrait"
-                     ],
-        "unlock":  "내셔 남작의 앙상블 멤버 5명 모두 모으기 / 가장 강한 아군 말자하로 60000의 피해 입히기",
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Rakan19",
-        "teamPlannerCode":  "448",
-        "name":  "Rakan",
-        "nameKo":  "라칸",
-        "cost":  7,
-        "role":  "Magic Assassin",
-        "roleKo":  "주문력 암살자",
-        "traits":  [
-                       "Boy Band",
-                       "Choreographer"
-                   ],
-        "traitsKo":  [
-                         "보이 밴드",
-                         "안무가"
-                     ],
-        "traitIds":  [
-                         "DA_Rakan19_UniqueTrait",
-                         "DA_Choreographer19"
-                     ],
-        "unlock":  "8레벨 이상일 때 전투 4회 연속 승리 / 8레벨 이상일 때 전투 3회 연속 패배",
-        "levelRequired":  null
-    },
-    {
-        "id":  "DA_Smeech19",
-        "teamPlannerCode":  "42a",
-        "name":  "Smeech",
-        "nameKo":  "스미치",
-        "cost":  7,
-        "role":  "Attack Specialist",
-        "roleKo":  "공격력 전문가",
-        "traits":  [
-                       "Jazz",
-                       "Slayer"
-                   ],
-        "traitsKo":  [
-                         "재즈",
-                         "학살자"
-                     ],
-        "traitIds":  [
-                         "DA_Jazz19",
-                         "DA_Mosher19"
-                     ],
-        "unlock":  "9레벨 이상 · 고유 특성이 아닌 특성 8개 이상 활성화",
-        "levelRequired":  9
-    },
-    {
-        "id":  "DA_Sona19",
-        "teamPlannerCode":  "42c",
-        "name":  "Sona",
-        "nameKo":  "소나",
-        "cost":  7,
-        "role":  "Magic Specialist",
-        "roleKo":  "주문력 전문가",
-        "traits":  [
-                       "Producer",
-                       "Collab"
-                   ],
-        "traitsKo":  [
-                         "프로듀서",
-                         "콜라보"
-                     ],
-        "traitIds":  [
-                         "DA_Sona19_UniqueTrait",
-                         "DA_Collab19"
-                     ],
-        "unlock":  "10레벨 이상 · 콜라보 챔피언이 플레이어 대상 전투 중 15회 영감을 받음",
-        "levelRequired":  10
-    }
+  {
+    "id": "DA_Elise19",
+    "teamPlannerCode": "3fd",
+    "name": "Elise",
+    "nameKo": "엘리스",
+    "cost": 1,
+    "role": "Magic Tank",
+    "roleKo": "주문력 탱커",
+    "traits": [
+      "Ionic Spark",
+      "Frontman"
+    ],
+    "traitsKo": [
+      "Ionic Spark",
+      "프론트맨"
+    ],
+    "traitIds": [
+      "DA_IonicSpark19",
+      "DA_Frontman19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_StrikersFlail",
+        "nameKo": "타격대의 철퇴",
+        "placeChange": -0.78
+      },
+      {
+        "id": "DA_JeweledGauntlet",
+        "nameKo": "보석 건틀릿",
+        "placeChange": -0.75
+      },
+      {
+        "id": "DA_HandOfJustice",
+        "nameKo": "정의의 손길",
+        "placeChange": -0.71
+      },
+      {
+        "id": "DA_EdgeOfNight",
+        "nameKo": "밤의 끝자락",
+        "placeChange": -0.31
+      },
+      {
+        "id": "DA_Bloodthirster",
+        "nameKo": "피바라기",
+        "placeChange": -0.28
+      }
+    ]
+  },
+  {
+    "id": "DA_Gnar19",
+    "teamPlannerCode": "402",
+    "name": "Gnar",
+    "nameKo": "나르",
+    "cost": 1,
+    "role": "Hybrid Specialist",
+    "roleKo": "혼합 전문가",
+    "traits": [
+      "Pentakill",
+      "Trickshot"
+    ],
+    "traitsKo": [
+      "펜타킬",
+      "재주꾼"
+    ],
+    "traitIds": [
+      "DA_Pentakill19",
+      "DA_Trickshot19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_KrakensFury",
+        "nameKo": "크라켄의 분노",
+        "placeChange": -0.42
+      },
+      {
+        "id": "DA_RedBuff",
+        "nameKo": "붉은 덩굴정령",
+        "placeChange": -0.36
+      },
+      {
+        "id": "DA_Deathblade",
+        "nameKo": "죽음의 검",
+        "placeChange": -0.31
+      },
+      {
+        "id": "DA_GiantSlayer",
+        "nameKo": "거인 학살자",
+        "placeChange": -0.3
+      },
+      {
+        "id": "DA_GuinsoosRageblade",
+        "nameKo": "구인수의 격노검",
+        "placeChange": -0.11
+      }
+    ]
+  },
+  {
+    "id": "DA_Katarina19",
+    "teamPlannerCode": "40c",
+    "name": "Katarina",
+    "nameKo": "카타리나",
+    "cost": 1,
+    "role": "Magic Fighter",
+    "roleKo": "주문력 전사",
+    "traits": [
+      "Classical",
+      "Slayer"
+    ],
+    "traitsKo": [
+      "클래식",
+      "학살자"
+    ],
+    "traitIds": [
+      "DA_Virtuosos19",
+      "DA_Mosher19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_JeweledGauntlet",
+        "nameKo": "보석 건틀릿",
+        "placeChange": -0.5
+      },
+      {
+        "id": "DA_IonicSpark",
+        "nameKo": "이온 충격기",
+        "placeChange": -0.32
+      },
+      {
+        "id": "DA_EdgeOfNight",
+        "nameKo": "밤의 끝자락",
+        "placeChange": -0.26
+      },
+      {
+        "id": "DA_HandOfJustice",
+        "nameKo": "정의의 손길",
+        "placeChange": -0.26
+      },
+      {
+        "id": "DA_RabadonsDeathcap",
+        "nameKo": "라바돈의 죽음모자",
+        "placeChange": -0.12
+      }
+    ]
+  },
+  {
+    "id": "DA_Kayn19",
+    "teamPlannerCode": "40e",
+    "name": "Kayn",
+    "nameKo": "케인",
+    "cost": 1,
+    "role": "Attack Fighter",
+    "roleKo": "공격력 전사",
+    "traits": [
+      "Heartsteel",
+      "Slayer"
+    ],
+    "traitsKo": [
+      "HEARTSTEEL",
+      "학살자"
+    ],
+    "traitIds": [
+      "DA_Heartsteel19",
+      "DA_Mosher19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_InfinityEdge",
+        "nameKo": "무한의 대검",
+        "placeChange": -0.36
+      },
+      {
+        "id": "DA_Deathblade",
+        "nameKo": "죽음의 검",
+        "placeChange": -0.3
+      },
+      {
+        "id": "DA_GiantSlayer",
+        "nameKo": "거인 학살자",
+        "placeChange": -0.27
+      },
+      {
+        "id": "DA_HandOfJustice",
+        "nameKo": "정의의 손길",
+        "placeChange": -0.25
+      },
+      {
+        "id": "DA_SteraksGage",
+        "nameKo": "스테락의 도전",
+        "placeChange": -0.21
+      }
+    ]
+  },
+  {
+    "id": "DA_Kennen19",
+    "teamPlannerCode": "40f",
+    "name": "Kennen",
+    "nameKo": "케넨",
+    "cost": 1,
+    "role": "Magic Tank",
+    "roleKo": "주문력 탱커",
+    "traits": [
+      "True Damage",
+      "Bodyguard"
+    ],
+    "traitsKo": [
+      "True Damage",
+      "경호대"
+    ],
+    "traitIds": [
+      "DA_TrueDamage19",
+      "DA_Bodyguard19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_JeweledGauntlet",
+        "nameKo": "보석 건틀릿",
+        "placeChange": -0.75
+      },
+      {
+        "id": "DA_HandOfJustice",
+        "nameKo": "정의의 손길",
+        "placeChange": -0.56
+      },
+      {
+        "id": "DA_NashorsTooth",
+        "nameKo": "내셔의 이빨",
+        "placeChange": -0.4
+      },
+      {
+        "id": "DA_EdgeOfNight",
+        "nameKo": "밤의 끝자락",
+        "placeChange": -0.37
+      },
+      {
+        "id": "DA_Bloodthirster",
+        "nameKo": "피바라기",
+        "placeChange": -0.34
+      }
+    ]
+  },
+  {
+    "id": "DA_Kobuko19",
+    "teamPlannerCode": "410",
+    "name": "Kobuko",
+    "nameKo": "코부코",
+    "cost": 1,
+    "role": "Magic Tank",
+    "roleKo": "주문력 탱커",
+    "traits": [
+      "Hyperpop",
+      "Frontman"
+    ],
+    "traitsKo": [
+      "하이퍼팝",
+      "프론트맨"
+    ],
+    "traitIds": [
+      "DA_GlitterBomb19",
+      "DA_Frontman19"
+    ],
+    "unlock": "아이템 1개를 장착한 2성 직스",
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_GargoyleStoneplate",
+        "nameKo": "가고일 돌갑옷",
+        "placeChange": -0.74
+      },
+      {
+        "id": "DA_GargoyleStoneplate",
+        "nameKo": "가고일 돌갑옷",
+        "placeChange": -0.45,
+        "occurrence": 2
+      },
+      {
+        "id": "DA_Crownguard",
+        "nameKo": "크라운가드",
+        "placeChange": -0.28
+      },
+      {
+        "id": "DA_SpiritVisage",
+        "nameKo": "정령의 형상",
+        "placeChange": -0.13
+      },
+      {
+        "id": "DA_WarmogsArmor",
+        "nameKo": "워모그의 갑옷",
+        "placeChange": -0.02
+      }
+    ]
+  },
+  {
+    "id": "DA_Lillia19",
+    "teamPlannerCode": "413",
+    "name": "Lillia",
+    "nameKo": "릴리아",
+    "cost": 1,
+    "role": "Magic Tank",
+    "roleKo": "주문력 탱커",
+    "traits": [
+      "K/DA",
+      "Bodyguard"
+    ],
+    "traitsKo": [
+      "K/DA",
+      "경호대"
+    ],
+    "traitIds": [
+      "DA_KDA19",
+      "DA_Bodyguard19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_IonicSpark",
+        "nameKo": "이온 충격기",
+        "placeChange": -0.51
+      },
+      {
+        "id": "DA_ProtectorsVow",
+        "nameKo": "수호자의 맹세",
+        "placeChange": -0.28
+      },
+      {
+        "id": "DA_ArchangelsStaff",
+        "nameKo": "대천사의 지팡이",
+        "placeChange": -0.22
+      },
+      {
+        "id": "DA_SunfireCape",
+        "nameKo": "태양불꽃 망토",
+        "placeChange": -0.21
+      },
+      {
+        "id": "DA_TitansResolve",
+        "nameKo": "거인의 결의",
+        "placeChange": -0.15
+      }
+    ]
+  },
+  {
+    "id": "DA_Neeko19",
+    "teamPlannerCode": "41c",
+    "name": "Neeko",
+    "nameKo": "니코",
+    "cost": 1,
+    "role": "Magic Caster",
+    "roleKo": "주문력 마법사",
+    "traits": [
+      "K/DA",
+      "Encore",
+      "Prodigy"
+    ],
+    "traitsKo": [
+      "K/DA",
+      "앙코르",
+      "신동"
+    ],
+    "traitIds": [
+      "DA_KDA19",
+      "DA_Encore19",
+      "DA_Prodigy19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_StrikersFlail",
+        "nameKo": "타격대의 철퇴",
+        "placeChange": -0.46
+      },
+      {
+        "id": "DA_JeweledGauntlet",
+        "nameKo": "보석 건틀릿",
+        "placeChange": -0.32
+      },
+      {
+        "id": "DA_SpearOfShojin",
+        "nameKo": "쇼진의 창",
+        "placeChange": -0.16
+      },
+      {
+        "id": "DA_GiantSlayer",
+        "nameKo": "거인 학살자",
+        "placeChange": -0.16
+      },
+      {
+        "id": "DA_RabadonsDeathcap",
+        "nameKo": "라바돈의 죽음모자",
+        "placeChange": 0.03
+      }
+    ]
+  },
+  {
+    "id": "DA_Olaf19",
+    "teamPlannerCode": "447",
+    "name": "Olaf",
+    "nameKo": "올라프",
+    "cost": 1,
+    "role": "Attack Tank",
+    "roleKo": "공격력 탱커",
+    "traits": [
+      "Pentakill",
+      "Rock",
+      "Juggernaut"
+    ],
+    "traitsKo": [
+      "펜타킬",
+      "락",
+      "전쟁기계"
+    ],
+    "traitIds": [
+      "DA_Pentakill19",
+      "DA_DemonVision19",
+      "DA_Juggernaut19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_GuinsoosRageblade",
+        "nameKo": "구인수의 격노검",
+        "placeChange": -0.84
+      },
+      {
+        "id": "DA_KrakensFury",
+        "nameKo": "크라켄의 분노",
+        "placeChange": -0.78
+      },
+      {
+        "id": "DA_InfinityEdge",
+        "nameKo": "무한의 대검",
+        "placeChange": -0.76
+      },
+      {
+        "id": "DA_Deathblade",
+        "nameKo": "죽음의 검",
+        "placeChange": -0.42
+      },
+      {
+        "id": "DA_GiantSlayer",
+        "nameKo": "거인 학살자",
+        "placeChange": -0.38
+      }
+    ]
+  },
+  {
+    "id": "DA_Sett19",
+    "teamPlannerCode": "428",
+    "name": "Sett",
+    "nameKo": "세트",
+    "cost": 1,
+    "role": "Attack Tank",
+    "roleKo": "공격력 탱커",
+    "traits": [
+      "Heartsteel",
+      "Frontman"
+    ],
+    "traitsKo": [
+      "HEARTSTEEL",
+      "프론트맨"
+    ],
+    "traitIds": [
+      "DA_Heartsteel19",
+      "DA_Frontman19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_InfinityEdge",
+        "nameKo": "무한의 대검",
+        "placeChange": -0.75
+      },
+      {
+        "id": "DA_HandOfJustice",
+        "nameKo": "정의의 손길",
+        "placeChange": -0.65
+      },
+      {
+        "id": "DA_Bloodthirster",
+        "nameKo": "피바라기",
+        "placeChange": -0.34
+      },
+      {
+        "id": "DA_SteraksGage",
+        "nameKo": "스테락의 도전",
+        "placeChange": -0.31
+      },
+      {
+        "id": "DA_TitansResolve",
+        "nameKo": "거인의 결의",
+        "placeChange": -0.29
+      }
+    ]
+  },
+  {
+    "id": "DA_Taric19",
+    "teamPlannerCode": "430",
+    "name": "Taric",
+    "nameKo": "타릭",
+    "cost": 1,
+    "role": "Magic Tank",
+    "roleKo": "주문력 탱커",
+    "traits": [
+      "Beach Pop",
+      "Juggernaut"
+    ],
+    "traitsKo": [
+      "비치 팝",
+      "전쟁기계"
+    ],
+    "traitIds": [
+      "DA_OceanSong19",
+      "DA_Juggernaut19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_Evenshroud",
+        "nameKo": "저녁갑주",
+        "placeChange": -0.58
+      },
+      {
+        "id": "DA_Crownguard",
+        "nameKo": "크라운가드",
+        "placeChange": -0.44
+      },
+      {
+        "id": "DA_ProtectorsVow",
+        "nameKo": "수호자의 맹세",
+        "placeChange": -0.43
+      },
+      {
+        "id": "DA_IonicSpark",
+        "nameKo": "이온 충격기",
+        "placeChange": -0.42
+      },
+      {
+        "id": "DA_SunfireCape",
+        "nameKo": "태양불꽃 망토",
+        "placeChange": -0.18
+      }
+    ]
+  },
+  {
+    "id": "DA_Varus19",
+    "teamPlannerCode": "436",
+    "name": "Varus",
+    "nameKo": "바루스",
+    "cost": 1,
+    "role": "Attack Caster",
+    "roleKo": "공격력 마법사",
+    "traits": [
+      "Rock",
+      "Encore"
+    ],
+    "traitsKo": [
+      "락",
+      "앙코르"
+    ],
+    "traitIds": [
+      "DA_DemonVision19",
+      "DA_Encore19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_RedBuff",
+        "nameKo": "붉은 덩굴정령",
+        "placeChange": -0.43
+      },
+      {
+        "id": "DA_SpearOfShojin",
+        "nameKo": "쇼진의 창",
+        "placeChange": -0.33
+      },
+      {
+        "id": "DA_GiantSlayer",
+        "nameKo": "거인 학살자",
+        "placeChange": -0.3
+      },
+      {
+        "id": "DA_Deathblade",
+        "nameKo": "죽음의 검",
+        "placeChange": -0.16
+      },
+      {
+        "id": "DA_InfinityEdge",
+        "nameKo": "무한의 대검",
+        "placeChange": -0.13
+      }
+    ]
+  },
+  {
+    "id": "DA_Yunara19",
+    "teamPlannerCode": "440",
+    "name": "Yunara",
+    "nameKo": "유나라",
+    "cost": 1,
+    "role": "Attack Marksman",
+    "roleKo": "공격력 원거리 딜러",
+    "traits": [
+      "Ionic Spark",
+      "Swiftstriker"
+    ],
+    "traitsKo": [
+      "Ionic Spark",
+      "신속타격대"
+    ],
+    "traitIds": [
+      "DA_IonicSpark19",
+      "DA_Swiftstriker19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_KrakensFury",
+        "nameKo": "크라켄의 분노",
+        "placeChange": -0.62
+      },
+      {
+        "id": "DA_GuinsoosRageblade",
+        "nameKo": "구인수의 격노검",
+        "placeChange": -0.51
+      },
+      {
+        "id": "DA_HextechGunblade",
+        "nameKo": "마법공학 총검",
+        "placeChange": -0.41
+      },
+      {
+        "id": "DA_Deathblade",
+        "nameKo": "죽음의 검",
+        "placeChange": -0.34
+      },
+      {
+        "id": "DA_GiantSlayer",
+        "nameKo": "거인 학살자",
+        "placeChange": -0.27
+      }
+    ]
+  },
+  {
+    "id": "DA_Ziggs19",
+    "teamPlannerCode": "444",
+    "name": "Ziggs",
+    "nameKo": "직스",
+    "cost": 1,
+    "role": "Magic Marksman",
+    "roleKo": "주문력 원거리 딜러",
+    "traits": [
+      "Hyperpop",
+      "Arcanist",
+      "Swiftstriker"
+    ],
+    "traitsKo": [
+      "하이퍼팝",
+      "비전 마법사",
+      "신속타격대"
+    ],
+    "traitIds": [
+      "DA_GlitterBomb19",
+      "DA_Arcanist19",
+      "DA_Swiftstriker19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_GuinsoosRageblade",
+        "nameKo": "구인수의 격노검",
+        "placeChange": -0.41
+      },
+      {
+        "id": "DA_RabadonsDeathcap",
+        "nameKo": "라바돈의 죽음모자",
+        "placeChange": -0.25
+      },
+      {
+        "id": "DA_StrikersFlail",
+        "nameKo": "타격대의 철퇴",
+        "placeChange": -0.24
+      },
+      {
+        "id": "DA_JeweledGauntlet",
+        "nameKo": "보석 건틀릿",
+        "placeChange": -0.16
+      },
+      {
+        "id": "DA_HextechGunblade",
+        "nameKo": "마법공학 총검",
+        "placeChange": -0.12
+      }
+    ]
+  },
+  {
+    "id": "DA_Zoe19",
+    "teamPlannerCode": "445",
+    "name": "Zoe",
+    "nameKo": "조이",
+    "cost": 1,
+    "role": "Magic Caster",
+    "roleKo": "주문력 마법사",
+    "traits": [
+      "Beach Pop",
+      "Arcanist"
+    ],
+    "traitsKo": [
+      "비치 팝",
+      "비전 마법사"
+    ],
+    "traitIds": [
+      "DA_OceanSong19",
+      "DA_Arcanist19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_HextechGunblade",
+        "nameKo": "마법공학 총검",
+        "placeChange": -0.26
+      },
+      {
+        "id": "DA_BlueBuff",
+        "nameKo": "푸른 파수꾼",
+        "placeChange": -0.19
+      },
+      {
+        "id": "DA_NashorsTooth",
+        "nameKo": "내셔의 이빨",
+        "placeChange": -0.17
+      },
+      {
+        "id": "DA_ArchangelsStaff",
+        "nameKo": "대천사의 지팡이",
+        "placeChange": -0.17
+      },
+      {
+        "id": "DA_AdaptiveHelm",
+        "nameKo": "적응형 투구",
+        "placeChange": -0.17
+      }
+    ]
+  },
+  {
+    "id": "DA_Annie19",
+    "teamPlannerCode": "3f0",
+    "name": "Annie",
+    "nameKo": "애니",
+    "cost": 2,
+    "role": "Magic Tank",
+    "roleKo": "주문력 탱커",
+    "traits": [
+      "Ionic Spark",
+      "Arcanist",
+      "Juggernaut"
+    ],
+    "traitsKo": [
+      "Ionic Spark",
+      "비전 마법사",
+      "전쟁기계"
+    ],
+    "traitIds": [
+      "DA_IonicSpark19",
+      "DA_Arcanist19",
+      "DA_Juggernaut19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_SpearOfShojin",
+        "nameKo": "쇼진의 창",
+        "placeChange": -0.4
+      },
+      {
+        "id": "DA_JeweledGauntlet",
+        "nameKo": "보석 건틀릿",
+        "placeChange": -0.32
+      },
+      {
+        "id": "DA_StrikersFlail",
+        "nameKo": "타격대의 철퇴",
+        "placeChange": -0.32
+      },
+      {
+        "id": "DA_HextechGunblade",
+        "nameKo": "마법공학 총검",
+        "placeChange": -0.3
+      },
+      {
+        "id": "DA_BlueBuff",
+        "nameKo": "푸른 파수꾼",
+        "placeChange": -0.23
+      }
+    ]
+  },
+  {
+    "id": "DA_Ashe19",
+    "teamPlannerCode": "3f2",
+    "name": "Ashe",
+    "nameKo": "애쉬",
+    "cost": 2,
+    "role": "Attack Marksman",
+    "roleKo": "공격력 원거리 딜러",
+    "traits": [
+      "Beach Pop",
+      "Swiftstriker"
+    ],
+    "traitsKo": [
+      "비치 팝",
+      "신속타격대"
+    ],
+    "traitIds": [
+      "DA_OceanSong19",
+      "DA_Swiftstriker19"
+    ],
+    "unlock": "아이템 2개를 장착한 비치 팝 챔피언",
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_KrakensFury",
+        "nameKo": "크라켄의 분노",
+        "placeChange": -0.36
+      },
+      {
+        "id": "DA_Deathblade",
+        "nameKo": "죽음의 검",
+        "placeChange": -0.17
+      },
+      {
+        "id": "DA_GiantSlayer",
+        "nameKo": "거인 학살자",
+        "placeChange": -0.14
+      },
+      {
+        "id": "DA_LastWhisper",
+        "nameKo": "최후의 속삭임",
+        "placeChange": -0.09
+      },
+      {
+        "id": "DA_GuinsoosRageblade",
+        "nameKo": "구인수의 격노검",
+        "placeChange": -0.02
+      }
+    ]
+  },
+  {
+    "id": "DA_Camille19",
+    "teamPlannerCode": "3f8",
+    "name": "Camille",
+    "nameKo": "카밀",
+    "cost": 2,
+    "role": "Attack Fighter",
+    "roleKo": "공격력 전사",
+    "traits": [
+      "Rock",
+      "Slayer"
+    ],
+    "traitsKo": [
+      "락",
+      "학살자"
+    ],
+    "traitIds": [
+      "DA_DemonVision19",
+      "DA_Mosher19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_Deathblade",
+        "nameKo": "죽음의 검",
+        "placeChange": -0.23
+      },
+      {
+        "id": "DA_GiantSlayer",
+        "nameKo": "거인 학살자",
+        "placeChange": -0.21
+      },
+      {
+        "id": "DA_InfinityEdge",
+        "nameKo": "무한의 대검",
+        "placeChange": -0.14
+      },
+      {
+        "id": "DA_Quicksilver",
+        "nameKo": "수은",
+        "placeChange": -0.13
+      },
+      {
+        "id": "DA_HandOfJustice",
+        "nameKo": "정의의 손길",
+        "placeChange": 0.01
+      }
+    ]
+  },
+  {
+    "id": "DA_Ezreal19",
+    "teamPlannerCode": "3ff",
+    "name": "Ezreal",
+    "nameKo": "이즈리얼",
+    "cost": 2,
+    "role": "Attack Caster",
+    "roleKo": "공격력 마법사",
+    "traits": [
+      "Heartsteel",
+      "Encore"
+    ],
+    "traitsKo": [
+      "HEARTSTEEL",
+      "앙코르"
+    ],
+    "traitIds": [
+      "DA_Heartsteel19",
+      "DA_Encore19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_BlueBuffRadiant",
+        "nameKo": "찬란한 푸른 파수꾼",
+        "placeChange": -0.86
+      },
+      {
+        "id": "DA_BlueBuff",
+        "nameKo": "푸른 파수꾼",
+        "placeChange": -0.63
+      },
+      {
+        "id": "DA_InfinityEdge",
+        "nameKo": "무한의 대검",
+        "placeChange": -0.55
+      },
+      {
+        "id": "DA_StrikersFlail",
+        "nameKo": "타격대의 철퇴",
+        "placeChange": -0.46
+      },
+      {
+        "id": "DA_Deathblade",
+        "nameKo": "죽음의 검",
+        "placeChange": -0.24
+      }
+    ]
+  },
+  {
+    "id": "DA_Gragas19",
+    "teamPlannerCode": "403",
+    "name": "Gragas",
+    "nameKo": "그라가스",
+    "cost": 2,
+    "role": "Magic Tank",
+    "roleKo": "주문력 탱커",
+    "traits": [
+      "K/DA",
+      "Juggernaut"
+    ],
+    "traitsKo": [
+      "K/DA",
+      "전쟁기계"
+    ],
+    "traitIds": [
+      "DA_KDA19",
+      "DA_Juggernaut19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_GargoyleStoneplate",
+        "nameKo": "가고일 돌갑옷",
+        "placeChange": -0.38
+      },
+      {
+        "id": "DA_GargoyleStoneplate",
+        "nameKo": "가고일 돌갑옷",
+        "placeChange": -0.32,
+        "occurrence": 2
+      },
+      {
+        "id": "DA_Crownguard",
+        "nameKo": "크라운가드",
+        "placeChange": -0.3
+      },
+      {
+        "id": "DA_IonicSpark",
+        "nameKo": "이온 충격기",
+        "placeChange": -0.15
+      },
+      {
+        "id": "DA_WarmogsArmor",
+        "nameKo": "워모그의 갑옷",
+        "placeChange": -0.11
+      }
+    ]
+  },
+  {
+    "id": "DA_Illaoi19",
+    "teamPlannerCode": "405",
+    "name": "Illaoi",
+    "nameKo": "일라오이",
+    "cost": 2,
+    "role": "Magic Tank",
+    "roleKo": "주문력 탱커",
+    "traits": [
+      "Illbeats",
+      "Frontman"
+    ],
+    "traitsKo": [
+      "일류 비트",
+      "프론트맨"
+    ],
+    "traitIds": [
+      "DA_Illbeats19",
+      "DA_Frontman19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_Evenshroud",
+        "nameKo": "저녁갑주",
+        "placeChange": -0.3
+      },
+      {
+        "id": "DA_ProtectorsVow",
+        "nameKo": "수호자의 맹세",
+        "placeChange": -0.14
+      },
+      {
+        "id": "DA_BrambleVest",
+        "nameKo": "덤불 조끼",
+        "placeChange": -0.11
+      },
+      {
+        "id": "DA_Crownguard",
+        "nameKo": "크라운가드",
+        "placeChange": -0.06
+      },
+      {
+        "id": "DA_SpiritVisage",
+        "nameKo": "정령의 형상",
+        "placeChange": -0.06
+      }
+    ]
+  },
+  {
+    "id": "DA_Jax19",
+    "teamPlannerCode": "407",
+    "name": "Jax",
+    "nameKo": "잭스",
+    "cost": 2,
+    "role": "Magic Fighter",
+    "roleKo": "주문력 전사",
+    "traits": [
+      "EDM",
+      "Bodyguard",
+      "Swiftstriker"
+    ],
+    "traitsKo": [
+      "EDM",
+      "경호대",
+      "신속타격대"
+    ],
+    "traitIds": [
+      "DA_EDM19",
+      "DA_Bodyguard19",
+      "DA_Swiftstriker19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_SpearOfShojin",
+        "nameKo": "쇼진의 창",
+        "placeChange": -0.71
+      },
+      {
+        "id": "DA_TitansResolve",
+        "nameKo": "거인의 결의",
+        "placeChange": -0.57
+      },
+      {
+        "id": "DA_Bloodthirster",
+        "nameKo": "피바라기",
+        "placeChange": -0.39
+      },
+      {
+        "id": "DA_HextechGunblade",
+        "nameKo": "마법공학 총검",
+        "placeChange": -0.25
+      },
+      {
+        "id": "DA_JeweledGauntlet",
+        "nameKo": "보석 건틀릿",
+        "placeChange": -0.03
+      }
+    ]
+  },
+  {
+    "id": "DA_Karthus19",
+    "teamPlannerCode": "40b",
+    "name": "Karthus",
+    "nameKo": "카서스",
+    "cost": 2,
+    "role": "Magic Caster",
+    "roleKo": "주문력 마법사",
+    "traits": [
+      "Pentakill",
+      "Arcanist"
+    ],
+    "traitsKo": [
+      "펜타킬",
+      "비전 마법사"
+    ],
+    "traitIds": [
+      "DA_Pentakill19",
+      "DA_Arcanist19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_StrikersFlail",
+        "nameKo": "타격대의 철퇴",
+        "placeChange": -0.17
+      },
+      {
+        "id": "DA_HextechGunblade",
+        "nameKo": "마법공학 총검",
+        "placeChange": -0.14
+      },
+      {
+        "id": "DA_BlueBuff",
+        "nameKo": "푸른 파수꾼",
+        "placeChange": -0.13
+      },
+      {
+        "id": "DA_GiantSlayer",
+        "nameKo": "거인 학살자",
+        "placeChange": -0.12
+      },
+      {
+        "id": "DA_RabadonsDeathcap",
+        "nameKo": "라바돈의 죽음모자",
+        "placeChange": -0.1
+      }
+    ]
+  },
+  {
+    "id": "DA_Lucian19",
+    "teamPlannerCode": "415",
+    "name": "Lucian",
+    "nameKo": "루시안",
+    "cost": 2,
+    "role": "Attack Caster",
+    "roleKo": "공격력 마법사",
+    "traits": [
+      "Jazz",
+      "Hitmaker",
+      "Encore"
+    ],
+    "traitsKo": [
+      "재즈",
+      "스타 제조기",
+      "앙코르"
+    ],
+    "traitIds": [
+      "DA_Jazz19",
+      "DA_Hitmaker19",
+      "DA_Encore19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_RedBuff",
+        "nameKo": "붉은 덩굴정령",
+        "placeChange": -0.53
+      },
+      {
+        "id": "DA_KrakensFury",
+        "nameKo": "크라켄의 분노",
+        "placeChange": -0.32
+      },
+      {
+        "id": "DA_SpearOfShojin",
+        "nameKo": "쇼진의 창",
+        "placeChange": -0.26
+      },
+      {
+        "id": "DA_GiantSlayer",
+        "nameKo": "거인 학살자",
+        "placeChange": -0.25
+      },
+      {
+        "id": "DA_LastWhisper",
+        "nameKo": "최후의 속삭임",
+        "placeChange": -0.16
+      }
+    ]
+  },
+  {
+    "id": "DA_Lulu19",
+    "teamPlannerCode": "416",
+    "name": "Lulu",
+    "nameKo": "룰루",
+    "cost": 2,
+    "role": "Magic Caster",
+    "roleKo": "주문력 마법사",
+    "traits": [
+      "Hyperpop",
+      "Choreographer"
+    ],
+    "traitsKo": [
+      "하이퍼팝",
+      "안무가"
+    ],
+    "traitIds": [
+      "DA_GlitterBomb19",
+      "DA_Choreographer19"
+    ],
+    "unlock": "특성을 활성화한 상태에서 하이퍼팝 챔피언이 스킬 10회 사용",
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_Arcanist19_Emblem",
+        "nameKo": "비전 마법사 상징",
+        "placeChange": -0.6
+      },
+      {
+        "id": "DA_AdaptiveHelm",
+        "nameKo": "적응형 투구",
+        "placeChange": -0.47
+      },
+      {
+        "id": "DA_Swiftstriker19_Emblem",
+        "nameKo": "신속타격대 상징",
+        "placeChange": -0.4
+      },
+      {
+        "id": "DA_RedBuff",
+        "nameKo": "붉은 덩굴정령",
+        "placeChange": -0.28
+      },
+      {
+        "id": "DA_BlueBuff",
+        "nameKo": "푸른 파수꾼",
+        "placeChange": -0.25
+      }
+    ]
+  },
+  {
+    "id": "DA_Lux19",
+    "teamPlannerCode": "417",
+    "name": "Lux",
+    "nameKo": "럭스",
+    "cost": 2,
+    "role": "Magic Caster",
+    "roleKo": "주문력 마법사",
+    "traits": [
+      "Ionic Spark",
+      "Prodigy"
+    ],
+    "traitsKo": [
+      "Ionic Spark",
+      "신동"
+    ],
+    "traitIds": [
+      "DA_IonicSpark19",
+      "DA_Prodigy19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_GiantSlayer",
+        "nameKo": "거인 학살자",
+        "placeChange": -0.34
+      },
+      {
+        "id": "DA_AdaptiveHelm",
+        "nameKo": "적응형 투구",
+        "placeChange": -0.21
+      },
+      {
+        "id": "DA_HextechGunblade",
+        "nameKo": "마법공학 총검",
+        "placeChange": -0.14
+      },
+      {
+        "id": "DA_RabadonsDeathcap",
+        "nameKo": "라바돈의 죽음모자",
+        "placeChange": -0.14
+      },
+      {
+        "id": "DA_ArchangelsStaff",
+        "nameKo": "대천사의 지팡이",
+        "placeChange": -0.12
+      }
+    ]
+  },
+  {
+    "id": "DA_Nasus19",
+    "teamPlannerCode": "44a",
+    "name": "Nasus",
+    "nameKo": "나서스",
+    "cost": 2,
+    "role": "Magic Tank",
+    "roleKo": "주문력 탱커",
+    "traits": [
+      "Classical",
+      "Bodyguard"
+    ],
+    "traitsKo": [
+      "클래식",
+      "경호대"
+    ],
+    "traitIds": [
+      "DA_Virtuosos19",
+      "DA_Bodyguard19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_IonicSpark",
+        "nameKo": "이온 충격기",
+        "placeChange": -0.51
+      },
+      {
+        "id": "DA_SunfireCape",
+        "nameKo": "태양불꽃 망토",
+        "placeChange": -0.28
+      },
+      {
+        "id": "DA_Crownguard",
+        "nameKo": "크라운가드",
+        "placeChange": -0.11
+      },
+      {
+        "id": "DA_SpiritVisage",
+        "nameKo": "정령의 형상",
+        "placeChange": -0.09
+      },
+      {
+        "id": "DA_WarmogsArmor",
+        "nameKo": "워모그의 갑옷",
+        "placeChange": -0.04
+      }
+    ]
+  },
+  {
+    "id": "DA_Qiyana19",
+    "teamPlannerCode": "421",
+    "name": "Qiyana",
+    "nameKo": "키아나",
+    "cost": 2,
+    "role": "Attack Fighter",
+    "roleKo": "공격력 전사",
+    "traits": [
+      "True Damage",
+      "Renegade"
+    ],
+    "traitsKo": [
+      "True Damage",
+      "무법자"
+    ],
+    "traitIds": [
+      "DA_TrueDamage19",
+      "DA_Renegade19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_HandOfJustice",
+        "nameKo": "정의의 손길",
+        "placeChange": -0.67,
+        "occurrence": 2
+      },
+      {
+        "id": "DA_HandOfJustice",
+        "nameKo": "정의의 손길",
+        "placeChange": -0.38
+      },
+      {
+        "id": "DA_StrikersFlail",
+        "nameKo": "타격대의 철퇴",
+        "placeChange": -0.34
+      },
+      {
+        "id": "DA_EdgeOfNight",
+        "nameKo": "밤의 끝자락",
+        "placeChange": -0.31
+      },
+      {
+        "id": "DA_Deathblade",
+        "nameKo": "죽음의 검",
+        "placeChange": -0.21
+      }
+    ]
+  },
+  {
+    "id": "DA_RenataGlasc19",
+    "teamPlannerCode": "423",
+    "name": "Renata Glasc",
+    "nameKo": "레나타 글라스크",
+    "cost": 2,
+    "role": "Magic Caster",
+    "roleKo": "주문력 마법사",
+    "traits": [
+      "Classical",
+      "Choreographer"
+    ],
+    "traitsKo": [
+      "클래식",
+      "안무가"
+    ],
+    "traitIds": [
+      "DA_Virtuosos19",
+      "DA_Choreographer19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_HextechGunblade",
+        "nameKo": "마법공학 총검",
+        "placeChange": -0.73
+      },
+      {
+        "id": "DA_ArchangelsStaff",
+        "nameKo": "대천사의 지팡이",
+        "placeChange": -0.7
+      },
+      {
+        "id": "DA_Artifact_BlightingJewel",
+        "nameKo": "역병의 보석",
+        "placeChange": -0.44
+      },
+      {
+        "id": "DA_BlueBuff",
+        "nameKo": "푸른 파수꾼",
+        "placeChange": -0.42
+      },
+      {
+        "id": "DA_ArchangelsStaff",
+        "nameKo": "대천사의 지팡이",
+        "placeChange": -0.18,
+        "occurrence": 2
+      }
+    ]
+  },
+  {
+    "id": "DA_Renekton19",
+    "teamPlannerCode": "424",
+    "name": "Renekton",
+    "nameKo": "레넥톤",
+    "cost": 2,
+    "role": "Attack Tank",
+    "roleKo": "공격력 탱커",
+    "traits": [
+      "Beach Pop",
+      "Frontman"
+    ],
+    "traitsKo": [
+      "비치 팝",
+      "프론트맨"
+    ],
+    "traitIds": [
+      "DA_OceanSong19",
+      "DA_Frontman19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_InfinityEdge",
+        "nameKo": "무한의 대검",
+        "placeChange": -0.58
+      },
+      {
+        "id": "DA_Deathblade",
+        "nameKo": "죽음의 검",
+        "placeChange": -0.51
+      },
+      {
+        "id": "DA_HandOfJustice",
+        "nameKo": "정의의 손길",
+        "placeChange": -0.41
+      },
+      {
+        "id": "DA_SteraksGage",
+        "nameKo": "스테락의 도전",
+        "placeChange": -0.09
+      },
+      {
+        "id": "DA_Bloodthirster",
+        "nameKo": "피바라기",
+        "placeChange": 0.02
+      }
+    ]
+  },
+  {
+    "id": "DA_Samira19",
+    "teamPlannerCode": "425",
+    "name": "Samira",
+    "nameKo": "사미라",
+    "cost": 2,
+    "role": "Attack Caster",
+    "roleKo": "공격력 마법사",
+    "traits": [
+      "Classical",
+      "Renegade",
+      "Trickshot"
+    ],
+    "traitsKo": [
+      "클래식",
+      "무법자",
+      "재주꾼"
+    ],
+    "traitIds": [
+      "DA_Virtuosos19",
+      "DA_Renegade19",
+      "DA_Trickshot19"
+    ],
+    "unlock": "클래식, 무법자 또는 재주꾼 챔피언에게 아이템 2개 장착",
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_DemonVision19_Emblem",
+        "nameKo": "락 상징",
+        "placeChange": -0.74
+      },
+      {
+        "id": "DA_RedBuff",
+        "nameKo": "붉은 덩굴정령",
+        "placeChange": -0.5
+      },
+      {
+        "id": "DA_SpearOfShojin",
+        "nameKo": "쇼진의 창",
+        "placeChange": -0.39
+      },
+      {
+        "id": "DA_StrikersFlail",
+        "nameKo": "타격대의 철퇴",
+        "placeChange": -0.33
+      },
+      {
+        "id": "DA_LastWhisper",
+        "nameKo": "최후의 속삭임",
+        "placeChange": -0.19
+      }
+    ]
+  },
+  {
+    "id": "DA_Seraphine19_Indie",
+    "teamPlannerCode": "427",
+    "name": "Seraphine",
+    "nameKo": "세라핀",
+    "cost": 2,
+    "role": "Magic Caster",
+    "roleKo": "주문력 마법사",
+    "traits": [
+      "Indie"
+    ],
+    "traitsKo": [
+      "인디"
+    ],
+    "traitIds": [
+      "DA_Seraphine19_IndieTrait"
+    ],
+    "unlock": "스테이지 2 공동 선택 전에 새로고침 4회",
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_VoidStaff",
+        "nameKo": "공허의 지팡이",
+        "placeChange": -0.51
+      },
+      {
+        "id": "DA_Morellonomicon",
+        "nameKo": "모렐로노미콘",
+        "placeChange": -0.43
+      },
+      {
+        "id": "DA_RedBuff",
+        "nameKo": "붉은 덩굴정령",
+        "placeChange": -0.21
+      },
+      {
+        "id": "DA_RabadonsDeathcap",
+        "nameKo": "라바돈의 죽음모자",
+        "placeChange": -0.07
+      },
+      {
+        "id": "DA_SpearOfShojin",
+        "nameKo": "쇼진의 창",
+        "placeChange": -0.0
+      }
+    ]
+  },
+  {
+    "id": "DA_Tristana19",
+    "teamPlannerCode": "434",
+    "name": "Tristana",
+    "nameKo": "트리스타나",
+    "cost": 2,
+    "role": "Attack Caster",
+    "roleKo": "공격력 마법사",
+    "traits": [
+      "Hyperpop",
+      "Hitmaker"
+    ],
+    "traitsKo": [
+      "하이퍼팝",
+      "스타 제조기"
+    ],
+    "traitIds": [
+      "DA_GlitterBomb19",
+      "DA_Hitmaker19"
+    ],
+    "unlock": "하이퍼팝이 활성화된 상태로 5킬 달성",
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_Choreographer19_Emblem",
+        "nameKo": "안무가 상징",
+        "placeChange": -1.49
+      },
+      {
+        "id": "DA_Swiftstriker19_Emblem",
+        "nameKo": "신속타격대 상징",
+        "placeChange": -0.58
+      },
+      {
+        "id": "DA_Deathblade",
+        "nameKo": "죽음의 검",
+        "placeChange": -0.43
+      },
+      {
+        "id": "DA_RedBuff",
+        "nameKo": "붉은 덩굴정령",
+        "placeChange": -0.26
+      },
+      {
+        "id": "DA_GiantSlayer",
+        "nameKo": "거인 학살자",
+        "placeChange": -0.18
+      }
+    ]
+  },
+  {
+    "id": "DA_Amumu19",
+    "teamPlannerCode": "3ef",
+    "name": "Amumu",
+    "nameKo": "아무무",
+    "cost": 3,
+    "role": "Magic Tank",
+    "roleKo": "주문력 탱커",
+    "traits": [
+      "Emo"
+    ],
+    "traitsKo": [
+      "이모코어"
+    ],
+    "traitIds": [
+      "DA_Amumu19_UniqueTrait"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "TFT_Emblem_CHANGEME",
+        "nameKo": "신동 상징",
+        "placeChange": -0.66
+      },
+      {
+        "id": "DA_Evenshroud",
+        "nameKo": "저녁갑주",
+        "placeChange": -0.34
+      },
+      {
+        "id": "DA_SunfireCape",
+        "nameKo": "태양불꽃 망토",
+        "placeChange": -0.19
+      },
+      {
+        "id": "DA_ProtectorsVow",
+        "nameKo": "수호자의 맹세",
+        "placeChange": -0.16
+      },
+      {
+        "id": "DA_SpiritVisage",
+        "nameKo": "정령의 형상",
+        "placeChange": -0.13
+      }
+    ]
+  },
+  {
+    "id": "DA_Bard19",
+    "teamPlannerCode": "3f4",
+    "name": "Bard",
+    "nameKo": "바드",
+    "cost": 3,
+    "role": "Magic Marksman",
+    "roleKo": "주문력 원거리 딜러",
+    "traits": [
+      "Jazz",
+      "Swiftstriker"
+    ],
+    "traitsKo": [
+      "재즈",
+      "신속타격대"
+    ],
+    "traitIds": [
+      "DA_Jazz19",
+      "DA_Swiftstriker19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_RedBuff",
+        "nameKo": "붉은 덩굴정령",
+        "placeChange": -0.84
+      },
+      {
+        "id": "DA_Morellonomicon",
+        "nameKo": "모렐로노미콘",
+        "placeChange": -0.74
+      },
+      {
+        "id": "DA_NashorsTooth",
+        "nameKo": "내셔의 이빨",
+        "placeChange": -0.68
+      },
+      {
+        "id": "DA_VoidStaff",
+        "nameKo": "공허의 지팡이",
+        "placeChange": -0.64
+      },
+      {
+        "id": "DA_JeweledGauntlet",
+        "nameKo": "보석 건틀릿",
+        "placeChange": -0.44
+      }
+    ]
+  },
+  {
+    "id": "DA_Braum19",
+    "teamPlannerCode": "3f6",
+    "name": "Braum",
+    "nameKo": "브라움",
+    "cost": 3,
+    "role": "Magic Tank",
+    "roleKo": "주문력 탱커",
+    "traits": [
+      "Illbeats",
+      "Juggernaut"
+    ],
+    "traitsKo": [
+      "일류 비트",
+      "전쟁기계"
+    ],
+    "traitIds": [
+      "DA_Illbeats19",
+      "DA_Juggernaut19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_Crownguard",
+        "nameKo": "크라운가드",
+        "placeChange": -0.18
+      },
+      {
+        "id": "DA_BrambleVest",
+        "nameKo": "덤불 조끼",
+        "placeChange": -0.15
+      },
+      {
+        "id": "DA_ProtectorsVow",
+        "nameKo": "수호자의 맹세",
+        "placeChange": -0.14
+      },
+      {
+        "id": "DA_SteadfastHeart",
+        "nameKo": "굳건한 심장",
+        "placeChange": -0.11
+      },
+      {
+        "id": "DA_WarmogsArmor",
+        "nameKo": "워모그의 갑옷",
+        "placeChange": -0.06
+      }
+    ]
+  },
+  {
+    "id": "DA_Briar19",
+    "teamPlannerCode": "3f7",
+    "name": "Briar",
+    "nameKo": "브라이어",
+    "cost": 3,
+    "role": "Attack Assassin",
+    "roleKo": "공격력 암살자",
+    "traits": [
+      "Ionic Spark",
+      "Slayer"
+    ],
+    "traitsKo": [
+      "Ionic Spark",
+      "학살자"
+    ],
+    "traitIds": [
+      "DA_IonicSpark19",
+      "DA_Mosher19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_Deathblade",
+        "nameKo": "죽음의 검",
+        "placeChange": -0.42
+      },
+      {
+        "id": "DA_SteraksGage",
+        "nameKo": "스테락의 도전",
+        "placeChange": -0.34
+      },
+      {
+        "id": "DA_TitansResolve",
+        "nameKo": "거인의 결의",
+        "placeChange": -0.32
+      },
+      {
+        "id": "DA_Bloodthirster",
+        "nameKo": "피바라기",
+        "placeChange": -0.09
+      },
+      {
+        "id": "DA_GiantSlayer",
+        "nameKo": "거인 학살자",
+        "placeChange": -0.07
+      }
+    ]
+  },
+  {
+    "id": "DA_Draven19",
+    "teamPlannerCode": "3fa",
+    "name": "Draven",
+    "nameKo": "드레이븐",
+    "cost": 3,
+    "role": "Attack Caster",
+    "roleKo": "공격력 마법사",
+    "traits": [
+      "Illbeats",
+      "Trickshot"
+    ],
+    "traitsKo": [
+      "일류 비트",
+      "재주꾼"
+    ],
+    "traitIds": [
+      "DA_Illbeats19",
+      "DA_Trickshot19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_StrikersFlail",
+        "nameKo": "타격대의 철퇴",
+        "placeChange": -0.29
+      },
+      {
+        "id": "DA_InfinityEdge",
+        "nameKo": "무한의 대검",
+        "placeChange": -0.21
+      },
+      {
+        "id": "DA_LastWhisper",
+        "nameKo": "최후의 속삭임",
+        "placeChange": -0.19
+      },
+      {
+        "id": "DA_Deathblade",
+        "nameKo": "죽음의 검",
+        "placeChange": -0.18
+      },
+      {
+        "id": "DA_BlueBuff",
+        "nameKo": "푸른 파수꾼",
+        "placeChange": -0.14
+      }
+    ]
+  },
+  {
+    "id": "DA_Ekko19",
+    "teamPlannerCode": "3fc",
+    "name": "Ekko",
+    "nameKo": "에코",
+    "cost": 3,
+    "role": "Magic Tank",
+    "roleKo": "주문력 탱커",
+    "traits": [
+      "True Damage",
+      "Juggernaut",
+      "Prodigy"
+    ],
+    "traitsKo": [
+      "True Damage",
+      "전쟁기계",
+      "신동"
+    ],
+    "traitIds": [
+      "DA_TrueDamage19",
+      "DA_Juggernaut19",
+      "DA_Prodigy19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_Crownguard",
+        "nameKo": "크라운가드",
+        "placeChange": -0.32
+      },
+      {
+        "id": "DA_IonicSpark",
+        "nameKo": "이온 충격기",
+        "placeChange": -0.17
+      },
+      {
+        "id": "DA_AdaptiveHelm",
+        "nameKo": "적응형 투구",
+        "placeChange": -0.1
+      },
+      {
+        "id": "DA_ProtectorsVow",
+        "nameKo": "수호자의 맹세",
+        "placeChange": -0.1
+      },
+      {
+        "id": "DA_GargoyleStoneplate",
+        "nameKo": "가고일 돌갑옷",
+        "placeChange": -0.02
+      }
+    ]
+  },
+  {
+    "id": "DA_Evelynn19",
+    "teamPlannerCode": "3fe",
+    "name": "Evelynn",
+    "nameKo": "이블린",
+    "cost": 3,
+    "role": "Magic Fighter",
+    "roleKo": "주문력 전사",
+    "traits": [
+      "K/DA",
+      "Renegade"
+    ],
+    "traitsKo": [
+      "K/DA",
+      "무법자"
+    ],
+    "traitIds": [
+      "DA_KDA19",
+      "DA_Renegade19"
+    ],
+    "unlock": "서로 다른 K/DA 또는 무법자 챔피언 3명",
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_StrikersFlail",
+        "nameKo": "타격대의 철퇴",
+        "placeChange": -0.41
+      },
+      {
+        "id": "DA_GiantSlayer",
+        "nameKo": "거인 학살자",
+        "placeChange": -0.38
+      },
+      {
+        "id": "DA_NashorsTooth",
+        "nameKo": "내셔의 이빨",
+        "placeChange": -0.35
+      },
+      {
+        "id": "DA_HextechGunblade",
+        "nameKo": "마법공학 총검",
+        "placeChange": -0.28
+      },
+      {
+        "id": "DA_RabadonsDeathcap",
+        "nameKo": "라바돈의 죽음모자",
+        "placeChange": -0.11
+      }
+    ]
+  },
+  {
+    "id": "DA_Galio19",
+    "teamPlannerCode": "400",
+    "name": "Galio",
+    "nameKo": "갈리오",
+    "cost": 3,
+    "role": "Magic Tank",
+    "roleKo": "주문력 탱커",
+    "traits": [
+      "Jazz",
+      "Frontman"
+    ],
+    "traitsKo": [
+      "재즈",
+      "프론트맨"
+    ],
+    "traitIds": [
+      "DA_Jazz19",
+      "DA_Frontman19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_Bodyguard19_Emblem",
+        "nameKo": "경호대 상징",
+        "placeChange": -0.78
+      },
+      {
+        "id": "DA_IonicSpark",
+        "nameKo": "이온 충격기",
+        "placeChange": -0.72
+      },
+      {
+        "id": "DA_Evenshroud",
+        "nameKo": "저녁갑주",
+        "placeChange": -0.55
+      },
+      {
+        "id": "DA_SunfireCape",
+        "nameKo": "태양불꽃 망토",
+        "placeChange": -0.33
+      },
+      {
+        "id": "DA_SteadfastHeart",
+        "nameKo": "굳건한 심장",
+        "placeChange": -0.24
+      }
+    ]
+  },
+  {
+    "id": "DA_Kaisa19",
+    "teamPlannerCode": "40a",
+    "name": "Kai'Sa",
+    "nameKo": "카이사",
+    "cost": 3,
+    "role": "Attack Marksman",
+    "roleKo": "공격력 원거리 딜러",
+    "traits": [
+      "K/DA",
+      "Trickshot"
+    ],
+    "traitsKo": [
+      "K/DA",
+      "재주꾼"
+    ],
+    "traitIds": [
+      "DA_KDA19",
+      "DA_Trickshot19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_IllBeats19_Emblem",
+        "nameKo": "일류 비트 상징",
+        "placeChange": -0.61
+      },
+      {
+        "id": "DA_RedBuff",
+        "nameKo": "붉은 덩굴정령",
+        "placeChange": -0.45
+      },
+      {
+        "id": "DA_LastWhisper",
+        "nameKo": "최후의 속삭임",
+        "placeChange": -0.29
+      },
+      {
+        "id": "DA_KrakensFury",
+        "nameKo": "크라켄의 분노",
+        "placeChange": -0.21
+      },
+      {
+        "id": "DA_HextechGunblade",
+        "nameKo": "마법공학 총검",
+        "placeChange": -0.15
+      }
+    ]
+  },
+  {
+    "id": "DA_KSante19",
+    "teamPlannerCode": "411",
+    "name": "K'Sante",
+    "nameKo": "크산테",
+    "cost": 3,
+    "role": "Attack Tank",
+    "roleKo": "공격력 탱커",
+    "traits": [
+      "Heartsteel",
+      "Bodyguard"
+    ],
+    "traitsKo": [
+      "HEARTSTEEL",
+      "경호대"
+    ],
+    "traitIds": [
+      "DA_Heartsteel19",
+      "DA_Bodyguard19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_IonicSpark",
+        "nameKo": "이온 충격기",
+        "placeChange": -0.49
+      },
+      {
+        "id": "DA_Evenshroud",
+        "nameKo": "저녁갑주",
+        "placeChange": -0.3
+      },
+      {
+        "id": "DA_SunfireCape",
+        "nameKo": "태양불꽃 망토",
+        "placeChange": -0.22
+      },
+      {
+        "id": "DA_ProtectorsVow",
+        "nameKo": "수호자의 맹세",
+        "placeChange": -0.17
+      },
+      {
+        "id": "DA_SteadfastHeart",
+        "nameKo": "굳건한 심장",
+        "placeChange": -0.1
+      }
+    ]
+  },
+  {
+    "id": "DA_Malzahar19",
+    "teamPlannerCode": "418",
+    "name": "Malzahar",
+    "nameKo": "말자하",
+    "cost": 3,
+    "role": "Magic Caster",
+    "roleKo": "주문력 마법사",
+    "traits": [
+      "Composer",
+      "Prodigy"
+    ],
+    "traitsKo": [
+      "작곡가",
+      "신동"
+    ],
+    "traitIds": [
+      "DA_Malzahar19_UniqueTrait",
+      "DA_Prodigy19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_StrikersFlail",
+        "nameKo": "타격대의 철퇴",
+        "placeChange": -0.41
+      },
+      {
+        "id": "DA_JeweledGauntlet",
+        "nameKo": "보석 건틀릿",
+        "placeChange": -0.37
+      },
+      {
+        "id": "DA_HextechGunblade",
+        "nameKo": "마법공학 총검",
+        "placeChange": -0.29
+      },
+      {
+        "id": "DA_RabadonsDeathcap",
+        "nameKo": "라바돈의 죽음모자",
+        "placeChange": -0.19
+      },
+      {
+        "id": "DA_GiantSlayer",
+        "nameKo": "거인 학살자",
+        "placeChange": -0.08
+      }
+    ]
+  },
+  {
+    "id": "DA_Senna19",
+    "teamPlannerCode": "426",
+    "name": "Senna",
+    "nameKo": "세나",
+    "cost": 3,
+    "role": "Attack Caster",
+    "roleKo": "공격력 마법사",
+    "traits": [
+      "True Damage",
+      "Hitmaker"
+    ],
+    "traitsKo": [
+      "True Damage",
+      "스타 제조기"
+    ],
+    "traitIds": [
+      "DA_TrueDamage19",
+      "DA_Hitmaker19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_InfinityEdgeRadiant",
+        "nameKo": "찬란한 무한의 대검",
+        "placeChange": -1.06
+      },
+      {
+        "id": "DA_Deathblade",
+        "nameKo": "죽음의 검",
+        "placeChange": -0.27
+      },
+      {
+        "id": "DA_GiantSlayer",
+        "nameKo": "거인 학살자",
+        "placeChange": -0.13
+      },
+      {
+        "id": "DA_SpearOfShojin",
+        "nameKo": "쇼진의 창",
+        "placeChange": -0.08
+      },
+      {
+        "id": "DA_InfinityEdge",
+        "nameKo": "무한의 대검",
+        "placeChange": -0.0
+      }
+    ]
+  },
+  {
+    "id": "DA_Swain19",
+    "teamPlannerCode": "42d",
+    "name": "Swain",
+    "nameKo": "스웨인",
+    "cost": 3,
+    "role": "Magic Tank",
+    "roleKo": "주문력 탱커",
+    "traits": [
+      "Rock",
+      "Arcanist",
+      "Frontman"
+    ],
+    "traitsKo": [
+      "락",
+      "비전 마법사",
+      "프론트맨"
+    ],
+    "traitIds": [
+      "DA_DemonVision19",
+      "DA_Arcanist19",
+      "DA_Frontman19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_IonicSpark",
+        "nameKo": "이온 충격기",
+        "placeChange": -0.57
+      },
+      {
+        "id": "DA_BrambleVest",
+        "nameKo": "덤불 조끼",
+        "placeChange": -0.36
+      },
+      {
+        "id": "DA_SunfireCape",
+        "nameKo": "태양불꽃 망토",
+        "placeChange": -0.29
+      },
+      {
+        "id": "DA_Evenshroud",
+        "nameKo": "저녁갑주",
+        "placeChange": -0.26
+      },
+      {
+        "id": "DA_ProtectorsVow",
+        "nameKo": "수호자의 맹세",
+        "placeChange": -0.21
+      }
+    ]
+  },
+  {
+    "id": "DA_Syndra19",
+    "teamPlannerCode": "42e",
+    "name": "Syndra",
+    "nameKo": "신드라",
+    "cost": 3,
+    "role": "Magic Caster",
+    "roleKo": "주문력 마법사",
+    "traits": [
+      "Beach Pop",
+      "Choreographer"
+    ],
+    "traitsKo": [
+      "비치 팝",
+      "안무가"
+    ],
+    "traitIds": [
+      "DA_OceanSong19",
+      "DA_Choreographer19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_ArchangelsStaff",
+        "nameKo": "대천사의 지팡이",
+        "placeChange": -0.17
+      },
+      {
+        "id": "DA_HextechGunblade",
+        "nameKo": "마법공학 총검",
+        "placeChange": -0.17
+      },
+      {
+        "id": "DA_GiantSlayer",
+        "nameKo": "거인 학살자",
+        "placeChange": -0.11
+      },
+      {
+        "id": "DA_VoidStaff",
+        "nameKo": "공허의 지팡이",
+        "placeChange": -0.06
+      },
+      {
+        "id": "DA_JeweledGauntlet",
+        "nameKo": "보석 건틀릿",
+        "placeChange": 0.0
+      }
+    ]
+  },
+  {
+    "id": "DA_Tibbers19",
+    "teamPlannerCode": "433",
+    "name": "Tibbers",
+    "nameKo": "티버",
+    "cost": 3,
+    "role": "Attack Tank",
+    "roleKo": "공격력 탱커",
+    "traits": [
+      "Ionic Spark",
+      "Bodyguard"
+    ],
+    "traitsKo": [
+      "Ionic Spark",
+      "경호대"
+    ],
+    "traitIds": [
+      "DA_IonicSpark19",
+      "DA_Bodyguard19"
+    ],
+    "unlock": "아이템 1개를 장착한 2성 애니",
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_IonicSpark",
+        "nameKo": "이온 충격기",
+        "placeChange": -0.29
+      },
+      {
+        "id": "DA_Evenshroud",
+        "nameKo": "저녁갑주",
+        "placeChange": -0.21
+      },
+      {
+        "id": "DA_Crownguard",
+        "nameKo": "크라운가드",
+        "placeChange": -0.18
+      },
+      {
+        "id": "DA_SunfireCape",
+        "nameKo": "태양불꽃 망토",
+        "placeChange": -0.17
+      },
+      {
+        "id": "DA_SteadfastHeart",
+        "nameKo": "굳건한 심장",
+        "placeChange": -0.1
+      }
+    ]
+  },
+  {
+    "id": "DA_Viego19",
+    "teamPlannerCode": "439",
+    "name": "Viego",
+    "nameKo": "비에고",
+    "cost": 3,
+    "role": "Attack Fighter",
+    "roleKo": "공격력 전사",
+    "traits": [
+      "Pentakill",
+      "Choreographer",
+      "Slayer"
+    ],
+    "traitsKo": [
+      "펜타킬",
+      "안무가",
+      "학살자"
+    ],
+    "traitIds": [
+      "DA_Pentakill19",
+      "DA_Choreographer19",
+      "DA_Mosher19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_InfinityEdge",
+        "nameKo": "무한의 대검",
+        "placeChange": -0.42
+      },
+      {
+        "id": "DA_EdgeOfNight",
+        "nameKo": "밤의 끝자락",
+        "placeChange": -0.23
+      },
+      {
+        "id": "DA_Deathblade",
+        "nameKo": "죽음의 검",
+        "placeChange": -0.2
+      },
+      {
+        "id": "DA_HandOfJustice",
+        "nameKo": "정의의 손길",
+        "placeChange": -0.17
+      },
+      {
+        "id": "DA_SteraksGage",
+        "nameKo": "스테락의 도전",
+        "placeChange": -0.1
+      }
+    ]
+  },
+  {
+    "id": "DA_19_Ahri",
+    "teamPlannerCode": "3e9",
+    "name": "Ahri",
+    "nameKo": "아리",
+    "cost": 4,
+    "role": "Magic Caster",
+    "roleKo": "주문력 마법사",
+    "traits": [
+      "K/DA",
+      "Choreographer"
+    ],
+    "traitsKo": [
+      "K/DA",
+      "안무가"
+    ],
+    "traitIds": [
+      "DA_KDA19",
+      "DA_Choreographer19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_SpearOfShojin",
+        "nameKo": "쇼진의 창",
+        "placeChange": -0.17
+      },
+      {
+        "id": "DA_ArchangelsStaff",
+        "nameKo": "대천사의 지팡이",
+        "placeChange": -0.09
+      },
+      {
+        "id": "DA_HextechGunblade",
+        "nameKo": "마법공학 총검",
+        "placeChange": -0.07
+      },
+      {
+        "id": "DA_VoidStaff",
+        "nameKo": "공허의 지팡이",
+        "placeChange": -0.07
+      },
+      {
+        "id": "DA_StrikersFlail",
+        "nameKo": "타격대의 철퇴",
+        "placeChange": -0.03
+      }
+    ]
+  },
+  {
+    "id": "DA_Alistar19",
+    "teamPlannerCode": "3ed",
+    "name": "Alistar",
+    "nameKo": "알리스타",
+    "cost": 4,
+    "role": "Magic Tank",
+    "roleKo": "주문력 탱커",
+    "traits": [
+      "Country"
+    ],
+    "traitsKo": [
+      "컨트리"
+    ],
+    "traitIds": [
+      "DA_Alistar19_UniqueTrait"
+    ],
+    "unlock": "7레벨 이상 · 마법사 또는 원거리 딜러에게 쇠사슬 조끼 1개 장착",
+    "levelRequired": 7,
+    "recommendedItems": [
+      {
+        "id": "DA_IonicSpark",
+        "nameKo": "이온 충격기",
+        "placeChange": -0.48
+      },
+      {
+        "id": "DA_ProtectorsVow",
+        "nameKo": "수호자의 맹세",
+        "placeChange": -0.39,
+        "occurrence": 2
+      },
+      {
+        "id": "DA_ProtectorsVow",
+        "nameKo": "수호자의 맹세",
+        "placeChange": -0.23
+      },
+      {
+        "id": "DA_BrambleVest",
+        "nameKo": "덤불 조끼",
+        "placeChange": -0.07
+      },
+      {
+        "id": "DA_WarmogsArmor",
+        "nameKo": "워모그의 갑옷",
+        "placeChange": -0.05
+      }
+    ]
+  },
+  {
+    "id": "DA_Alune19",
+    "teamPlannerCode": "3ee",
+    "name": "Alune",
+    "nameKo": "알룬",
+    "cost": 4,
+    "role": "Magic Caster",
+    "roleKo": "주문력 마법사",
+    "traits": [
+      "Heartsteel",
+      "Manager",
+      "Prodigy"
+    ],
+    "traitsKo": [
+      "HEARTSTEEL",
+      "매니저",
+      "신동"
+    ],
+    "traitIds": [
+      "DA_Heartsteel19",
+      "DA_Manager19",
+      "DA_Prodigy19"
+    ],
+    "unlock": "7레벨 이상 · 서로 다른 HEARTSTEEL 또는 신동 챔피언 4명",
+    "levelRequired": 7,
+    "recommendedItems": [
+      {
+        "id": "DA_Morellonomicon",
+        "nameKo": "모렐로노미콘",
+        "placeChange": -0.44
+      },
+      {
+        "id": "DA_VoidStaff",
+        "nameKo": "공허의 지팡이",
+        "placeChange": -0.27
+      },
+      {
+        "id": "DA_RedBuff",
+        "nameKo": "붉은 덩굴정령",
+        "placeChange": -0.26
+      },
+      {
+        "id": "DA_AdaptiveHelm",
+        "nameKo": "적응형 투구",
+        "placeChange": -0.13
+      },
+      {
+        "id": "DA_HextechGunblade",
+        "nameKo": "마법공학 총검",
+        "placeChange": -0.09
+      }
+    ]
+  },
+  {
+    "id": "DA_Aurora19",
+    "teamPlannerCode": "3f3",
+    "name": "Aurora",
+    "nameKo": "오로라",
+    "cost": 4,
+    "role": "Magic Caster",
+    "roleKo": "주문력 마법사",
+    "traits": [
+      "Ionic Spark",
+      "Renegade"
+    ],
+    "traitsKo": [
+      "Ionic Spark",
+      "무법자"
+    ],
+    "traitIds": [
+      "DA_IonicSpark19",
+      "DA_Renegade19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_Morellonomicon",
+        "nameKo": "모렐로노미콘",
+        "placeChange": -0.41
+      },
+      {
+        "id": "DA_RedBuff",
+        "nameKo": "붉은 덩굴정령",
+        "placeChange": -0.4
+      },
+      {
+        "id": "DA_AdaptiveHelm",
+        "nameKo": "적응형 투구",
+        "placeChange": -0.15
+      },
+      {
+        "id": "DA_VoidStaff",
+        "nameKo": "공허의 지팡이",
+        "placeChange": -0.12
+      },
+      {
+        "id": "DA_BlueBuff",
+        "nameKo": "푸른 파수꾼",
+        "placeChange": -0.06
+      }
+    ]
+  },
+  {
+    "id": "DA_Garen19",
+    "teamPlannerCode": "401",
+    "name": "Garen",
+    "nameKo": "가렌",
+    "cost": 4,
+    "role": "Attack Tank",
+    "roleKo": "공격력 탱커",
+    "traits": [
+      "Synthwave",
+      "Choreographer"
+    ],
+    "traitsKo": [
+      "신스웨이브",
+      "안무가"
+    ],
+    "traitIds": [
+      "DA_Garen19_UniqueTrait",
+      "DA_Choreographer19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_Frontman19_Emblem",
+        "nameKo": "프론트맨 상징",
+        "placeChange": -0.81
+      },
+      {
+        "id": "DA_IonicSpark",
+        "nameKo": "이온 충격기",
+        "placeChange": -0.38
+      },
+      {
+        "id": "DA_Evenshroud",
+        "nameKo": "저녁갑주",
+        "placeChange": -0.26
+      },
+      {
+        "id": "DA_BrambleVest",
+        "nameKo": "덤불 조끼",
+        "placeChange": -0.26
+      },
+      {
+        "id": "DA_ProtectorsVow",
+        "nameKo": "수호자의 맹세",
+        "placeChange": -0.23
+      }
+    ]
+  },
+  {
+    "id": "DA_Graves19",
+    "teamPlannerCode": "449",
+    "name": "Graves",
+    "nameKo": "그레이브즈",
+    "cost": 4,
+    "role": "Attack Fighter",
+    "roleKo": "공격력 전사",
+    "traits": [
+      "Beach Pop",
+      "Renegade"
+    ],
+    "traitsKo": [
+      "비치 팝",
+      "무법자"
+    ],
+    "traitIds": [
+      "DA_OceanSong19",
+      "DA_Renegade19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_Deathblade",
+        "nameKo": "죽음의 검",
+        "placeChange": -0.15
+      },
+      {
+        "id": "DA_GiantSlayer",
+        "nameKo": "거인 학살자",
+        "placeChange": -0.14
+      },
+      {
+        "id": "DA_LastWhisper",
+        "nameKo": "최후의 속삭임",
+        "placeChange": -0.1
+      },
+      {
+        "id": "DA_StrikersFlail",
+        "nameKo": "타격대의 철퇴",
+        "placeChange": -0.09
+      },
+      {
+        "id": "DA_TitansResolve",
+        "nameKo": "거인의 결의",
+        "placeChange": -0.04
+      }
+    ]
+  },
+  {
+    "id": "DA_Jhin19",
+    "teamPlannerCode": "408",
+    "name": "Jhin",
+    "nameKo": "진",
+    "cost": 4,
+    "role": "Attack Specialist",
+    "roleKo": "공격력 전문가",
+    "traits": [
+      "Classical",
+      "Encore"
+    ],
+    "traitsKo": [
+      "클래식",
+      "앙코르"
+    ],
+    "traitIds": [
+      "DA_Virtuosos19",
+      "DA_Encore19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_InfinityEdge",
+        "nameKo": "무한의 대검",
+        "placeChange": -0.37
+      },
+      {
+        "id": "DA_LastWhisper",
+        "nameKo": "최후의 속삭임",
+        "placeChange": -0.35
+      },
+      {
+        "id": "DA_Hitmaker19_Emblem",
+        "nameKo": "스타 제조기 상징",
+        "placeChange": -0.33
+      },
+      {
+        "id": "DA_Deathblade",
+        "nameKo": "죽음의 검",
+        "placeChange": -0.21
+      },
+      {
+        "id": "DA_StrikersFlail",
+        "nameKo": "타격대의 철퇴",
+        "placeChange": -0.13
+      }
+    ]
+  },
+  {
+    "id": "DA_Jinx19",
+    "teamPlannerCode": "409",
+    "name": "Jinx",
+    "nameKo": "징크스",
+    "cost": 4,
+    "role": "Attack Marksman",
+    "roleKo": "공격력 원거리 딜러",
+    "traits": [
+      "Ionic Spark",
+      "Hitmaker"
+    ],
+    "traitsKo": [
+      "Ionic Spark",
+      "스타 제조기"
+    ],
+    "traitIds": [
+      "DA_IonicSpark19",
+      "DA_Hitmaker19"
+    ],
+    "unlock": "7레벨 이상 · Ionic Spark 또는 스타 제조기 챔피언에게 장착한 아이템 3개",
+    "levelRequired": 7,
+    "recommendedItems": [
+      {
+        "id": "DA_GuinsoosRageblade",
+        "nameKo": "구인수의 격노검",
+        "placeChange": -0.34
+      },
+      {
+        "id": "DA_LastWhisper",
+        "nameKo": "최후의 속삭임",
+        "placeChange": -0.2
+      },
+      {
+        "id": "DA_InfinityEdge",
+        "nameKo": "무한의 대검",
+        "placeChange": -0.12
+      },
+      {
+        "id": "DA_StrikersFlail",
+        "nameKo": "타격대의 철퇴",
+        "placeChange": -0.06
+      },
+      {
+        "id": "DA_KrakensFury",
+        "nameKo": "크라켄의 분노",
+        "placeChange": -0.05
+      }
+    ]
+  },
+  {
+    "id": "DA_Kayle19",
+    "teamPlannerCode": "40d",
+    "name": "Kayle",
+    "nameKo": "케일",
+    "cost": 4,
+    "role": "Magic Marksman",
+    "roleKo": "주문력 원거리 딜러",
+    "traits": [
+      "Pentakill",
+      "Swiftstriker"
+    ],
+    "traitsKo": [
+      "펜타킬",
+      "신속타격대"
+    ],
+    "traitIds": [
+      "DA_Pentakill19",
+      "DA_Swiftstriker19"
+    ],
+    "unlock": "7레벨 이상 · 서로 다른 펜타킬 또는 신속타격대 챔피언 4명",
+    "levelRequired": 7,
+    "recommendedItems": [
+      {
+        "id": "DA_VoidStaff",
+        "nameKo": "공허의 지팡이",
+        "placeChange": -0.21
+      },
+      {
+        "id": "DA_RedBuff",
+        "nameKo": "붉은 덩굴정령",
+        "placeChange": -0.2
+      },
+      {
+        "id": "DA_StrikersFlail",
+        "nameKo": "타격대의 철퇴",
+        "placeChange": -0.17
+      },
+      {
+        "id": "DA_RabadonsDeathcap",
+        "nameKo": "라바돈의 죽음모자",
+        "placeChange": -0.1
+      },
+      {
+        "id": "DA_JeweledGauntlet",
+        "nameKo": "보석 건틀릿",
+        "placeChange": -0.06
+      }
+    ]
+  },
+  {
+    "id": "DA_Leona19",
+    "teamPlannerCode": "412",
+    "name": "Leona",
+    "nameKo": "레오나",
+    "cost": 4,
+    "role": "Magic Tank",
+    "roleKo": "주문력 탱커",
+    "traits": [
+      "K/DA",
+      "Bodyguard",
+      "Manager"
+    ],
+    "traitsKo": [
+      "K/DA",
+      "경호대",
+      "매니저"
+    ],
+    "traitIds": [
+      "DA_KDA19",
+      "DA_Bodyguard19",
+      "DA_Manager19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_IonicSpark",
+        "nameKo": "이온 충격기",
+        "placeChange": -0.55
+      },
+      {
+        "id": "DA_SteadfastHeart",
+        "nameKo": "굳건한 심장",
+        "placeChange": -0.25
+      },
+      {
+        "id": "DA_ProtectorsVow",
+        "nameKo": "수호자의 맹세",
+        "placeChange": -0.24
+      },
+      {
+        "id": "DA_SunfireCape",
+        "nameKo": "태양불꽃 망토",
+        "placeChange": -0.21
+      },
+      {
+        "id": "DA_Evenshroud",
+        "nameKo": "저녁갑주",
+        "placeChange": -0.14
+      }
+    ]
+  },
+  {
+    "id": "DA_Locke19",
+    "teamPlannerCode": "414",
+    "name": "Locke",
+    "nameKo": "로크",
+    "cost": 4,
+    "role": "Magic Assassin",
+    "roleKo": "주문력 암살자",
+    "traits": [
+      "Rock",
+      "Swiftstriker"
+    ],
+    "traitsKo": [
+      "락",
+      "신속타격대"
+    ],
+    "traitIds": [
+      "DA_DemonVision19",
+      "DA_Swiftstriker19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_IonicSpark",
+        "nameKo": "이온 충격기",
+        "placeChange": -0.37
+      },
+      {
+        "id": "DA_Pentakill19_Emblem",
+        "nameKo": "펜타킬 상징",
+        "placeChange": -0.28
+      },
+      {
+        "id": "DA_RabadonsDeathcap",
+        "nameKo": "라바돈의 죽음모자",
+        "placeChange": -0.18
+      },
+      {
+        "id": "DA_VoidStaff",
+        "nameKo": "공허의 지팡이",
+        "placeChange": -0.16
+      },
+      {
+        "id": "DA_HextechGunblade",
+        "nameKo": "마법공학 총검",
+        "placeChange": -0.1
+      }
+    ]
+  },
+  {
+    "id": "DA_Mel19",
+    "teamPlannerCode": "419",
+    "name": "Mel",
+    "nameKo": "멜",
+    "cost": 4,
+    "role": "Magic Caster",
+    "roleKo": "주문력 마법사",
+    "traits": [
+      "R&B",
+      "Arcanist"
+    ],
+    "traitsKo": [
+      "R&B",
+      "비전 마법사"
+    ],
+    "traitIds": [
+      "DA_RnB19",
+      "DA_Arcanist19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_Mosher19_Emblem",
+        "nameKo": "학살자 상징",
+        "placeChange": -1.02
+      },
+      {
+        "id": "DA_Morellonomicon",
+        "nameKo": "모렐로노미콘",
+        "placeChange": -0.43
+      },
+      {
+        "id": "DA_VoidStaff",
+        "nameKo": "공허의 지팡이",
+        "placeChange": -0.32
+      },
+      {
+        "id": "DA_RedBuff",
+        "nameKo": "붉은 덩굴정령",
+        "placeChange": -0.27
+      },
+      {
+        "id": "DA_AdaptiveHelm",
+        "nameKo": "적응형 투구",
+        "placeChange": -0.15
+      }
+    ]
+  },
+  {
+    "id": "DA_Shyvana19",
+    "teamPlannerCode": "429",
+    "name": "Shyvana",
+    "nameKo": "쉬바나",
+    "cost": 4,
+    "role": "Magic Tank",
+    "roleKo": "주문력 탱커",
+    "traits": [
+      "Ionic Spark",
+      "Frontman"
+    ],
+    "traitsKo": [
+      "Ionic Spark",
+      "프론트맨"
+    ],
+    "traitIds": [
+      "DA_IonicSpark19",
+      "DA_Frontman19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_Crownguard",
+        "nameKo": "크라운가드",
+        "placeChange": -0.12
+      },
+      {
+        "id": "DA_GargoyleStoneplate",
+        "nameKo": "가고일 돌갑옷",
+        "placeChange": -0.12
+      },
+      {
+        "id": "DA_SpiritVisage",
+        "nameKo": "정령의 형상",
+        "placeChange": -0.1
+      },
+      {
+        "id": "DA_ProtectorsVow",
+        "nameKo": "수호자의 맹세",
+        "placeChange": -0.07
+      },
+      {
+        "id": "DA_WarmogsArmor",
+        "nameKo": "워모그의 갑옷",
+        "placeChange": -0.02
+      }
+    ]
+  },
+  {
+    "id": "DA_Thresh19",
+    "teamPlannerCode": "432",
+    "name": "Thresh",
+    "nameKo": "쓰레쉬",
+    "cost": 4,
+    "role": "Magic Tank",
+    "roleKo": "주문력 탱커",
+    "traits": [
+      "Classical",
+      "Frontman"
+    ],
+    "traitsKo": [
+      "클래식",
+      "프론트맨"
+    ],
+    "traitIds": [
+      "DA_Virtuosos19",
+      "DA_Frontman19"
+    ],
+    "unlock": "클래식으로 적 250초 동안 매료 상태로 만들기",
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_Crownguard",
+        "nameKo": "크라운가드",
+        "placeChange": -0.29
+      },
+      {
+        "id": "DA_GargoyleStoneplate",
+        "nameKo": "가고일 돌갑옷",
+        "placeChange": -0.28
+      },
+      {
+        "id": "DA_SpiritVisage",
+        "nameKo": "정령의 형상",
+        "placeChange": -0.25
+      },
+      {
+        "id": "DA_ProtectorsVow",
+        "nameKo": "수호자의 맹세",
+        "placeChange": -0.09
+      },
+      {
+        "id": "DA_GargoyleStoneplate",
+        "nameKo": "가고일 돌갑옷",
+        "placeChange": -0.02,
+        "occurrence": 2
+      }
+    ]
+  },
+  {
+    "id": "DA_Vayne19",
+    "teamPlannerCode": "437",
+    "name": "Vayne",
+    "nameKo": "베인",
+    "cost": 4,
+    "role": "Attack Marksman",
+    "roleKo": "공격력 원거리 딜러",
+    "traits": [
+      "Rock",
+      "Trickshot"
+    ],
+    "traitsKo": [
+      "락",
+      "재주꾼"
+    ],
+    "traitIds": [
+      "DA_DemonVision19",
+      "DA_Trickshot19"
+    ],
+    "unlock": "7레벨 이상 · 서로 다른 락 또는 재주꾼 유닛 별 레벨 총합 5",
+    "levelRequired": 7,
+    "recommendedItems": [
+      {
+        "id": "DA_RedBuff",
+        "nameKo": "붉은 덩굴정령",
+        "placeChange": -0.16
+      },
+      {
+        "id": "DA_KrakensFury",
+        "nameKo": "크라켄의 분노",
+        "placeChange": -0.09
+      },
+      {
+        "id": "DA_GiantSlayer",
+        "nameKo": "거인 학살자",
+        "placeChange": -0.07
+      },
+      {
+        "id": "DA_LastWhisper",
+        "nameKo": "최후의 속삭임",
+        "placeChange": -0.06
+      },
+      {
+        "id": "DA_GuinsoosRageblade",
+        "nameKo": "구인수의 격노검",
+        "placeChange": 0.05
+      }
+    ]
+  },
+  {
+    "id": "DA_Wukong19",
+    "teamPlannerCode": "43b",
+    "name": "Wukong",
+    "nameKo": "오공",
+    "cost": 4,
+    "role": "Attack Tank",
+    "roleKo": "공격력 탱커",
+    "traits": [
+      "Gu Feng"
+    ],
+    "traitsKo": [
+      "고풍"
+    ],
+    "traitIds": [
+      "DA_Heavenscale19"
+    ],
+    "unlock": "자야를 배치한 상태로 아군이 25000의 피해 입히기",
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_ProtectorsVow",
+        "nameKo": "수호자의 맹세",
+        "placeChange": -0.22
+      },
+      {
+        "id": "DA_SpiritVisage",
+        "nameKo": "정령의 형상",
+        "placeChange": -0.13
+      },
+      {
+        "id": "DA_Crownguard",
+        "nameKo": "크라운가드",
+        "placeChange": -0.13
+      },
+      {
+        "id": "DA_Evenshroud",
+        "nameKo": "저녁갑주",
+        "placeChange": -0.08
+      },
+      {
+        "id": "DA_WarmogsArmor",
+        "nameKo": "워모그의 갑옷",
+        "placeChange": -0.02
+      }
+    ]
+  },
+  {
+    "id": "DA_Xayah19",
+    "teamPlannerCode": "43c",
+    "name": "Xayah",
+    "nameKo": "자야",
+    "cost": 4,
+    "role": "Attack Caster",
+    "roleKo": "공격력 마법사",
+    "traits": [
+      "Gu Feng",
+      "Hitmaker"
+    ],
+    "traitsKo": [
+      "고풍",
+      "스타 제조기"
+    ],
+    "traitIds": [
+      "DA_Heavenscale19",
+      "DA_Hitmaker19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_Heavenscale19_DangerousItem",
+        "nameKo": "야수의 두루마리",
+        "placeChange": -0.81
+      },
+      {
+        "id": "DA_GiantSlayer",
+        "nameKo": "거인 학살자",
+        "placeChange": -0.12
+      },
+      {
+        "id": "DA_StrikersFlail",
+        "nameKo": "타격대의 철퇴",
+        "placeChange": -0.11
+      },
+      {
+        "id": "DA_InfinityEdge",
+        "nameKo": "무한의 대검",
+        "placeChange": -0.07
+      },
+      {
+        "id": "DA_Deathblade",
+        "nameKo": "죽음의 검",
+        "placeChange": -0.03
+      }
+    ]
+  },
+  {
+    "id": "DA_Yasuo19",
+    "teamPlannerCode": "43d",
+    "name": "Yasuo",
+    "nameKo": "야스오",
+    "cost": 4,
+    "role": "Attack Fighter",
+    "roleKo": "공격력 전사",
+    "traits": [
+      "True Damage",
+      "Slayer"
+    ],
+    "traitsKo": [
+      "True Damage",
+      "학살자"
+    ],
+    "traitIds": [
+      "DA_TrueDamage19",
+      "DA_Mosher19"
+    ],
+    "unlock": "7레벨 이상 · 서로 다른 True Damage 또는 학살자 챔피언 별 레벨 총합 6",
+    "levelRequired": 7,
+    "recommendedItems": [
+      {
+        "id": "DA_SteraksGageRadiant",
+        "nameKo": "찬란한 스테락의 도전",
+        "placeChange": -1.5
+      },
+      {
+        "id": "DA_Deathblade",
+        "nameKo": "죽음의 검",
+        "placeChange": -0.34
+      },
+      {
+        "id": "DA_GiantSlayer",
+        "nameKo": "거인 학살자",
+        "placeChange": -0.23
+      },
+      {
+        "id": "DA_LastWhisper",
+        "nameKo": "최후의 속삭임",
+        "placeChange": -0.22
+      },
+      {
+        "id": "DA_SteraksGage",
+        "nameKo": "스테락의 도전",
+        "placeChange": -0.09
+      }
+    ]
+  },
+  {
+    "id": "DA_Yone19",
+    "teamPlannerCode": "43e",
+    "name": "Yone",
+    "nameKo": "요네",
+    "cost": 4,
+    "role": "Attack Fighter",
+    "roleKo": "공격력 전사",
+    "traits": [
+      "Heartsteel",
+      "Slayer"
+    ],
+    "traitsKo": [
+      "HEARTSTEEL",
+      "학살자"
+    ],
+    "traitIds": [
+      "DA_Heartsteel19",
+      "DA_Mosher19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_GiantSlayer",
+        "nameKo": "거인 학살자",
+        "placeChange": -0.26
+      },
+      {
+        "id": "DA_LastWhisper",
+        "nameKo": "최후의 속삭임",
+        "placeChange": -0.26
+      },
+      {
+        "id": "DA_Deathblade",
+        "nameKo": "죽음의 검",
+        "placeChange": -0.21
+      },
+      {
+        "id": "DA_Quicksilver",
+        "nameKo": "수은",
+        "placeChange": -0.08
+      },
+      {
+        "id": "DA_SteraksGage",
+        "nameKo": "스테락의 도전",
+        "placeChange": -0.08
+      }
+    ]
+  },
+  {
+    "id": "DA_Yorick19",
+    "teamPlannerCode": "43f",
+    "name": "Yorick",
+    "nameKo": "요릭",
+    "cost": 4,
+    "role": "Magic Tank",
+    "roleKo": "주문력 탱커",
+    "traits": [
+      "Pentakill",
+      "Juggernaut"
+    ],
+    "traitsKo": [
+      "펜타킬",
+      "전쟁기계"
+    ],
+    "traitIds": [
+      "DA_Pentakill19",
+      "DA_Juggernaut19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_SunfireCape",
+        "nameKo": "태양불꽃 망토",
+        "placeChange": -0.24
+      },
+      {
+        "id": "DA_Evenshroud",
+        "nameKo": "저녁갑주",
+        "placeChange": -0.18
+      },
+      {
+        "id": "DA_BrambleVest",
+        "nameKo": "덤불 조끼",
+        "placeChange": -0.16
+      },
+      {
+        "id": "DA_ProtectorsVow",
+        "nameKo": "수호자의 맹세",
+        "placeChange": -0.12
+      },
+      {
+        "id": "DA_SteadfastHeart",
+        "nameKo": "굳건한 심장",
+        "placeChange": -0.1
+      }
+    ]
+  },
+  {
+    "id": "DA_Yuumi19",
+    "teamPlannerCode": "441",
+    "name": "Yuumi",
+    "nameKo": "유미",
+    "cost": 4,
+    "role": "Magic Caster",
+    "roleKo": "주문력 마법사",
+    "traits": [
+      "Illbeats",
+      "Encore"
+    ],
+    "traitsKo": [
+      "일류 비트",
+      "앙코르"
+    ],
+    "traitIds": [
+      "DA_Illbeats19",
+      "DA_Encore19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_Morellonomicon",
+        "nameKo": "모렐로노미콘",
+        "placeChange": -0.29
+      },
+      {
+        "id": "DA_Oceansong19_Emblem",
+        "nameKo": "비치 팝 상징",
+        "placeChange": -0.28
+      },
+      {
+        "id": "DA_RedBuff",
+        "nameKo": "붉은 덩굴정령",
+        "placeChange": -0.2
+      },
+      {
+        "id": "DA_VoidStaff",
+        "nameKo": "공허의 지팡이",
+        "placeChange": -0.2
+      },
+      {
+        "id": "DA_AdaptiveHelm",
+        "nameKo": "적응형 투구",
+        "placeChange": -0.11
+      }
+    ]
+  },
+  {
+    "id": "DA_Zac19",
+    "teamPlannerCode": "442",
+    "name": "Zac",
+    "nameKo": "자크",
+    "cost": 4,
+    "role": "Magic Tank",
+    "roleKo": "주문력 탱커",
+    "traits": [
+      "Beach Pop",
+      "Juggernaut"
+    ],
+    "traitsKo": [
+      "비치 팝",
+      "전쟁기계"
+    ],
+    "traitIds": [
+      "DA_OceanSong19",
+      "DA_Juggernaut19"
+    ],
+    "unlock": "7레벨 이상 · 서로 다른 비치 팝 또는 전쟁기계 챔피언 5명",
+    "levelRequired": 7,
+    "recommendedItems": [
+      {
+        "id": "DA_Evenshroud",
+        "nameKo": "저녁갑주",
+        "placeChange": -0.21
+      },
+      {
+        "id": "DA_SunfireCape",
+        "nameKo": "태양불꽃 망토",
+        "placeChange": -0.15
+      },
+      {
+        "id": "DA_WarmogsArmor",
+        "nameKo": "워모그의 갑옷",
+        "placeChange": -0.04
+      },
+      {
+        "id": "DA_SpiritVisage",
+        "nameKo": "정령의 형상",
+        "placeChange": -0.02
+      },
+      {
+        "id": "DA_GargoyleStoneplate",
+        "nameKo": "가고일 돌갑옷",
+        "placeChange": -0.01
+      }
+    ]
+  },
+  {
+    "id": "DA_Akali_TrueDamage19",
+    "teamPlannerCode": "3ea",
+    "name": "Akali (True Damage)",
+    "nameKo": "아칼리 (True Damage)",
+    "cost": 5,
+    "role": "Magic Fighter",
+    "roleKo": "주문력 전사",
+    "traits": [
+      "True Damage",
+      "Freestyle"
+    ],
+    "traitsKo": [
+      "True Damage",
+      "프리스타일"
+    ],
+    "traitIds": [
+      "DA_TrueDamage19",
+      "DA_Akali_TrueDamage19_UniqueTrait"
+    ],
+    "unlock": "K/DA 아칼리가 해금되지 않은 상태에서 True Damage 블링 320개 획득",
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_RabadonsDeathcap_Radiant",
+        "nameKo": "찬란한 라바돈의 죽음모자",
+        "placeChange": -0.99
+      },
+      {
+        "id": "DA_JeweledGauntletRadiant",
+        "nameKo": "찬란한 보석 건틀릿",
+        "placeChange": -0.96
+      },
+      {
+        "id": "DA_HandOfJusticeRadiant",
+        "nameKo": "찬란한 정의의 손길",
+        "placeChange": -0.95
+      },
+      {
+        "id": "DA_IonicSpark",
+        "nameKo": "이온 충격기",
+        "placeChange": -0.27
+      },
+      {
+        "id": "DA_HextechGunblade",
+        "nameKo": "마법공학 총검",
+        "placeChange": -0.13
+      }
+    ]
+  },
+  {
+    "id": "DA_AkaliKDA19",
+    "teamPlannerCode": "3ec",
+    "name": "Akali (K/DA)",
+    "nameKo": "아칼리 (K/DA)",
+    "cost": 5,
+    "role": "Attack Assassin",
+    "roleKo": "공격력 암살자",
+    "traits": [
+      "K/DA"
+    ],
+    "traitsKo": [
+      "K/DA"
+    ],
+    "traitIds": [
+      "DA_KDA19"
+    ],
+    "unlock": "True Damage 아칼리가 해금되지 않은 상태에서 서로 다른 K/DA 별 레벨 총합 12",
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_SteraksGage",
+        "nameKo": "스테락의 도전",
+        "placeChange": -0.31
+      },
+      {
+        "id": "DA_Deathblade",
+        "nameKo": "죽음의 검",
+        "placeChange": -0.3
+      },
+      {
+        "id": "DA_StrikersFlail",
+        "nameKo": "타격대의 철퇴",
+        "placeChange": -0.13
+      },
+      {
+        "id": "DA_RedBuff",
+        "nameKo": "붉은 덩굴정령",
+        "placeChange": -0.1
+      },
+      {
+        "id": "DA_GiantSlayer",
+        "nameKo": "거인 학살자",
+        "placeChange": -0.04
+      }
+    ]
+  },
+  {
+    "id": "DA_Aphelios19",
+    "teamPlannerCode": "3f1",
+    "name": "Aphelios",
+    "nameKo": "아펠리오스",
+    "cost": 5,
+    "role": "Attack Marksman",
+    "roleKo": "공격력 원거리 딜러",
+    "traits": [
+      "Heartsteel"
+    ],
+    "traitsKo": [
+      "HEARTSTEEL"
+    ],
+    "traitIds": [
+      "DA_Heartsteel19"
+    ],
+    "unlock": "2성 알룬 또는 요네",
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_GiantSlayer",
+        "nameKo": "거인 학살자",
+        "placeChange": -0.15
+      },
+      {
+        "id": "DA_RedBuff",
+        "nameKo": "붉은 덩굴정령",
+        "placeChange": -0.14
+      },
+      {
+        "id": "DA_LastWhisper",
+        "nameKo": "최후의 속삭임",
+        "placeChange": -0.04
+      },
+      {
+        "id": "DA_Deathblade",
+        "nameKo": "죽음의 검",
+        "placeChange": -0.0
+      },
+      {
+        "id": "DA_KrakensFury",
+        "nameKo": "크라켄의 분노",
+        "placeChange": -0.0
+      }
+    ]
+  },
+  {
+    "id": "DA_DrMundo19",
+    "teamPlannerCode": "3fb",
+    "name": "Dr. Mundo",
+    "nameKo": "문도 박사",
+    "cost": 5,
+    "role": "Magic Tank",
+    "roleKo": "주문력 탱커",
+    "traits": [
+      "Record Mogul",
+      "Manager"
+    ],
+    "traitsKo": [
+      "음반계 거물",
+      "매니저"
+    ],
+    "traitIds": [
+      "DA_DrMundo19_UniqueTrait",
+      "DA_Manager19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_SteadfastHeart",
+        "nameKo": "굳건한 심장",
+        "placeChange": -0.18
+      },
+      {
+        "id": "DA_Crownguard",
+        "nameKo": "크라운가드",
+        "placeChange": -0.16
+      },
+      {
+        "id": "DA_Evenshroud",
+        "nameKo": "저녁갑주",
+        "placeChange": -0.13
+      },
+      {
+        "id": "DA_WarmogsArmor",
+        "nameKo": "워모그의 갑옷",
+        "placeChange": -0.1
+      },
+      {
+        "id": "DA_SpiritVisage",
+        "nameKo": "정령의 형상",
+        "placeChange": -0.05
+      }
+    ]
+  },
+  {
+    "id": "DA_Gwen19",
+    "teamPlannerCode": "404",
+    "name": "Gwen",
+    "nameKo": "그웬",
+    "cost": 5,
+    "role": "Magic Fighter",
+    "roleKo": "주문력 전사",
+    "traits": [
+      "Ionic Spark",
+      "Melodic Heart"
+    ],
+    "traitsKo": [
+      "Ionic Spark",
+      "선율의 심장"
+    ],
+    "traitIds": [
+      "DA_IonicSpark19",
+      "DA_Gwen19_UniqueTrait"
+    ],
+    "unlock": "Ionic Spark 팬들이 250회 응원합니다.",
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_StrikersFlail",
+        "nameKo": "타격대의 철퇴",
+        "placeChange": -0.23
+      },
+      {
+        "id": "DA_Morellonomicon",
+        "nameKo": "모렐로노미콘",
+        "placeChange": -0.15
+      },
+      {
+        "id": "DA_GiantSlayer",
+        "nameKo": "거인 학살자",
+        "placeChange": -0.13
+      },
+      {
+        "id": "DA_VoidStaff",
+        "nameKo": "공허의 지팡이",
+        "placeChange": -0.08
+      },
+      {
+        "id": "DA_RabadonsDeathcap",
+        "nameKo": "라바돈의 죽음모자",
+        "placeChange": -0.06
+      }
+    ]
+  },
+  {
+    "id": "DA_Janna19",
+    "teamPlannerCode": "406",
+    "name": "Janna",
+    "nameKo": "잔나",
+    "cost": 5,
+    "role": "Magic Caster",
+    "roleKo": "주문력 마법사",
+    "traits": [
+      "Windblessed",
+      "Gu Feng",
+      "Prodigy"
+    ],
+    "traitsKo": [
+      "바람의 축복",
+      "고풍",
+      "신동"
+    ],
+    "traitIds": [
+      "DA_Janna19_UniqueTrait",
+      "DA_Heavenscale19",
+      "DA_Prodigy19"
+    ],
+    "unlock": "자야를 배치한 상태로 이자 25골드 획득",
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_Heavenscale19_HeavenlyPrayer",
+        "nameKo": "천상의 기도 두루마리",
+        "placeChange": -0.39
+      },
+      {
+        "id": "DA_Heavenscale19_DangerousItem",
+        "nameKo": "야수의 두루마리",
+        "placeChange": -0.38
+      },
+      {
+        "id": "DA_RedBuff",
+        "nameKo": "붉은 덩굴정령",
+        "placeChange": -0.2
+      },
+      {
+        "id": "DA_AdaptiveHelm",
+        "nameKo": "적응형 투구",
+        "placeChange": -0.15
+      },
+      {
+        "id": "DA_Morellonomicon",
+        "nameKo": "모렐로노미콘",
+        "placeChange": -0.12
+      }
+    ]
+  },
+  {
+    "id": "DA_LeeSin19",
+    "teamPlannerCode": "44f",
+    "name": "Lee Sin",
+    "nameKo": "리 신",
+    "cost": 5,
+    "role": "Attack Fighter",
+    "roleKo": "공격력 전사",
+    "traits": [
+      "Gu Feng"
+    ],
+    "traitsKo": [
+      "고풍"
+    ],
+    "traitIds": [
+      "DA_Heavenscale19"
+    ],
+    "unlock": "자야를 배치하고 플레이어 피해 40 입히기",
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_EdgeOfNight",
+        "nameKo": "밤의 끝자락",
+        "placeChange": -0.18
+      },
+      {
+        "id": "DA_SteraksGage",
+        "nameKo": "스테락의 도전",
+        "placeChange": -0.13
+      },
+      {
+        "id": "DA_Bloodthirster",
+        "nameKo": "피바라기",
+        "placeChange": -0.08
+      },
+      {
+        "id": "DA_Heavenscale19_HeavenlyPrayer",
+        "nameKo": "천상의 기도 두루마리",
+        "placeChange": -0.0
+      },
+      {
+        "id": "DA_HandOfJustice",
+        "nameKo": "정의의 손길",
+        "placeChange": 0.05
+      }
+    ]
+  },
+  {
+    "id": "DA_MissFortune19",
+    "teamPlannerCode": "41a",
+    "name": "Miss Fortune",
+    "nameKo": "미스 포츈",
+    "cost": 5,
+    "role": "Attack Caster",
+    "roleKo": "공격력 마법사",
+    "traits": [
+      "8-Bit",
+      "Hitmaker"
+    ],
+    "traitsKo": [
+      "8비트",
+      "스타 제조기"
+    ],
+    "traitIds": [
+      "DA_MissFortune19_UniqueTrait",
+      "DA_Hitmaker19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_IonicSpark19_Emblem",
+        "nameKo": "Ionic Spark 상징",
+        "placeChange": -0.43
+      },
+      {
+        "id": "DA_RedBuff",
+        "nameKo": "붉은 덩굴정령",
+        "placeChange": -0.39
+      },
+      {
+        "id": "DA_GiantSlayer",
+        "nameKo": "거인 학살자",
+        "placeChange": -0.14
+      },
+      {
+        "id": "DA_LastWhisper",
+        "nameKo": "최후의 속삭임",
+        "placeChange": -0.12
+      },
+      {
+        "id": "DA_Deathblade",
+        "nameKo": "죽음의 검",
+        "placeChange": -0.12
+      }
+    ]
+  },
+  {
+    "id": "DA_Mordekaiser19",
+    "teamPlannerCode": "44b",
+    "name": "Mordekaiser",
+    "nameKo": "모데카이저",
+    "cost": 5,
+    "role": "Magic Fighter",
+    "roleKo": "주문력 전사",
+    "traits": [
+      "Pentakill"
+    ],
+    "traitsKo": [
+      "펜타킬"
+    ],
+    "traitIds": [
+      "DA_Pentakill19"
+    ],
+    "unlock": "서로 다른 펜타킬 유닛 별 레벨 총합 9",
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_Quicksilver",
+        "nameKo": "수은",
+        "placeChange": -0.09
+      },
+      {
+        "id": "DA_GuinsoosRageblade",
+        "nameKo": "구인수의 격노검",
+        "placeChange": -0.07
+      },
+      {
+        "id": "DA_TitansResolve",
+        "nameKo": "거인의 결의",
+        "placeChange": -0.03
+      },
+      {
+        "id": "DA_EdgeOfNight",
+        "nameKo": "밤의 끝자락",
+        "placeChange": -0.03
+      },
+      {
+        "id": "DA_Bloodthirster",
+        "nameKo": "피바라기",
+        "placeChange": -0.02
+      }
+    ]
+  },
+  {
+    "id": "DA_Nidalee19",
+    "teamPlannerCode": "41d",
+    "name": "Nidalee",
+    "nameKo": "니달리",
+    "cost": 5,
+    "role": "Magic Fighter",
+    "roleKo": "주문력 전사",
+    "traits": [
+      "Mariachi",
+      "Choreographer"
+    ],
+    "traitsKo": [
+      "마리아치",
+      "안무가"
+    ],
+    "traitIds": [
+      "DA_Nidalee19_UniqueTrait",
+      "DA_Choreographer19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_RabadonsDeathcap",
+        "nameKo": "라바돈의 죽음모자",
+        "placeChange": -0.19
+      },
+      {
+        "id": "DA_VoidStaff",
+        "nameKo": "공허의 지팡이",
+        "placeChange": -0.18
+      },
+      {
+        "id": "DA_HextechGunblade",
+        "nameKo": "마법공학 총검",
+        "placeChange": -0.14
+      },
+      {
+        "id": "DA_NashorsTooth",
+        "nameKo": "내셔의 이빨",
+        "placeChange": -0.11
+      },
+      {
+        "id": "DA_StrikersFlail",
+        "nameKo": "타격대의 철퇴",
+        "placeChange": -0.08
+      }
+    ]
+  },
+  {
+    "id": "DA_Nunu19",
+    "teamPlannerCode": "41e",
+    "name": "Nunu & Willump",
+    "nameKo": "누누와 윌럼프",
+    "cost": 5,
+    "role": "Magic Specialist",
+    "roleKo": "주문력 전문가",
+    "traits": [
+      "Disco",
+      "Frontman"
+    ],
+    "traitsKo": [
+      "디스코",
+      "프론트맨"
+    ],
+    "traitIds": [
+      "DA_Nunu19_UniqueTrait",
+      "DA_Frontman19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_Evenshroud",
+        "nameKo": "저녁갑주",
+        "placeChange": -0.2
+      },
+      {
+        "id": "DA_ProtectorsVow",
+        "nameKo": "수호자의 맹세",
+        "placeChange": -0.2
+      },
+      {
+        "id": "DA_SunfireCape",
+        "nameKo": "태양불꽃 망토",
+        "placeChange": -0.18
+      },
+      {
+        "id": "DA_Morellonomicon",
+        "nameKo": "모렐로노미콘",
+        "placeChange": -0.15
+      },
+      {
+        "id": "DA_IonicSpark",
+        "nameKo": "이온 충격기",
+        "placeChange": -0.12
+      }
+    ]
+  },
+  {
+    "id": "DA_Pyke19",
+    "teamPlannerCode": "420",
+    "name": "Pyke",
+    "nameKo": "파이크",
+    "cost": 5,
+    "role": "Attack Fighter",
+    "roleKo": "공격력 전사",
+    "traits": [
+      "Rock",
+      "Renegade"
+    ],
+    "traitsKo": [
+      "락",
+      "무법자"
+    ],
+    "traitIds": [
+      "DA_DemonVision19",
+      "DA_Renegade19"
+    ],
+    "unlock": "7레벨 이상 · 전투 종료 시 85골드 이상 소지",
+    "levelRequired": 7,
+    "recommendedItems": [
+      {
+        "id": "DA_Deathblade",
+        "nameKo": "죽음의 검",
+        "placeChange": -0.22
+      },
+      {
+        "id": "DA_StrikersFlail",
+        "nameKo": "타격대의 철퇴",
+        "placeChange": -0.21
+      },
+      {
+        "id": "DA_GiantSlayer",
+        "nameKo": "거인 학살자",
+        "placeChange": -0.13
+      },
+      {
+        "id": "DA_SteraksGage",
+        "nameKo": "스테락의 도전",
+        "placeChange": -0.12
+      },
+      {
+        "id": "DA_HandOfJustice",
+        "nameKo": "정의의 손길",
+        "placeChange": -0.04
+      }
+    ]
+  },
+  {
+    "id": "DA_Rell19",
+    "teamPlannerCode": "422",
+    "name": "Rell",
+    "nameKo": "렐",
+    "cost": 5,
+    "role": "Magic Tank",
+    "roleKo": "주문력 탱커",
+    "traits": [
+      "R&B",
+      "Beat Master"
+    ],
+    "traitsKo": [
+      "R&B",
+      "비트의 대가"
+    ],
+    "traitIds": [
+      "DA_RnB19",
+      "DA_Rell19_UniqueTrait"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_Evenshroud",
+        "nameKo": "저녁갑주",
+        "placeChange": -0.29
+      },
+      {
+        "id": "DA_IonicSpark",
+        "nameKo": "이온 충격기",
+        "placeChange": -0.22
+      },
+      {
+        "id": "DA_ProtectorsVow",
+        "nameKo": "수호자의 맹세",
+        "placeChange": -0.1
+      },
+      {
+        "id": "DA_Crownguard",
+        "nameKo": "크라운가드",
+        "placeChange": -0.1
+      },
+      {
+        "id": "DA_SteadfastHeart",
+        "nameKo": "굳건한 심장",
+        "placeChange": -0.08
+      }
+    ]
+  },
+  {
+    "id": "DA_Taliyah19",
+    "teamPlannerCode": "42f",
+    "name": "Taliyah",
+    "nameKo": "탈리야",
+    "cost": 5,
+    "role": "Magic Caster",
+    "roleKo": "주문력 마법사",
+    "traits": [
+      "Beach Pop",
+      "Encore"
+    ],
+    "traitsKo": [
+      "비치 팝",
+      "앙코르"
+    ],
+    "traitIds": [
+      "DA_OceanSong19",
+      "DA_Encore19"
+    ],
+    "unlock": "각 단계의 챔피언이 비치 팝 칸에서 시작",
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_RabadonsDeathcap",
+        "nameKo": "라바돈의 죽음모자",
+        "placeChange": -0.12
+      },
+      {
+        "id": "DA_ArchangelsStaff",
+        "nameKo": "대천사의 지팡이",
+        "placeChange": -0.12
+      },
+      {
+        "id": "DA_StrikersFlail",
+        "nameKo": "타격대의 철퇴",
+        "placeChange": -0.07
+      },
+      {
+        "id": "DA_Morellonomicon",
+        "nameKo": "모렐로노미콘",
+        "placeChange": -0.06
+      },
+      {
+        "id": "DA_JeweledGauntlet",
+        "nameKo": "보석 건틀릿",
+        "placeChange": 0.04
+      }
+    ]
+  },
+  {
+    "id": "DA_Teemo19",
+    "teamPlannerCode": "431",
+    "name": "Teemo",
+    "nameKo": "티모",
+    "cost": 5,
+    "role": "Magic Caster",
+    "roleKo": "주문력 마법사",
+    "traits": [
+      "Hyperpop",
+      "Hype Man"
+    ],
+    "traitsKo": [
+      "하이퍼팝",
+      "바람잡이"
+    ],
+    "traitIds": [
+      "DA_GlitterBomb19",
+      "DA_Teemo19_UniqueTrait"
+    ],
+    "unlock": "하이퍼팝 열광 900개 수집",
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_RabadonsDeathcap",
+        "nameKo": "라바돈의 죽음모자",
+        "placeChange": -0.31
+      },
+      {
+        "id": "DA_StrikersFlail",
+        "nameKo": "타격대의 철퇴",
+        "placeChange": -0.17
+      },
+      {
+        "id": "DA_BlueBuff",
+        "nameKo": "푸른 파수꾼",
+        "placeChange": -0.17
+      },
+      {
+        "id": "DA_JeweledGauntlet",
+        "nameKo": "보석 건틀릿",
+        "placeChange": -0.04
+      },
+      {
+        "id": "DA_NashorsTooth",
+        "nameKo": "내셔의 이빨",
+        "placeChange": -0.02
+      }
+    ]
+  },
+  {
+    "id": "DA_TwistedFate19",
+    "teamPlannerCode": "435",
+    "name": "Twisted Fate",
+    "nameKo": "트위스티드 페이트",
+    "cost": 5,
+    "role": "Magic Marksman",
+    "roleKo": "주문력 원거리 딜러",
+    "traits": [
+      "Tango",
+      "Trickshot"
+    ],
+    "traitsKo": [
+      "탱고",
+      "재주꾼"
+    ],
+    "traitIds": [
+      "DA_TwistedFate19_UniqueTrait",
+      "DA_Trickshot19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_DemonVision19_Emblem",
+        "nameKo": "락 상징",
+        "placeChange": -0.48
+      },
+      {
+        "id": "DA_Swiftstriker19_Emblem",
+        "nameKo": "신속타격대 상징",
+        "placeChange": -0.45
+      },
+      {
+        "id": "DA_VoidStaff",
+        "nameKo": "공허의 지팡이",
+        "placeChange": -0.2
+      },
+      {
+        "id": "DA_RabadonsDeathcap",
+        "nameKo": "라바돈의 죽음모자",
+        "placeChange": -0.2
+      },
+      {
+        "id": "DA_ArchangelsStaff",
+        "nameKo": "대천사의 지팡이",
+        "placeChange": -0.12
+      }
+    ]
+  },
+  {
+    "id": "DA_Vi19",
+    "teamPlannerCode": "438",
+    "name": "Vi",
+    "nameKo": "바이",
+    "cost": 5,
+    "role": "Attack Fighter",
+    "roleKo": "공격력 전사",
+    "traits": [
+      "EDM",
+      "Juggernaut"
+    ],
+    "traitsKo": [
+      "EDM",
+      "전쟁기계"
+    ],
+    "traitIds": [
+      "DA_EDM19",
+      "DA_Juggernaut19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_Mosher19_Emblem",
+        "nameKo": "학살자 상징",
+        "placeChange": -0.81
+      },
+      {
+        "id": "DA_GiantSlayer",
+        "nameKo": "거인 학살자",
+        "placeChange": -0.21
+      },
+      {
+        "id": "DA_SteraksGage",
+        "nameKo": "스테락의 도전",
+        "placeChange": -0.17
+      },
+      {
+        "id": "DA_TitansResolve",
+        "nameKo": "거인의 결의",
+        "placeChange": -0.07
+      },
+      {
+        "id": "DA_HandOfJustice",
+        "nameKo": "정의의 손길",
+        "placeChange": -0.05
+      }
+    ]
+  },
+  {
+    "id": "DA_Vladimir19",
+    "teamPlannerCode": "43a",
+    "name": "Vladimir",
+    "nameKo": "블라디미르",
+    "cost": 5,
+    "role": "Magic Fighter",
+    "roleKo": "주문력 전사",
+    "traits": [
+      "Classical",
+      "Arcanist"
+    ],
+    "traitsKo": [
+      "클래식",
+      "비전 마법사"
+    ],
+    "traitIds": [
+      "DA_Virtuosos19",
+      "DA_Arcanist19"
+    ],
+    "unlock": "8레벨 이상 · 전장 전방 가로 2열에 챔피언 1명만 배치",
+    "levelRequired": 8,
+    "recommendedItems": [
+      {
+        "id": "DA_Mosher19_Emblem",
+        "nameKo": "학살자 상징",
+        "placeChange": -0.8
+      },
+      {
+        "id": "DA_AdaptiveHelm",
+        "nameKo": "적응형 투구",
+        "placeChange": -0.29
+      },
+      {
+        "id": "DA_BlueBuff",
+        "nameKo": "푸른 파수꾼",
+        "placeChange": -0.28
+      },
+      {
+        "id": "DA_Morellonomicon",
+        "nameKo": "모렐로노미콘",
+        "placeChange": -0.27
+      },
+      {
+        "id": "DA_VoidStaff",
+        "nameKo": "공허의 지팡이",
+        "placeChange": -0.1
+      }
+    ]
+  },
+  {
+    "id": "DA_Zeri19",
+    "teamPlannerCode": "443",
+    "name": "Zeri",
+    "nameKo": "제리",
+    "cost": 5,
+    "role": "Attack Caster",
+    "roleKo": "공격력 마법사",
+    "traits": [
+      "Goth",
+      "Swiftstriker"
+    ],
+    "traitsKo": [
+      "고스족",
+      "신속타격대"
+    ],
+    "traitIds": [
+      "DA_Zeri19_UniqueTrait",
+      "DA_Swiftstriker19"
+    ],
+    "unlock": null,
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_SpearOfShojin",
+        "nameKo": "쇼진의 창",
+        "placeChange": -0.23
+      },
+      {
+        "id": "DA_StrikersFlail",
+        "nameKo": "타격대의 철퇴",
+        "placeChange": -0.19
+      },
+      {
+        "id": "DA_InfinityEdge",
+        "nameKo": "무한의 대검",
+        "placeChange": -0.1
+      },
+      {
+        "id": "DA_BlueBuff",
+        "nameKo": "푸른 파수꾼",
+        "placeChange": -0.07
+      },
+      {
+        "id": "DA_Deathblade",
+        "nameKo": "죽음의 검",
+        "placeChange": -0.06
+      }
+    ]
+  },
+  {
+    "id": "DA_BaronNashor19",
+    "teamPlannerCode": "3f5",
+    "name": "Baron Nashor",
+    "nameKo": "내셔 남작",
+    "cost": 7,
+    "role": "Attack Fighter",
+    "roleKo": "공격력 전사",
+    "traits": [
+      "One Monster Band"
+    ],
+    "traitsKo": [
+      "원 몬스터 밴드"
+    ],
+    "traitIds": [
+      "DA_BaronNashor19_UniqueTrait"
+    ],
+    "unlock": "내셔 남작의 앙상블 멤버 5명 모두 모으기 / 가장 강한 아군 말자하로 60000의 피해 입히기",
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "TFT_Emblem_CHANGEME",
+        "nameKo": "신동 상징",
+        "placeChange": -0.3
+      },
+      {
+        "id": "DA_Deathblade",
+        "nameKo": "죽음의 검",
+        "placeChange": -0.16
+      },
+      {
+        "id": "DA_InfinityEdge",
+        "nameKo": "무한의 대검",
+        "placeChange": -0.16
+      },
+      {
+        "id": "DA_HextechGunblade",
+        "nameKo": "마법공학 총검",
+        "placeChange": -0.1
+      },
+      {
+        "id": "DA_HandOfJustice",
+        "nameKo": "정의의 손길",
+        "placeChange": -0.05
+      }
+    ]
+  },
+  {
+    "id": "DA_Rakan19",
+    "teamPlannerCode": "448",
+    "name": "Rakan",
+    "nameKo": "라칸",
+    "cost": 7,
+    "role": "Magic Assassin",
+    "roleKo": "주문력 암살자",
+    "traits": [
+      "Boy Band",
+      "Choreographer"
+    ],
+    "traitsKo": [
+      "보이 밴드",
+      "안무가"
+    ],
+    "traitIds": [
+      "DA_Rakan19_UniqueTrait",
+      "DA_Choreographer19"
+    ],
+    "unlock": "8레벨 이상일 때 전투 4회 연속 승리 / 8레벨 이상일 때 전투 3회 연속 패배",
+    "levelRequired": null,
+    "recommendedItems": [
+      {
+        "id": "DA_Mosher19_Emblem",
+        "nameKo": "학살자 상징",
+        "placeChange": -0.39
+      },
+      {
+        "id": "DA_IonicSpark",
+        "nameKo": "이온 충격기",
+        "placeChange": -0.14
+      },
+      {
+        "id": "DA_RedBuff",
+        "nameKo": "붉은 덩굴정령",
+        "placeChange": -0.13
+      },
+      {
+        "id": "DA_Morellonomicon",
+        "nameKo": "모렐로노미콘",
+        "placeChange": -0.1
+      },
+      {
+        "id": "DA_ProtectorsVow",
+        "nameKo": "수호자의 맹세",
+        "placeChange": -0.06
+      }
+    ]
+  },
+  {
+    "id": "DA_Smeech19",
+    "teamPlannerCode": "42a",
+    "name": "Smeech",
+    "nameKo": "스미치",
+    "cost": 7,
+    "role": "Attack Specialist",
+    "roleKo": "공격력 전문가",
+    "traits": [
+      "Jazz",
+      "Slayer"
+    ],
+    "traitsKo": [
+      "재즈",
+      "학살자"
+    ],
+    "traitIds": [
+      "DA_Jazz19",
+      "DA_Mosher19"
+    ],
+    "unlock": "9레벨 이상 · 고유 특성이 아닌 특성 9개 이상 활성화",
+    "levelRequired": 9,
+    "recommendedItems": [
+      {
+        "id": "DA_Deathblade",
+        "nameKo": "죽음의 검",
+        "placeChange": -0.22
+      },
+      {
+        "id": "DA_Hitmaker19_Emblem",
+        "nameKo": "스타 제조기 상징",
+        "placeChange": -0.21
+      },
+      {
+        "id": "DA_SteraksGage",
+        "nameKo": "스테락의 도전",
+        "placeChange": -0.15
+      },
+      {
+        "id": "DA_GiantSlayer",
+        "nameKo": "거인 학살자",
+        "placeChange": -0.15
+      },
+      {
+        "id": "DA_EdgeOfNight",
+        "nameKo": "밤의 끝자락",
+        "placeChange": -0.06
+      }
+    ]
+  },
+  {
+    "id": "DA_Sona19",
+    "teamPlannerCode": "42c",
+    "name": "Sona",
+    "nameKo": "소나",
+    "cost": 7,
+    "role": "Magic Specialist",
+    "roleKo": "주문력 전문가",
+    "traits": [
+      "Producer",
+      "Collab"
+    ],
+    "traitsKo": [
+      "프로듀서",
+      "콜라보"
+    ],
+    "traitIds": [
+      "DA_Sona19_UniqueTrait",
+      "DA_Collab19"
+    ],
+    "unlock": "10레벨 이상 · 콜라보 챔피언이 플레이어 대상 전투 중 15회 영감을 받음",
+    "levelRequired": 10,
+    "recommendedItems": [
+      {
+        "id": "DA_AdaptiveHelm",
+        "nameKo": "적응형 투구",
+        "placeChange": -0.11
+      },
+      {
+        "id": "DA_Morellonomicon",
+        "nameKo": "모렐로노미콘",
+        "placeChange": -0.1
+      },
+      {
+        "id": "DA_BlueBuff",
+        "nameKo": "푸른 파수꾼",
+        "placeChange": -0.07
+      },
+      {
+        "id": "DA_ArchangelsStaff",
+        "nameKo": "대천사의 지팡이",
+        "placeChange": -0.04
+      },
+      {
+        "id": "DA_VoidStaff",
+        "nameKo": "공허의 지팡이",
+        "placeChange": -0.01
+      }
+    ]
+  }
 ]

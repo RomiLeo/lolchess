@@ -28,14 +28,25 @@
       <div class="tabs" id="board-tabs"><button data-mode="manual" aria-pressed="true">수동 배치</button><button data-mode="auto" aria-pressed="false">자동 조합</button></div>
       <div id="auto" hidden><p class="note">소나는 콜라보 인원에 포함돼. 재즈는 장착한 상징까지 합산해.</p><label class="control">목표 인원 <select id="level"></select></label>
         <div id="deck-conditions">
-          <fieldset><legend>추천 모드</legend><label><input type="radio" name="priority" value="five" checked> 5코스트 우선</label> <label><input type="radio" name="priority" value="synergy"> 시너지 우선</label>
-            <p class="note">5코스트 우선은 고유 특성을 제외한 시너지 8개 이상이 필요해. 5코 수가 같으면 활성 시너지가 많은 덱이 앞서.</p></fieldset>
+          <fieldset><legend>추천 모드</legend><label><input type="radio" name="priority" value="balance" checked> 밸런스</label> <label><input type="radio" name="priority" value="value"> 고밸류</label>
+            <p class="note">밸런스는 시너지·캐리·앞라인의 종합 점수가 가장 높은 덱을 추천해. 고밸류는 고유 제외 시너지 9개 이상을 유지하며 시너지가 켜진 5·7코 기물을 극대화해.</p></fieldset>
           <fieldset><legend>콜라보</legend><label><input type="radio" name="collab" value="3" checked> 3콜라보</label> <label><input type="radio" name="collab" value="5"> 5콜라보</label></fieldset>
           <fieldset><legend>재즈</legend><label><input type="radio" name="jazz" value="2" checked> 2재즈</label> <label><input type="radio" name="jazz" value="3"> 3재즈</label>
             <label><input type="checkbox" id="smeech"> 스미치 포함</label></fieldset>
           <label><input type="checkbox" id="gu-feng"> 고풍 유닛 사용</label>
-          <p class="note">스미치는 체크하면 반드시 배치해. 고풍을 체크하면 해금 고풍 유닛도 후보에 포함해. 두 설정은 해금 기물 전체 선택·해제와 독립적이야.</p>
+          <p class="note">스미치는 체크하면 반드시 배치해(9레벨 이상에서는 9시너지 적용). 고풍을 체크하면 해금 고풍 유닛도 후보에 포함해.</p>
           <p class="note" id="pool-needed"></p>
+        </div>
+        <div class="lucky-section">
+          <div class="lucky-header"><strong>럭키 기물 <small id="lucky-count">0/2명</small></strong><small>빌드업 4·5코 필수 활용</small></div>
+          <div id="lucky-picks"></div>
+          <details id="lucky-drawer"><summary>4·5코 기물 선택</summary>
+            <div class="lucky-toolbar">
+              <label class="search"><span aria-hidden="true">⌕</span><input id="lucky-search" type="search" placeholder="기물명 또는 특성 검색" aria-label="럭키 기물 검색"></label>
+              <div class="filters" id="lucky-costs" aria-label="럭키 기물 코스트 필터"></div>
+            </div>
+            <div id="lucky-roster" class="lucky-roster"></div>
+          </details>
         </div>
         <div class="unlock-controls">
           <details><summary>해금 기물 <small id="unlock-count"></small></summary><div id="unlocks"></div></details>
@@ -50,6 +61,7 @@
       <div class="lineup-results">
         <div>
           <div class="section-title"><h3 id="team-title">배치 라인업</h3><small id="team-count">0명</small></div>
+          <div id="score-box"></div>
           <div id="team"></div><div id="editor"></div><div id="unused"></div>
         </div>
         <div>

@@ -8,7 +8,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import urlsplit
 
-from manual_builder import PROFILES, draw_collab, pool_slot
+from manual_builder import BANDS, PROFILES, draw_collab, pool_slot
 
 
 ROOT = Path(__file__).resolve().parent
@@ -26,7 +26,7 @@ ELIGIBLE = {u["id"]: u for u in UNITS if SLOTS[u["id"]] is not None}
 FILES = {"/": "index.html", "/index.html": "index.html", "/ui.js": "ui.js", "/style.css": "style.css", "/theme.js": "theme.js"}
 for name in ("ladder.html", "ladder-plans.json", "planner-worker.js", "ladder-worker.js", "units.json", "traits.json", "emblems.json"):
     FILES["/" + name] = name
-for row in [*UNITS, *CATALOG["traits"]["traits"]]:
+for row in [*UNITS, *CATALOG["traits"]["traits"], *(item for u in UNITS for item in u.get("recommendedItems", ()))]:
     asset = "assets/" + row["id"] + ".png"
     FILES["/" + asset] = asset
 
@@ -93,6 +93,30 @@ def serve(complete, evaluate):
                 if not 0 < size <= 32768:
                     raise ValueError("입력 크기를 확인해 줘.")
                 data = json.loads(self.rfile.read(size))
+                if self.path == "/api/score":
+                    team_ids = data.get("team", [])
+                    selected = data.get("selected", [])
+                    priority = data.get("priority", "balance")
+                    band = data.get("band") or None
+                    if band and band not in BANDS:
+                        band = None
+                    if priority not in ("balance", "value"):
+                        raise ValueError("추천 모드를 확인해 줘.")
+                    if not isinstance(team_ids, list) or any(uid not in BY_ID for uid in team_ids):
+                        raise ValueError("배치 기물을 확인해 줘.")
+                    team = [BY_ID[uid] for uid in team_ids]
+                    score, _, _, meta = evaluate(
+                        team, set(selected), {}, band,
+                        lucky=data.get("lucky", ()), priority=priority,
+                        fixed_equipment=data.get("equipment", {}),
+                    )
+                    return self.send_json({
+                        "score": score,
+                        "breakdown": meta["breakdown"],
+                        "activeCount": meta["activeCount"],
+                        "unmetCarries": meta["unmetCarries"],
+                    })
+
                 selected = data["selected"]
                 if not isinstance(selected, list) or any(uid not in BY_ID for uid in selected):
                     raise ValueError("기물 선택을 확인해 줘.")
@@ -105,6 +129,8 @@ def serve(complete, evaluate):
                 pool(selected)
                 level = data["level"]
                 inventory = data.get("inventory", {})
+                lucky = data.get("lucky", [])
+                priority = data.get("priority", "balance")
                 known = {e["trait"] for e in CATALOG["emblems"]["items"]}
                 if level not in range(3, 12) or any(t not in known or type(n) != int or n < 0
                                                       for t, n in inventory.items()):
@@ -112,10 +138,18 @@ def serve(complete, evaluate):
                 decks = []
                 for team, band in complete(UNITS, set(selected), level, set(data["unlocked"]), inventory,
                                            data.get("collab", 3), data.get("jazz"), data.get("guFeng", False),
-                                           data.get("priority", "synergy"), data.get("smeech", False)):
-                    holders = evaluate(team, set(selected), inventory, band)[2]
-                    decks.append({"team": [u["id"] for u in team], "band": band,
-                                  "equipment": {u["id"]: sorted(h) for u, h in zip(team, holders)}})
+                                           priority, data.get("smeech", False), lucky):
+                    score, _, holders, meta = evaluate(
+                        team, set(selected), inventory, band, lucky=lucky, priority=priority
+                    )
+                    decks.append({
+                        "team": [u["id"] for u in team],
+                        "band": band,
+                        "equipment": {u["id"]: sorted(h) for u, h in zip(team, holders)},
+                        "score": score,
+                        "breakdown": meta["breakdown"],
+                        "activeCount": meta["activeCount"],
+                    })
                 self.send_json({**decks[0], "decks": decks})
             except (KeyError, TypeError, ValueError, AttributeError) as exc:
                 self.send_json({"error": str(exc)}, 400)

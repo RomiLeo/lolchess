@@ -2,13 +2,15 @@
 const $ = id => document.getElementById(id);
 const ladderPage = document.documentElement.dataset.page === "ladder";
 const sona = "DA_Sona19";
+const baron = "DA_BaronNashor19";
 const bands = ["Heartsteel", "Ionic Spark", "K/DA", "Pentakill", "True Damage"];
 const colors = {1: "#aeb4bd", 2: "#53c776", 3: "#429cf5", 4: "#bb70ec", 5: "#efbd40", 7: "#fb794b"};
 const state = {
   units: [], byId: new Map(), traits: new Map(), tiers: {}, items: [],
   pool: [], candidates: [], board: [], equipment: {}, focused: null, band: "",
-  inventory: {}, unlocked: new Set(), result: null, mode: "manual", library: "pool",
-  cost: 0, poolBusy: false, building: false, revision: 0
+  inventory: {}, unlocked: new Set(), lucky: [], luckyCost: 0,
+  result: null, manualScore: null, scoreRevision: 0,
+  mode: "manual", library: "pool", cost: 0, poolBusy: false, building: false, revision: 0
 };
 function element(tag, text, cls) {
   const el = document.createElement(tag);
@@ -38,6 +40,12 @@ function option(value, label) {
   return new Option(label, value);
 }
 function msg(text) { $("feedback").textContent = text; }
+function currentPriority() {
+  return document.querySelector('[name="priority"]:checked')?.value || "balance";
+}
+function slotCount(team) {
+  return team.reduce((sum, id) => sum + (id === baron ? 2 : 1), 0);
+}
 function teamCodeControl(team) {
   // Set 19 codes from https://data.metatft.com/lookups/TFTSet19_pbe_en_us.json
   const slots = team.map(id => state.byId.get(id)?.teamPlannerCode);
@@ -134,6 +142,54 @@ function renderPool() {
     return item;
   });
   $("picks").replaceChildren(...(picks.length ? picks : [element("p","아래 후보에서 기물을 선택하거나 랜덤으로 추첨해.","empty-picks")]));
+}
+function toggleLucky(id) {
+  if (state.lucky.includes(id)) {
+    state.lucky = state.lucky.filter(x => x !== id);
+  } else {
+    if (state.lucky.length >= 2) return msg("럭키 기물은 최대 2명까지 선택할 수 있어.");
+    if (id.includes("Akali") && state.lucky.some(x => x.includes("Akali"))) return msg("아칼리는 한 형태만 선택할 수 있어.");
+    state.lucky = [...state.lucky, id];
+  }
+  msg("");
+  invalidate();
+  renderLucky();
+  renderBoard();
+}
+function renderLucky() {
+  if (ladderPage || !$("lucky-picks")) return;
+  $("lucky-count").textContent = state.lucky.length + "/2명";
+  const picks = state.lucky.map(id => {
+    const unit = state.byId.get(id);
+    const item = btn("", () => toggleLucky(id), "pick lucky-chip");
+    item.title = unit.nameKo + " 럭키 기물 해제";
+    item.append(img(id), element("span", unit.nameKo + " · " + unit.cost + "코"), element("b", "×"));
+    return item;
+  });
+  $("lucky-picks").replaceChildren(...(picks.length ? picks : [element("p", "빌드업에서 뜬 4·5코 핵심 기물을 최대 2명까지 고정할 수 있어.", "empty-picks")]));
+
+  for (const b of $("lucky-costs").children) {
+    b.setAttribute("aria-pressed", Number(b.value) === state.luckyCost);
+  }
+  const term = $("lucky-search").value.trim().toLowerCase();
+  const poolUnits = state.units.filter(u =>
+    (u.cost === 4 || u.cost === 5) &&
+    (!state.luckyCost || u.cost === state.luckyCost) &&
+    (!term || [u.nameKo, u.name, ...u.traitsKo, ...u.traits].join(" ").toLowerCase().includes(term))
+  );
+  const full = state.lucky.length >= 2;
+  const hasAkali = state.lucky.some(x => x.includes("Akali"));
+  const cards = poolUnits.map(u => {
+    const picked = state.lucky.includes(u.id);
+    const item = btn("", () => toggleLucky(u.id), "lucky-unit");
+    item.setAttribute("aria-pressed", picked);
+    item.disabled = !picked && (full || (u.id.includes("Akali") && hasAkali));
+    item.style.setProperty("--cost", colors[u.cost] || "#c7d4d9");
+    item.title = [u.nameKo, u.cost + "코", u.roleKo, ...u.traitsKo].join(" · ");
+    item.append(img(u.id), element("span", u.nameKo), element("small", u.traitsKo.join(" · ")));
+    return item;
+  });
+  $("lucky-roster").replaceChildren(...(cards.length ? cards : [element("p", "검색 조건에 맞는 4·5코 기물이 없어.", "quiet")]));
 }
 function switchLib(value) {
   state.library = value;
@@ -247,6 +303,61 @@ function renderSynergies(team, equipment) {
 function currentDeck() {
   return state.result?.decks?.[state.deckIndex] || state.result;
 }
+function renderScoreBox() {
+  const root = $("score-box");
+  if (!root) return;
+  root.replaceChildren();
+  const manual = state.mode === "manual";
+  const data = manual ? (state.board.length ? state.manualScore : null) : currentDeck();
+  if (!data?.breakdown) return;
+  const {total, synergy, carry, value, frontline} = data.breakdown;
+  const modeLabel = currentPriority() === "value" ? "고밸류 기준" : "밸런스 기준";
+  const card = element("div", undefined, "score-card");
+  const head = element("div", undefined, "score-head");
+  const left = element("div");
+  left.append(element("strong", "덱 환산 점수"), element("small", " · " + modeLabel));
+  head.append(left, element("span", total.toFixed(1) + "점", "score-total"));
+  const metrics = element("div", undefined, "score-metrics");
+  for (const [label, val] of [["시너지", synergy], ["캐리 결합", carry], ["5·7코 밸류", value], ["앞라인", frontline]]) {
+    const chip = element("span", undefined, "score-chip");
+    chip.append(element("small", label), element("b", val.toFixed(1)));
+    metrics.append(chip);
+  }
+  card.append(head, metrics);
+  if (manual && data.unmetCarries?.length) {
+    const names = data.unmetCarries.map(id => state.byId.get(id)?.nameKo).filter(Boolean).join(", ");
+    if (names) card.append(element("p", "유효 시너지 미활성 캐리 · " + names, "score-warn"));
+  }
+  root.append(card);
+}
+async function refreshManualScore() {
+  if (state.mode !== "manual") return;
+  if (!state.board.length) {
+    state.manualScore = null;
+    renderScoreBox();
+    return;
+  }
+  const rev = ++state.scoreRevision;
+  try {
+    const res = await api("score", {
+      selected: state.pool,
+      team: state.board,
+      equipment: state.equipment,
+      band: state.band,
+      lucky: state.lucky,
+      priority: currentPriority()
+    });
+    if (rev === state.scoreRevision) {
+      state.manualScore = res;
+      renderScoreBox();
+    }
+  } catch {
+    if (rev === state.scoreRevision) {
+      state.manualScore = null;
+      renderScoreBox();
+    }
+  }
+}
 function renderBoard() {
   const manual = state.mode === "manual";
   const deck = currentDeck();
@@ -254,23 +365,52 @@ function renderBoard() {
   const equipment = manual ? state.equipment : deck?.equipment || {};
   $("auto").hidden = manual;
   const collab = Number(document.querySelector('[name="collab"]:checked').value);
-  const available = state.pool.filter(id => $("gu-feng").checked || !state.byId.get(id).traits.includes("Gu Feng")).length;
-  const needs = available < collab - 1 || Number($("level").value) < collab;
-  $("pool-needed").textContent = needs ? collab+"콜라보에는 사용 가능한 후보 "+(collab-1)+"명과 목표 인원 "+collab+"명 이상이 필요해." : "";
+  const level = Number($("level").value);
+  const allowGuFeng = $("gu-feng").checked || state.lucky.some(id => state.byId.get(id)?.traits.includes("Gu Feng"));
+  const luckyCollab = state.lucky.filter(id => state.pool.includes(id));
+  const luckyExtra = state.lucky.filter(id => !state.pool.includes(id));
+  const availableOther = state.pool.filter(id => !state.lucky.includes(id) && (allowGuFeng || !state.byId.get(id).traits.includes("Gu Feng"))).length;
+  const minSlots = collab + ($("smeech").checked ? 1 : 0) + luckyExtra.length;
+  const needsPool = luckyCollab.length + availableOther < collab - 1;
+  const needsSlots = level < minSlots;
+  const needs = needsPool || needsSlots;
+  $("pool-needed").textContent = needsPool
+    ? collab + "콜라보에는 사용 가능한 후보 " + (collab - 1) + "명이 필요해."
+    : needsSlots
+      ? "선택한 콜라보와 필수 기물을 배치하려면 목표 인원이 최소 " + minSlots + "명 필요해."
+      : "";
   $("build").disabled = needs || state.building || state.poolBusy;
   $("build").textContent = state.building ? "조합 계산 중…" : "덱 자동 완성";
   for (const b of $("board-tabs").children) b.setAttribute("aria-pressed",b.dataset.mode === state.mode);
   $("team-title").textContent = manual ? "배치 라인업" : "추천 라인업";
-  $("team-count").textContent = team.length + "명";
+  const totalSlots = slotCount(team);
+  $("team-count").textContent = totalSlots !== team.length ? team.length + "명 (" + totalSlots + "슬롯)" : team.length + "명";
   const rows = team.map(id => {
     const u = state.byId.get(id), row = element("div",undefined,"team-row");
     const main = manual ? btn("",() => {state.focused=id;renderBoard();}) : element("div",undefined,"result");
     if (manual) main.setAttribute("aria-pressed",state.focused === id);
-    const labels = element("span",u.nameKo+(state.pool.includes(id) || id === sona ? " ★":""));
+    const title = u.nameKo + (state.pool.includes(id) || id === sona ? " ★" : "") + (!manual && state.lucky.includes(id) ? " · 럭키" : "");
+    const labels = element("span", title);
     labels.append(element("small", [u.cost+"코",u.roleKo,...u.traitsKo].join(" · ")));
     if (!manual && id === sona && deck?.band) labels.append(element("strong","추천 밴드 · "+name(deck.band)));
     if (equipment[id]?.length) labels.append(element("small","상징 · "+equipment[id].map(name).join(", ")));
     if (!manual && u.unlock) labels.append(element("small","해금 · "+u.unlock));
+    if (!manual && u.recommendedItems?.length) {
+      const items = element("span", undefined, "recommended-items");
+      items.setAttribute("aria-label", "추천 아이템");
+      for (const item of u.recommendedItems) {
+        const delta = (item.placeChange > 0 ? "+" : "") + item.placeChange.toFixed(2);
+        const titleText = (item.occurrence > 1 ? item.nameKo + " (" + item.occurrence + "번째)" : item.nameKo) + " · 등수 변화 " + delta;
+        const slot = element("span", undefined, "recommended-item");
+        slot.title = titleText;
+        const icon = img(item.id);
+        icon.alt = titleText;
+        slot.append(icon);
+        if (item.occurrence > 1) slot.append(element("b", String(item.occurrence)));
+        items.append(slot);
+      }
+      labels.append(items);
+    }
     main.append(img(id),labels);row.append(main);
     if (manual) { const b = btn("×",() => removeUnit(id),"remove"); b.setAttribute("aria-label",u.nameKo+" 배치 해제");row.append(b); }
     return row;
@@ -282,8 +422,9 @@ function renderBoard() {
     $("team").prepend(copy);
     if (state.result.decks?.length > 1) {
       const ranks = element("div", undefined, "tabs");
-      state.result.decks.forEach((_, index) => {
-        const button = btn((index + 1) + "순위", () => { state.deckIndex = index; renderBoard(); });
+      state.result.decks.forEach((d, index) => {
+        const scoreTag = d.score !== undefined ? " · " + d.score.toFixed(1) + "점" : "";
+        const button = btn((index + 1) + "순위" + scoreTag, () => { state.deckIndex = index; renderBoard(); });
         button.setAttribute("aria-pressed", index === state.deckIndex);
         ranks.append(button);
       });
@@ -295,12 +436,18 @@ function renderBoard() {
   const remaining = Object.entries(unused).filter(([,n]) => n > 0).map(([t,n]) => name(t)+" ×"+n);
   $("unused").replaceChildren();
   if (!manual && state.result && remaining.length) $("unused").append(element("p","미장착 상징 · "+remaining.join(", "),"note"));
-  renderEditor();renderSynergies(team,equipment);
+  renderEditor();
+  renderSynergies(team,equipment);
+  if (manual) refreshManualScore();
+  else renderScoreBox();
 }
 function render() {
   renderPool();
   renderRoster();
-  if (!ladderPage) renderBoard();
+  if (!ladderPage) {
+    renderLucky();
+    renderBoard();
+  }
 }
 let ladderPlans, ladderRevision = 0;
 async function renderLadder() {
@@ -317,7 +464,8 @@ async function renderLadder() {
     const choices = routes.map((route, i) => {
       const base = routes[0].team;
       const delta = i ? route.team.filter(id => !base.includes(id)) : [];
-      return {route, label: "조합 "+(i+1)+(delta.length ? " · "+delta.map(id => state.byId.get(id).nameKo).join(", ")+" 포함" : "")};
+      const scoreText = route.score !== undefined ? " (" + route.score.toFixed(1) + "점)" : "";
+      return {route, label: "조합 "+(i+1)+scoreText+(delta.length ? " · "+delta.map(id => state.byId.get(id).nameKo).join(", ")+" 포함" : "")};
     });
     if (!routes.length) {
       for (const {extra, route} of suggestions) choices.push({route, extra, label: name(extra)+" 상징"});
@@ -383,7 +531,7 @@ function ladderPick(id, pool) {
   item.append(portrait, unit.nameKo + (pool.includes(id) ? " ★" : ""));
   return item;
 }
-function renderLadderRoute(root, {team, levels, equipment}, pool) {
+function renderLadderRoute(root, {team, levels, equipment, score}, pool) {
   const activeTraits = ids => traitRows(ids, equipment, pool, "").filter(
     row => row.active && state.traits.get(row.t).type !== "unique"
   );
@@ -408,7 +556,8 @@ function renderLadderRoute(root, {team, levels, equipment}, pool) {
   const kda = team.filter(id => state.byId.get(id).traits.includes("K/DA") || equipment[id]?.includes("K/DA"));
   const assignments = Object.entries(equipment).map(([id, items]) =>
     state.byId.get(id).nameKo+"에게 "+items.map(t => name(t)+" 상징").join(", "));
-  root.replaceChildren(title(team.length+"레벨 · "+active.length+"특성 조합"), roster,
+  const scoreTitle = score !== undefined ? " · 환산 " + score.toFixed(1) + "점" : "";
+  root.replaceChildren(title(team.length+"레벨 · "+active.length+"특성 조합"+scoreTitle), roster,
     teamCodeControl(team),
     element("p", "상징 장착 · "+assignments.join(" / ")),
     element("p", "활성 특성 · "+active.map(row => name(row.t)+" "+row.count).join(" / ")));
@@ -426,11 +575,18 @@ async function build() {
   const revision = state.revision;
   state.building = true;renderBoard();msg("");
   try {
-    const result = await api("complete",{selected:state.pool,level:Number($("level").value),unlocked:[...state.unlocked],inventory:state.inventory,
-      priority:document.querySelector('[name="priority"]:checked').value,
+    const result = await api("complete",{
+      selected:state.pool,
+      level:Number($("level").value),
+      unlocked:[...state.unlocked],
+      inventory:state.inventory,
+      priority:currentPriority(),
       collab:Number(document.querySelector('[name="collab"]:checked').value),
-      jazz:Number(document.querySelector('[name="jazz"]:checked').value), guFeng:$("gu-feng").checked,
-      smeech:$("smeech").checked});
+      jazz:Number(document.querySelector('[name="jazz"]:checked').value),
+      guFeng:$("gu-feng").checked,
+      smeech:$("smeech").checked,
+      lucky:state.lucky
+    });
     if (revision === state.revision) {
       state.result = result;
       state.deckIndex = 0;
@@ -464,6 +620,14 @@ function initControls() {
   for (let n=3;n<=11;n++) $("level").append(option(n,n+"명"));
   $("level").value = 10;
   $("level").onchange = () => {invalidate();renderBoard();};
+
+  for (const cost of [0, 4, 5]) {
+    const b = btn(cost ? cost + "코" : "전체", () => { state.luckyCost = cost; renderLucky(); });
+    b.value = cost;
+    $("lucky-costs").append(b);
+  }
+  $("lucky-search").oninput = renderLucky;
+
   for (const u of state.units.filter(u=>u.unlock && u.id !== sona && u.id !== "DA_Smeech19" && !u.traits.includes("Gu Feng"))) {
     const label = element("label"), check = element("input");
     check.type = "checkbox";

@@ -36,6 +36,50 @@ class LadderTest(unittest.TestCase):
                 self.assertIn(emblem, active)
                 self.assertLess(counts[emblem] - (2 if emblem == "K/DA" else 1), thresholds[emblem])
 
+    def test_every_unit_has_five_sorted_recommended_items(self):
+        import web_planner
+        root = Path(__file__).resolve().parent
+        units = read_catalog_file("units")
+        self.assertGreater(len(units), 0)
+        for unit in units:
+            with self.subTest(unit=unit["id"]):
+                items = unit.get("recommendedItems", [])
+                self.assertEqual(len(items), 5)
+                deltas = [item["placeChange"] for item in items]
+                self.assertEqual(deltas, sorted(deltas))
+                for item in items:
+                    self.assertTrue(item["nameKo"])
+                    rel = f"assets/{item['id']}.png"
+                    self.assertTrue((root / rel).is_file(), rel)
+                    self.assertEqual(web_planner.FILES.get("/" + rel), rel)
+
+    def test_python_planner_matches_new_scoring_and_lucky_rules(self):
+        from importlib.machinery import SourceFileLoader
+        from importlib.util import module_from_spec, spec_from_loader
+
+        root = Path(__file__).resolve().parent
+        loader = SourceFileLoader("planner_pyw", str(root / "planner.pyw"))
+        spec = spec_from_loader(loader.name, loader)
+        planner_mod = module_from_spec(spec)
+        loader.exec_module(planner_mod)
+
+        units = read_catalog_file("units")
+        selected = {"DA_Sett19", "DA_Taric19", "DA_Karthus19", "DA_Malzahar19", "DA_Yuumi19"}
+        decks = planner_mod.ranked_decks(
+            units, selected, 9, set(), {}, collab=3, jazz=2,
+            gu_feng=False, priority="value", smeech=False, lucky=["DA_Jinx19"],
+        )
+        self.assertEqual(len(decks), 3)
+        for team, band in decks:
+            ids = [u["id"] for u in team]
+            self.assertIn("DA_Jinx19", ids)
+            score, active, _, meta = planner_mod.evaluate(
+                team, selected, {}, band, lucky=["DA_Jinx19"], priority="value"
+            )
+            self.assertGreaterEqual(meta["activeCount"], 9)
+            self.assertFalse(meta["invalidCarry"])
+            self.assertGreater(score, 0)
+
 
 if __name__ == "__main__":
     unittest.main()
